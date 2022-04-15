@@ -6,7 +6,9 @@ const Footer = () => {
   return (
     <StyleFooter>
       <div>
-        <p className='center white-text'>U.E Fe y Alegría San Francisco 2022-2023 © Copyright</p>
+        <p className="center-align white-text">
+          U.E Fe y Alegría San Francisco 2022-2023 © Copyright
+        </p>
       </div>
     </StyleFooter>
   );

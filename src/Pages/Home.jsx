@@ -1,16 +1,29 @@
 import React from "react";
+import BillBoard from "../Components/BillBoard/BillBoard";
+import HomeInfo from "../Components/HomeInfo/HomeInfo";
+import News from "../Components/News/News";
 
 const Home = () => {
   return (
     <main>
-      <div>
-        <h2>holaaa</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
-          sed expedita veritatis quibusdam voluptatum saepe a dolorum
-          dignissimos, suscipit tempore, alias reprehenderit voluptates incidunt
-          quis omnis ullam ipsam voluptatem. Voluptate?
-        </p>
+      <div className="row">
+        <div className="col l12 s12">
+          <BillBoard></BillBoard>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col l9 s12">
+          <HomeInfo />
+        </div>
+        <div className="col l3 s12">
+          <News />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col l9 s12">
+          <h2>Pago</h2>
+        </div>
       </div>
     </main>
   );

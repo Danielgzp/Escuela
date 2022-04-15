@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 export const StyleFooter = styled.footer`
-  height: 5vh;
+  height: 4vh;
   background-color: #131313;
-  bottom: 0;
+  display: flex;
+  justify-content: center;
 `;

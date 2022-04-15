@@ -1,0 +1,41 @@
+.cartelera-section{
+    background-color: rgb(20, 20, 20);
+    border-top: 10px solid red;
+    padding-bottom: 10px;
+}
+.background{
+    background-image: url("../../images/background.jpg");
+    opacity: 0.2;
+    width: 100%;
+    height: 145px;
+    position: absolute;
+}
+.cartelera {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cartelera-container p, span, h4{
+    padding: 0 10px;
+}
+.cartelera-container__image{
+    /* margin-bottom: -4px; */
+}
+.cartelera-container__image img {
+  height: auto;
+  max-width: 100%;
+  bottom: -2px;
+}
+.slide-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.slide-container ul li {
+  padding: 5px;
+  margin: 0 5px;
+  background-color: red;
+}
+.slide-container ul li:hover{
+    background-color: rgb(70, 7, 7);
+}
