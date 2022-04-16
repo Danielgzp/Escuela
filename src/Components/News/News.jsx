@@ -13,7 +13,7 @@ const LastNews = () => {
       <h4 className="title-info center">Ultimas noticias</h4>
       <ul className="news-list">
         <li>
-          <div class="imgholder valign-wrapper">
+          <div className="imgholder valign-wrapper">
             <a href="#">
               <img src={bienestar} alt="" href="#" />
             </a>
@@ -29,7 +29,7 @@ const LastNews = () => {
           </div>
         </li>
         <li>
-          <div class="imgholder valign-wrapper">
+          <div className="imgholder valign-wrapper">
             <a href="#">
               <img src={tapabocas} alt="" />
             </a>
@@ -45,7 +45,7 @@ const LastNews = () => {
           </div>
         </li>
         <li>
-          <div class="imgholder valign-wrapper">
+          <div className="imgholder valign-wrapper">
             <a href="#">
               <img src={nuevoIngreso} alt="" />
             </a>
@@ -60,8 +60,8 @@ const LastNews = () => {
             </p>
           </div>
         </li>
-        <li class="last">
-          <div class="imgholder valign-wrapper">
+        <li className="last">
+          <div className="imgholder valign-wrapper">
             <a href="#">
               <img src={reinscripciones} alt="" />
             </a>

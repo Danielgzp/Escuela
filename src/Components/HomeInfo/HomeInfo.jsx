@@ -11,7 +11,7 @@ const HomeInfo = () => {
       <h3 className="center">Bienvenidos a la pagina de nuestra escuela</h3>
       <div className="pastoral-container">
         <h4 className="center title-info">Pastoral</h4>
-        <div class="center">
+        <div className="center">
           <img src={pastoral} alt="" className="center" />
         </div>
         <p className="center">
@@ -29,7 +29,7 @@ const HomeInfo = () => {
       </div>
       <div className="biblioteca-container">
         <h4 className="center title-info">Biblioteca </h4>
-        <div class="imgholder center">
+        <div className="imgholder center">
           <img src={biblioteca} alt="" />
         </div>
         <p>
