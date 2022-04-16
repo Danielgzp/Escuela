@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Escuela
+Este es un repositorio para el proyecto de la página web del Colegio Fe y Alegría San Francisco, en ella se enccuentrna las noticias, historia, contacto y todo tipo de información referente a esta, además, uns sistema acádemico de notas y boletas al cual puedan acceder los estudiantes, docentes, personal adminsitrativo y directivo
+>>>>>>> 1e2914518e41e291a50426d81ca17d4b390a5743
