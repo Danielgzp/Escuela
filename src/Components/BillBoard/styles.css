@@ -1,12 +1,13 @@
 .cartelera-section{
     background-color: rgb(20, 20, 20);
-    border-top: 10px solid red;
+    border-top: 8px solid red;
     padding-bottom: 10px;
 }
 .background{
     background-image: url("../../images/background.jpg");
     opacity: 0.2;
     width: 100%;
+    max-width: fit-content;
     height: 145px;
     position: absolute;
 }

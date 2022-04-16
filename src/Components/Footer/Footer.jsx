@@ -4,7 +4,7 @@ import { StyleFooter } from "./styles";
 
 const Footer = () => {
   return (
-    <StyleFooter>
+    <StyleFooter className='black'>
       <div>
         <p className="center-align white-text">
           U.E Fe y Alegría San Francisco 2022-2023 © Copyright

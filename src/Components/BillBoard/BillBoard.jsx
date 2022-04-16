@@ -22,7 +22,7 @@ const BillBoard = () => {
             página de noticias para más información sobre las reinscripciones de
             1er a 6to grado.
           </p>
-          <span className="red-text right">Continuar leyendo >> </span>
+          <span className="red-text right">Continuar leyendo  </span>
         </div>
         {/* <div className="b">
             <ul>

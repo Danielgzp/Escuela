@@ -10,7 +10,7 @@ header{
 .logo-container{
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 65%;
     align-items: center;
 }
 .logo-container h4{
@@ -21,7 +21,7 @@ header{
     width: 90px;
     height: 40px;
 }
-.burger-container{
+.menu-container{
     width: 40px;
     height: 40px;
     border: 1px white solid;
