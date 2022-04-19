@@ -1,4 +1,4 @@
-var btnMenu = document.querySelector('logo-container');
+var btnMenu = document.querySelector("#menu-container");
 
 let open = false;
 

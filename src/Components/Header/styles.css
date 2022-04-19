@@ -35,3 +35,32 @@ header{
 .icon-white{
     color: white;
 }
+
+.mobile-menu{
+    display: none;
+}
+.open{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    
+}
+.menu{
+    position: absolute;
+    background-color: #131313;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 94vh;
+    top: 35px;
+}
+.menu li{
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+.menu i{
+    margin-right: 10px;
+}
