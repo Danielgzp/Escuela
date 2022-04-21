@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./styles.css";
 
 import logo from "../../images/logofeyalegria 2.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   let [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -23,42 +24,45 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="mobile-menu">
+      <nav className="mobile-menu side-nav" id="side-nav">
         <ul className="menu">
-          <a href="#">
+          <Link to="#">
             <li>
-              <i className="material-icons icon-white">account_balance</i>Colegio
+              <i className="material-icons icon-white">account_balance</i>
+              Colegio
             </li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <li>
               <i className="material-icons icon-white">photo_library</i>
               Galeria
             </li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <li>
               <i className="material-icons icon-white">description</i>
               Publicaciones
             </li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <li>
               <i className="material-icons icon-white">contacts</i>
               Contacto
             </li>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="/login">
             <li>
               <i className="material-icons icon-white">account_circle</i>
               Login
             </li>
-          </a>
+          </Link>
         </ul>
       </nav>
       <div className="logo-container">
-        <img src={logo} alt="Logo del colegio" className="logo" />
-        <h4 className="white-text">U.E.C Fe y Alegría San Francisco </h4>
+        <Link to="/">
+          <img src={logo} alt="Logo del colegio" className="logo" />
+          <span>U.E.C Fe y Alegría San Francisco </span>
+        </Link>
       </div>
       <div
         className="menu-container"

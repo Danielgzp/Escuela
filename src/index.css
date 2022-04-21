@@ -23,3 +23,6 @@ code {
     padding-left: 0;
     padding-right: -0.75;
 }
+.carousel .carousel-item {
+  visibility: visible;
+}
