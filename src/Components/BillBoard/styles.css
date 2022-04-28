@@ -1,12 +1,31 @@
+/*.carousel {
+  background-color: #131313;
+  height: 430px;
+}*/
+
 .background{
     background-image: url("../../images/background.jpg");
-    opacity: 0.2;
-    width: 100%;
-    max-width: fit-content;
-    height: 145px;
+    background-size: cover;
+    /* width: 100vw;
+    height: 430px;
     position: absolute;
+    opacity: 0.2; */
 }
-.cartelera {
+/*
+.cartelera-container__image img {
+  width: 100%;
+  max-height: 220px;
+}
+.cartelera h4{
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+.carousel.carousel-slider .carousel-item p{
+  font-size: 1rem;
+  font-weight: lighter;
+  padding: 5px;
+}*/
+/* .cartelera {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -15,7 +34,7 @@
     padding: 0 10px;
 }
 .cartelera-container__image{
-    /* margin-bottom: -4px; */
+    
 }
 .cartelera-container__image img {
   height: auto;
@@ -34,7 +53,8 @@
 }
 .slide-container ul li:hover{
     background-color: rgb(70, 7, 7);
-}
+} */
+
 
 /* <div className="cartelera">
         <div className="cartelera-container__image">

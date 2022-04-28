@@ -1,0 +1,89 @@
+.pastoral {
+  padding: 15px 30px;
+}
+.pastoral h2,
+h3,
+h4 {
+  font-family: "Fira Sans";
+  color: var(--dark-red);
+}
+.pastoral p,
+li {
+  font-size: 1.1rem;
+  line-height: 30px;
+  /* text-align: justify; */
+  color: #3a3a3a;
+  font-weight: normal;
+}
+.pastoral__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 1px var(--dark-red) dashed;
+  padding-bottom: 20px;
+}
+.pastoral__container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.pastoral__container h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.pastoral__container h4 {
+  font-size: 1.4rem;
+  background-color: #f3f3f3;
+}
+.pastoral__container-info span {
+  font-weight: bold;
+  font-style: italic;
+}
+.pastoral__container-info {
+  border-top: 2px solid var(--dark-red);
+  border-radius: 1.5%;
+  padding: 0 20px;
+}
+.childrens__container {
+  width: 70%;
+  height: auto;
+}
+.childrens__container img {
+  width: 280px;
+  height: auto;
+  border-radius: 50%;
+}
+.mision-vision__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f3f3;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: justify;
+}
+.mision-vision__container h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.pastoral-caracteristics{
+    border-top: 1px var(--dark-red) dashed;
+}
+.pastoral-caracteristics ul{
+    border-bottom:  1px var(--dark-red) dashed;
+    padding-bottom: 20px;
+}
+.pastoral-caracteristics li {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.pastoral-caracteristics i {
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 500px){
+    .mision-vision__container{
+        flex-direction: row;
+        margin: 0 20px;
+    }
+}
