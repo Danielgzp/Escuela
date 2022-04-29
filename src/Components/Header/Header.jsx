@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./styles.css";
 
-import logo from "../../images/logofeyalegria 2.png";
+import logo2 from "../../images/logo2.svg";
 import M from "materialize-css";
 
 const Header = () => {
@@ -43,7 +43,7 @@ const Header = () => {
       <nav>
         <div className="logo-container">
           <Link to="/">
-            <img src={logo} alt="Logo del colegio" className="logo" />
+            <img src={logo2} alt="Logo del colegio" className="logo" />
             <span>U.E.C Fe y Alegría San Francisco </span>
           </Link>
         </div>
@@ -86,7 +86,7 @@ const Header = () => {
                   <div className="collapsible-body">
                     <ul>
                       <li>
-                        <Link to="">
+                        <Link to="/history">
                           <i className="tiny material-icons icon-white">
                             chevron_right
                           </i>
@@ -94,7 +94,7 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link to="">
+                        <Link to="/mision-vision">
                           <i className="tiny material-icons icon-white">
                             chevron_right
                           </i>

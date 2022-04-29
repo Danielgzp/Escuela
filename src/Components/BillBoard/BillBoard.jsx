@@ -12,7 +12,7 @@ const BillBoard = () => {
   document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelector(".carousel");
     var instances = M.Carousel.init(elems, {
-      duration: 500,
+      duration: 600,
       indicators: true,
       onCycleTo: setInterval(() => {
         instances.next()

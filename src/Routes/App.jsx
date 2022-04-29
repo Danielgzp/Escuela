@@ -9,6 +9,8 @@ import Layout from "../Components/Layout/Layout";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Pastoral from "../Pages/Pastoral";
+import History from "../Pages/History";
+import MisionVision from "../Pages/MisionVision";
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/pastoral"component={Pastoral} />
+          <Route exact path="/history" component={History} />
+          <Route exact path="/mision-vision" component={MisionVision} />
         </Switch>
       </Layout>
     </BrowserRouter>

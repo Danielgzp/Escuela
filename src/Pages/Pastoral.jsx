@@ -11,10 +11,12 @@ const Pastoral = () => {
         <div className="col s12 l12">
           <div className="pastoral__container">
             <div>
-              <h2>Pastoral</h2>
-              <h3>Fe y Alegria una obra educativa evangelizadora</h3>
+              <h2 className="big-title__red">Pastoral</h2>
+              <h3 className="medium-title__red" >
+                Fe y Alegria una obra educativa evangelizadora
+              </h3>
               <div className="pastoral__container-info">
-                <h4>
+                <h4 className="small-title__red">
                   Un movimiento nacido de la experiencia y compromiso de fe
                 </h4>
                 <p>
@@ -125,8 +127,8 @@ const Pastoral = () => {
                 autónomos. .
               </li>
               <li>
-                <i className="material-icons icon-red">build</i>Está en constante
-                reflexión y revisión de su propuesta.
+                <i className="material-icons icon-red">build</i>Está en
+                constante reflexión y revisión de su propuesta.
               </li>
               <li>
                 <i className="material-icons icon-red">build</i>

@@ -18,10 +18,10 @@ const Home = () => {
       </div>
 
       <div className="row">
-        <div className="col l9 s12">
+        <div className="col m8 l9 s12">
           <HomeInfo />
         </div>
-        <div className="col l3 s12">
+        <div className="col m4 l3 s12">
           <News />
         </div>
       </div>

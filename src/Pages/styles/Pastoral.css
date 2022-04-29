@@ -1,17 +1,11 @@
 .pastoral {
   padding: 15px 30px;
 }
-.pastoral h2,
-h3,
-h4 {
-  font-family: "Fira Sans";
-  color: var(--dark-red);
-}
 .pastoral p,
 li {
   font-size: 1.1rem;
   line-height: 30px;
-  /* text-align: justify; */
+   text-align: justify; 
   color: #3a3a3a;
   font-weight: normal;
 }
@@ -22,17 +16,22 @@ li {
   border-bottom: 1px var(--dark-red) dashed;
   padding-bottom: 20px;
 }
-.pastoral__container h2 {
+body .big-title__red {
   font-size: 2rem;
   font-weight: bold;
+   font-family: "Fira Sans";
+  color: var(--dark-red);
 }
-.pastoral__container h3 {
+body .medium-title__red {
   font-size: 1.8rem;
   font-weight: 600;
+   font-family: "Fira Sans";
+  color: var(--dark-red);
 }
-.pastoral__container h4 {
+body .small-title__red {
   font-size: 1.4rem;
   background-color: #f3f3f3;
+  color: var(--dark-red);
 }
 .pastoral__container-info span {
   font-weight: bold;
