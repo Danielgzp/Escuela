@@ -14,23 +14,55 @@ const BillBoard = () => {
     var instances = M.Carousel.init(elems, {
       duration: 600,
       indicators: true,
+      fullWidth: true,
       onCycleTo: setInterval(() => {
-        instances.next()
-      }, 20000),
+        instances.next();
+      }, 6000),
     });
-    
   });
 
   return (
     <section className="cartelera-section">
       <div className="carousel carousel-slider center">
-        <div className="carousel-item red white-text" href="#one!">
-          <h2>First Panel</h2>
-          <p className="white-text">This is your first panel</p>
+        <div className="background"></div>
+        <div className="carousel-item white-text" href="#one!">
+          <div className="cartelera-container__image center">
+            <img src={regresoAClases} alt="" className="center" />
+          </div>
+          <div className="cartelera-container">
+            <h3 className="center medium-title__red">
+              ¿Listos para el regreso a Clases?
+            </h3>
+            <p className="center white-text">
+              ¡Pronto nos reencontraremos en las aulas! Estar atentos a nuestra
+              página de noticias para más información sobre las reinscripciones
+              de 1er a 6to grado.
+            </p>
+            <a class="btn waves-effect">
+              Continuar leyendo{" "}
+              <i className="material-icons icon-white right">arrow_forward</i>
+            </a>
+          </div>
         </div>
-        <div className="carousel-item amber white-text" href="#two!">
-          <h2>Second Panel</h2>
-          <p className="white-text">This is your second panel</p>
+        <div className="carousel-item white-text" href="#two!">
+          <div className="cartelera-container__image">
+            <img src={profeMusica} alt="" />
+          </div>
+          <div className="cartelera-container">
+            <h4 className="center white-text">
+              Solicitamos profesor de musica
+            </h4>
+            <p className="center white-text">
+              El colegio San Francisco tiene las puertas abiertas a todo aquel
+              docente con habilidades musicales en distintos instrumentos y que
+              además cuente con el dinamismo de realizar actividades culturales
+              con los alumnos de nuestra institución.
+            </p>
+            <a class="btn waves-effect">
+              Continuar leyendo{" "}
+              <i className="material-icons icon-white right">arrow_forward</i>
+            </a>
+          </div>
         </div>
         <div className="carousel-item green white-text" href="#three!">
           <h2>Third Panel</h2>
