@@ -39,8 +39,10 @@ body .small-title__red {
 }
 .pastoral__container-info {
   border-top: 2px solid var(--dark-red);
+  border-bottom: 2px solid var(--dark-red);
   border-radius: 1.5%;
   padding: 0 20px;
+  margin-bottom: 15px;
 }
 .childrens__container {
   width: 70%;

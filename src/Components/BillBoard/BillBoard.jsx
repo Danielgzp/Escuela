@@ -30,7 +30,7 @@ const BillBoard = () => {
             <img src={regresoAClases} alt="" className="center" />
           </div>
           <div className="cartelera-container">
-            <h3 className="center medium-title__red">
+            <h3 className="center">
               ¿Listos para el regreso a Clases?
             </h3>
             <p className="center white-text">

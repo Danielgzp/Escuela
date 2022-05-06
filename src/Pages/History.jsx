@@ -6,7 +6,18 @@ import docenteAlumno from "../images/historypage/docente-alumno.jpg";
 import joseMariaVelaz from "../images/historypage/josemariavelaz.png";
 import alumnos from "../images/historypage/alumnos.jpg";
 
+import M from "materialize-css";
+
 const History = () => {
+
+   document.addEventListener("DOMContentLoaded", function () {
+     var elems = document.querySelector(".collapsible");
+     
+     var instances = M.Collapsible.init(elems, {
+       
+     });
+   });
+
   return (
     <main className="history">
       <div className="layout-background"></div>
@@ -33,6 +44,32 @@ const History = () => {
               programas educativos, comunitarios y de capacitación humana y
               laboral.
             </p>
+            <div className="collapsible" id="collapsible-info">
+              <li>
+                <div className="collapsible-header">
+                  <h3 className="collapsible-title">
+                    <i className="material-icons icon-red">arrow_drop_down</i>
+                    Leer Mas
+                  </h3>
+                </div>
+                <div className="collapsible-body">
+                  <p>
+                    En Venezuela, Fe y Alegría tiene un total de 176 escuelas, 5
+                    Institutos Universitarios, 23 emisoras de radio conectadas
+                    en red, 75 Centros de Capacitación Laboral y un centro de
+                    formación, investigación y producción, que coordina las
+                    políticas de formación de miles de educadores, no sólo de Fe
+                    y Alegría, sino de otras escuelas, produce teoría pedagógica
+                    en contextos de marginalidad. De las 176 escuelas, 83
+                    ofrecen educación técnica, pues entre las actuales
+                    prioridades de Fe y Alegría está el potenciarlas para
+                    desarrollar las competencias laborales y fortalecer su
+                    capacidad para resolver problemas en sus contextos de
+                    desempeño.
+                  </p>
+                </div>
+              </li>
+            </div>
           </div>
         </div>
         <div className="col s12 l4 history__container-img">
@@ -60,13 +97,77 @@ const History = () => {
               llevara a comprometer su fe y sus vidas en el servicio a los más
               necesitados.
             </p>
+            <div className="collapsible" id="collapsible-info">
+              <li>
+                <div className="collapsible-header">
+                  <h3 className="collapsible-title">
+                    <i className="material-icons icon-red">arrow_drop_down</i>
+                    Leer Mas
+                  </h3>
+                </div>
+                <div className="collapsible-body">
+                  <p>
+                    En las visitas a lo que hoy conocemos como el 23 de Enero de
+                    Caracas, el padre y los universitarios preparaban a los
+                    niños para que hicieran su primera comunión. Al acercarse a
+                    la gente y ver cómo vivían, sintieron la tragedia de la
+                    marginación y comprendieron que para superar tantos
+                    problemas que tenían, era necesaria una educación para que
+                    pudieran ejercer la ciudadanía de un modo digno. Educación
+                    para transformar las vidas y poder contribuir a la
+                    transformación del país como sujetos activos y productivos.
+                    <br />
+                    <br />
+                    La primera escuela de Fe y Alegría nació de un acto de
+                    rotunda generosidad. El obrero Abrahán Reyes había brindado
+                    la sala de su casa para que se celebrara en ella la primera
+                    comunión de setenta niños y niñas, fruto de la labor
+                    catequética de los universitarios. En la homilía, el padre
+                    Vélaz habló de la necesidad de profundizar la labor
+                    formativa mediante un proceso de educación sistemática. Para
+                    ello, necesitaban construir una escuela, donde todos esos
+                    niños y niñas pudieran salir de la ignorancia. Al terminar
+                    la misa, uno de los asistentes, el obrero Abrahán Reyes, se
+                    acercó al padre y le dijo: “Si usted quiere hacer una
+                    escuela, ponga las maestras que yo le regalo este local”.
+                    <br />
+                    <br />
+                    Siete largos años le había llevado a Abrahán y su esposa
+                    Patricia construir la casa, ladrillo a ladrillo, como las
+                    construyen los pobres. Cuando lograban reunir cien
+                    bolívares, corrían a comprar cemento, bloques o cabillas, no
+                    fuera que se les presentara algún percance y tuvieran que
+                    gastar el dinero. Poco a poco, como un árbol de vida, la
+                    casa de Abrahán y de Patricia fue creciendo de sus manos y
+                    sus sueños. No había agua donde estaban construyendo y
+                    tenían que carretearla en latas de manteca que cargaban
+                    sobre sus cabezas desde el pie del cerro. Y cuando todavía
+                    estaba fresco el olor a cemento y no se habían acostumbrado
+                    al milagro de verla terminada, se la regalaron al Padre
+                    Vélaz para que iniciara en ella su sueño de sembrar los
+                    barrios más pobres con escuelas: “Si me quedo con ella
+                    –trataba de argumentar Abrahán ante el asombro del Padre-
+                    será la casa de mi mujer y los ocho hijos. Pero si la
+                    convertimos en escuela, será la casa de todos los niños del
+                    barrio”.
+                    <br />
+                    <br />
+                    El gesto de Abrahán conmovió profundamente al Padre Vélaz y
+                    le mostró el camino a seguir. Si había personas capaces de
+                    darlo todo, sí era posible realizar el sueño de llenar de
+                    escuelas los barrios más empobrecidos. El iría de corazón en
+                    corazón, sembrando sueños y la audacia y el valor para
+                    convertirlos en realidades. Levantarían con fuerza la
+                    bandera de la educación de los más pobres y muchas personas
+                    generosas correrían a militar bajo ella.
+                  </p>
+                </div>
+              </li>
+            </div>
           </div>
         </div>
       </div>
       <div className="row">
-        <div className="col s12 l4 history__container-img">
-          <img src={alumnos} alt="Alumnos en Clase"/>
-        </div>
         <div className="col s12 l8">
           <div className="pastoral__container-info">
             <h3 className="small-title__red">
@@ -86,24 +187,70 @@ const History = () => {
               maestras. No sabían cuándo ni cuánto les iban a pagar. Así nació
               Fe y Alegría. Era el cinco de marzo de 1955.
             </p>
+            <div className="collapsible" id="collapsible-info">
+              <li>
+                <div className="collapsible-header">
+                  <h3 className="collapsible-title">
+                    <i className="material-icons icon-red">arrow_drop_down</i>
+                    Leer Mas
+                  </h3>
+                </div>
+                <div className="collapsible-body">
+                  <p>
+                    La segunda escuela, llamada Rosa Molas, nació en Ciudad
+                    Tablitas, un barrio muy pobre también en Catia, que lo
+                    llamaron así porque todos los ranchitos habían sido
+                    construidos con tablitas de cajas de embalaje. El Padre
+                    Vélaz consiguió en comodato unos galpones muy rústicos del
+                    Banco Obrero y con un donativo de seis mil bolívares de un
+                    empresario generoso compraron cien pupitres y acomodaron los
+                    galpones para atender en dos turnos a doscientos alumnos.
+                    Algunos de ellos rondaban ya los veinte años de edad,
+                    ninguno tenía zapatos, la mayoría usaba cotizas y otros
+                    acudían descalzos a la escuela. Como algunos se desmayaban
+                    por el hambre porque acudían a clases sin haber comido nada,
+                    las maestras se las ingeniaron para implementar muy pronto
+                    el programa del vaso de leche escolar.
+                    <br />
+                    <br /> Al otro extremo de Caracas, un año después de la
+                    primera, nació la tercera escuela, la Inmaculada, en un
+                    terreno inhóspito de Barrio Unión en Petare. La obra empezó
+                    a crecer luego hacia los suburbios de otras ciudades del
+                    país, con el apoyo de diversas congregaciones religiosas y
+                    laicos comprometidos con el Movimiento. Ya para 1963, además
+                    de 10 colegios en Caracas, funcionaban colegios en
+                    Maracaibo, Maracay, Valencia, Pto. La Cruz, Cumaná, Maturín,
+                    Puerto Cabello, Barquisimeto, Lagunillas, Carora, Punto Fijo
+                    y Puerto Ordaz. En 1964 comienza el proceso de expansión
+                    hacia países de América Latina. El lema del Movimiento en
+                    esos primeros años era: “Fe y Alegría comienza donde termina
+                    el asfalto”.
+                  </p>
+                </div>
+              </li>
+            </div>
           </div>
+        </div>
+        <div className="col s12 l4 history__container-img">
+          <img src={alumnos} alt="Alumnos en Clase" />
         </div>
       </div>
       <div className="row">
-        <div className="s12 l6 center">
+        <div className="s12 m8 l6 center">
           <h2 className="center medium-title__red">
             ”Fe y Alegría comienza donde termina el asfalto”… más de 60 años de
             pasión por la educación.
           </h2>
-          <iframe
-            height="350"
-            width="580"
-            src="https://www.youtube.com/embed/hJKzwtPQNQw"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-            ali
-          ></iframe>
+          
+            <iframe
+              className="mi-iframe"
+              src="https://www.youtube.com/embed/hJKzwtPQNQw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            ></iframe>
+          
+
           {/* <video controls preoload="auto">
             <source src="./video.m4v#t=10,60" />
             <source src="./video.mp4#t=10,60" />

@@ -7,23 +7,23 @@ import logo2 from "../../images/logo2.svg";
 import M from "materialize-css";
 
 const Header = () => {
-  // let [showMobileMenu, setShowMobileMenu] = useState(false);
-  // const [menu, setMenu] = useState("");
+  let [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [menu, setMenu] = useState("");
 
-  // useEffect(() => {
-  //   setMenu(document.querySelector(".menu"));
-  // }, []);
+  useEffect(() => {
+    setMenu(document.querySelector(".menu"));
+  }, []);
 
-  // const handleMenuShow = () => {
-  //   setShowMobileMenu(!showMobileMenu);
-  //   if (showMobileMenu) {
-  //     menu.classList.add("open");
+  const handleMenuShow = () => {
+    setShowMobileMenu(!showMobileMenu);
+    if (showMobileMenu) {
+      menu.classList.add("open");
 
-  //   } else {
-  //     menu.classList.remove("open");
+    } else {
+      menu.classList.remove("open");
 
-  //   }
-  // };
+    }
+  };
 
   document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".sidenav");
@@ -60,21 +60,21 @@ const Header = () => {
           >
             menu
           </i>
-
+        </div>
+        <div className="slider-container">
           <ul id="slide-out" class="sidenav slide-menu">
             <li className="no-padding">
               <ul className="collapsible collapsible-accordion">
+                <div className="background-nav"></div>
                 <li>
                   <div className="user-view">
-                    <div className="background">
-                      <img src="images/office.jpg" />
-                    </div>
-
-                    <img className="circle" src="images/yuna.jpg" />
+                    <img className="circle" src={logo2} />
 
                     <span className="white-text name">John Doe</span>
 
-                    <span className="white-text email">jdandturk@gmail.com</span>
+                    <span className="white-text email">
+                      jdandturk@gmail.com
+                    </span>
                   </div>
                 </li>
                 <li>
@@ -134,8 +134,10 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          <ul className="right hide-on-med-and-down"></ul>
         </div>
+
+        <ul className="right hide-on-med-and-down"></ul>
+
         {/* <div className="menu">
             <ul className="menu-list">
               <Link to="#">

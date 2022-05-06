@@ -13,7 +13,7 @@ const MisionVision = () => {
         <div className="col s12 l12">
           <span>
             <strong>
-              Somos un Movimiento de Educación Popular y Promoción Social, aquí
+            Somos un Movimiento de Educación Popular y Promoción Social, aquí
               está contenida la identidad y esencia de Fe y Alegría.
             </strong>
           </span>
