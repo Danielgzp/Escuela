@@ -18,10 +18,8 @@ const Header = () => {
     setShowMobileMenu(!showMobileMenu);
     if (showMobileMenu) {
       menu.classList.add("open");
-
     } else {
       menu.classList.remove("open");
-
     }
   };
 
@@ -107,7 +105,7 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <Link to="#">
+              <Link to="/gallery">
                 <i className="material-icons icon-white">photo_library</i>
                 Galeria
               </Link>
@@ -135,47 +133,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-
         <ul className="right hide-on-med-and-down"></ul>
-
-        {/* <div className="menu">
-            <ul className="menu-list">
-              <Link to="#">
-                <li>
-                  <i className="material-icons icon-white">account_balance</i>
-                  <ul>
-                    ¿Quiénes Somos?
-                    <li>Historia</li>
-                    <li>Mision y Visión</li>
-                  </ul>
-                </li>
-              </Link>
-              <Link to="#">
-                <li>
-                  <i className="material-icons icon-white">photo_library</i>
-                  Galeria
-                </li>
-              </Link>
-              <Link to="#">
-                <li>
-                  <i className="material-icons icon-white">description</i>
-                  Publicaciones
-                </li>
-              </Link>
-              <Link to="#">
-                <li>
-                  <i className="material-icons icon-white">contacts</i>
-                  Contacto
-                </li>
-              </Link>
-              <Link to="/login">
-                <li>
-                  <i className="material-icons icon-white">account_circle</i>
-                  Login
-                </li>
-              </Link>
-            </ul>
-          </div> */}
       </nav>
     </header>
   );

@@ -9,14 +9,10 @@ import alumnos from "../images/historypage/alumnos.jpg";
 import M from "materialize-css";
 
 const History = () => {
-
-   document.addEventListener("DOMContentLoaded", function () {
-     var elems = document.querySelector(".collapsible");
-     
-     var instances = M.Collapsible.init(elems, {
-       
-     });
-   });
+  document.addEventListener("DOMContentLoaded", function () {
+    var elems = document.querySelector(".collapsible");
+    var instances = M.Collapsible.init(elems, {});
+  });
 
   return (
     <main className="history">
@@ -24,7 +20,7 @@ const History = () => {
       <h2 className="big-title__red">Historia</h2>
       <div className="row">
         <div className="col s12 l8">
-          <div className="pastoral__container-info">
+          <div className="information__container-info">
             <h3 className="small-title__red">
               Fe y Alegría: 65 años al servicio del pueblo venezolano
             </h3>
@@ -81,7 +77,7 @@ const History = () => {
           <img src={joseMariaVelaz} alt="Fundador de Fe y Alegría" />
         </div>
         <div className="col s12 l8">
-          <div className="pastoral__container-info">
+          <div className="information__container-info">
             <h3 className="small-title__red">
               Fe y Alegría nació de un acto de generosidad
             </h3>
@@ -169,7 +165,7 @@ const History = () => {
       </div>
       <div className="row">
         <div className="col s12 l8">
-          <div className="pastoral__container-info">
+          <div className="information__container-info">
             <h3 className="small-title__red">
               Fe y Alegría de la "chispa" al "incendio"
             </h3>
@@ -241,15 +237,14 @@ const History = () => {
             ”Fe y Alegría comienza donde termina el asfalto”… más de 60 años de
             pasión por la educación.
           </h2>
-          
-            <iframe
-              className="mi-iframe"
-              src="https://www.youtube.com/embed/hJKzwtPQNQw"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-            ></iframe>
-          
+
+          <iframe
+            className="history-frame"
+            src="https://www.youtube.com/embed/hJKzwtPQNQw"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+          ></iframe>
 
           {/* <video controls preoload="auto">
             <source src="./video.m4v#t=10,60" />

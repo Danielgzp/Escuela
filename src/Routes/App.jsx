@@ -23,7 +23,7 @@ const App = () => {
           <Route exact path="/pastoral"component={Pastoral} />
           <Route exact path="/history" component={History} />
           <Route exact path="/mision-vision" component={MisionVision} />
-          <Route exact path="/galeria" component={Gallery} />
+          <Route exact path="/gallery" component={Gallery} />
         </Switch>
       </Layout>
     </BrowserRouter>

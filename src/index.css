@@ -30,3 +30,6 @@ code {
 strong{
   font-weight: bold !important;
 }
+.row .col{
+  padding: 0 !important;
+}

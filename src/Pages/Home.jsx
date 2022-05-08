@@ -1,4 +1,5 @@
 import React from "react";
+
 import BillBoard from "../Components/BillBoard/BillBoard";
 import HomeInfo from "../Components/HomeInfo/HomeInfo";
 import News from "../Components/News/News";
@@ -26,7 +27,7 @@ const Home = () => {
         </div> */}
       </div>
       <div className="row">
-        <div className="col l9 s12">
+        <div className="col l12 s12">
           <h2>Pago</h2>
         </div>
       </div>

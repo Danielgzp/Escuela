@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Gallery = () => {
   return (
     <main>
-      <h2>a</h2>
+      <div className="gallery-container col s12 m10 l8">
+        <div id="cincopa_515042">...</div>
+      </div>
     </main>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;

@@ -22,125 +22,91 @@ const BillBoard = () => {
   });
 
   return (
-    <section className="cartelera-section">
-      <div className="carousel carousel-slider center">
-        <div className="background"></div>
-        <div className="carousel-item white-text" href="#one!">
-          <div className="cartelera-container__image center">
-            <img src={regresoAClases} alt="" className="center" />
-          </div>
-          <div className="cartelera-container">
-            <h3 className="center">
-              ¿Listos para el regreso a Clases?
-            </h3>
-            <p className="center white-text">
-              ¡Pronto nos reencontraremos en las aulas! Estar atentos a nuestra
-              página de noticias para más información sobre las reinscripciones
-              de 1er a 6to grado.
-            </p>
-            <a class="btn waves-effect">
-              Continuar leyendo{" "}
-              <i className="material-icons icon-white right">arrow_forward</i>
-            </a>
-          </div>
-        </div>
-        <div className="carousel-item white-text" href="#two!">
-          <div className="cartelera-container__image">
-            <img src={profeMusica} alt="" />
-          </div>
-          <div className="cartelera-container">
-            <h4 className="center white-text">
-              Solicitamos profesor de musica
-            </h4>
-            <p className="center white-text">
-              El colegio San Francisco tiene las puertas abiertas a todo aquel
-              docente con habilidades musicales en distintos instrumentos y que
-              además cuente con el dinamismo de realizar actividades culturales
-              con los alumnos de nuestra institución.
-            </p>
-            <a class="btn waves-effect">
-              Continuar leyendo{" "}
-              <i className="material-icons icon-white right">arrow_forward</i>
-            </a>
-          </div>
-        </div>
-        <div className="carousel-item green white-text" href="#three!">
-          <h2>Third Panel</h2>
-          <p className="white-text">This is your third panel</p>
-        </div>
-        <div className="carousel-item blue white-text" href="#four!">
-          <h2>Fourth Panel</h2>
-          <p className="white-text">This is your fourth panel</p>
-        </div>
-        <ul className="indicators"></ul>
-      </div>
-      {/* <div class="carousel carousel-slider center">
-        <div className="background"></div>
-        <div className="cartelera carousel-item" href="#one!">
-          <div className="cartelera-container__image">
-            <img src={regresoAClases} alt="" className="" />
-          </div>
-
-          <div className="cartelera-container">
-            <h4 className="center white-text">
-              ¿Listos para el regreso a Clases?
-            </h4>
-            <p className="center white-text">
-              ¡Pronto nos reencontraremos en las aulas! Estar atentos a nuestra
-              página de noticias para más información sobre las reinscripciones
-              de 1er a 6to grado.
-            </p>
-            <span className="red-text right">Continuar leyendo </span>
-          </div>
-        </div>
-
-        <div class="cartelera carousel-item" href="#two!">
-          <div className="cartelera-container__image">
-            <img src={semanaSanta} alt="" />
-          </div>
-          <div className="cartelera-container">
-            <h4 className="center white-text">¡Se aproxima semana santa!</h4>
-            <p className="center white-text">
-              En la última semana de la cuaresma, desde el dia el domingo 10 de
-              Abril hasta el sabado 16 no habrá actividades escolares en nuestra
-              institución.
-            </p>
-            <span className="red-text right">Continuar leyendo </span>
+    <section>
+      <div id="cincopa_db8771">...</div>
+      {/* <div id="gallery_div">
+        <div id="inner_cincopa_5f5afd" className="cp_reset_style">
+          <div
+            className="ze-wowslider-container noneThumbs "
+            id="ze-wow-cincopa_5f5afd"
+          >
+            <div className="ws_images">
+              <div>
+                <img
+                  alt="Biblioteca"
+                  title="Biblioteca"
+                  src="https://mediacdn.cincopa.com/v2/1137895/77!chxFAoeRuDg2dA/1/biblioteca.jpg"
+                />
+              </div>
+              <ul>
+                <li>
+                  <img
+                    alt="Biblioteca"
+                    title="Biblioteca"
+                    src="https://mediacdn.cincopa.com/v2/1137895/77!chxFAoeRuDg2dA/1/biblioteca.jpg"
+                  />
+                </li>
+                <li>
+                  <img
+                    alt="Comptucion"
+                    title="Comptucion"
+                    src="https://mediacdn.cincopa.com/v2/1137895/78!chxFAoeRuDweSA/1/computacion.jpg"
+                  />
+                </li>
+                <li>
+                  <img
+                    alt="Joropito"
+                    title="Joropito"
+                    src="https://mediacdn.cincopa.com/v2/1137895/79!chxFAoeRuDwOPA/1/joropo.JPG"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div className="ws_thumbs">
+              <div>
+                <a
+                  title="Biblioteca"
+                  className="ws_selthumb"
+                  href="javascript:void(0)"
+                >
+                  <img
+                    src="https://mediacdn.cincopa.com/v2/1137895/77!chxFAoeRuDg2dA/4/biblioteca.jpg"
+                    alt="Biblioteca"
+                  />
+                </a>
+                <a title="Comptucion" className="" href="javascript:void(0)">
+                  <img
+                    src="https://mediacdn.cincopa.com/v2/1137895/78!chxFAoeRuDweSA/4/computacion.jpg"
+                    alt="Comptucion"
+                  />
+                </a>
+                <a title="Joropito" className="" href="javascript:void(0)">
+                  <img
+                    src="https://mediacdn.cincopa.com/v2/1137895/79!chxFAoeRuDwOPA/4/joropo.JPG"
+                    alt="Joropito"
+                  />
+                </a>
+              </div>
+            </div>
+            <div>
+              <a href="#"></a>
+            </div>
+            <div className="ws_effect"></div>
+            <div className="ws_zoom"></div>
+            <a href="#" className="ws_next"></a>
+            <a href="#" className="ws_prev"></a>
+            <div className="ws-title">
+              <span>Biblioteca</span>
+              <div>
+                La escuela ha abierto una biblioteca para el disfrute de todos
+                sus estudiantes
+              </div>
+            </div>
+            <canvas width="375" height="281"></canvas>
+            <canvas width="375" height="281"></canvas>
           </div>
         </div>
-
-        <div class="cartelera carousel-item" href="#two!">
-          <div className="cartelera-container__image">
-            <img src={vacaciones} alt="" />
-          </div>
-          <div className="cartelera-container">
-            <h4 className="center white-text">¡No pares de aprender!</h4>
-            <p className="center white-text">
-              Durante las vacaciones, no frenes tu aprendizaje. Continua siendo
-              curioso, continua indigando y leyendo sobre lo que más te
-              asombran.
-            </p>
-            <span className="red-text right">Continuar leyendo </span>
-          </div>
-        </div>
-        <div class="cartelera carousel-item" href="#two!">
-          <div className="cartelera-container__image">
-            <img src={profeMusica} alt="" />
-          </div>
-          <div className="cartelera-container">
-            <h4 className="center white-text">
-              Solicitamos profesor de musica
-            </h4>
-            <p className="center white-text">
-              El colegio San Francisco tiene las puertas abiertas a todo aquel
-              docente con habilidades musicales en distintos instrumentos y que
-              además cuente con el dinamismo de realizar actividades culturales
-              con los alumnos de nuestra institución.
-            </p>
-            <span className="red-text right">Continuar leyendo </span>
-          </div>
-        </div>
-        <ul class="indicators"></ul>
+        <div></div>
       </div> */}
     </section>
   );

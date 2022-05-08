@@ -1,51 +1,50 @@
 import React from "react";
 
-import childrens from "../images/pastoralpage/childrens.jpg";
-
 import "./styles/Pastoral.css";
+
+import childrens from "../images/pastoralpage/childrens.jpg";
 
 const Pastoral = () => {
   return (
     <main className="section pastoral">
+      <div className="layout-pastoral"></div>
+      <h2 className="big-title__red">Pastoral</h2>
+      <h3 className="medium-title__red">
+        Fe y Alegria una obra educativa evangelizadora
+      </h3>
       <div className="row">
-        <div className="col s12 l12">
-          <div className="pastoral__container">
-            <div>
-              <h2 className="big-title__red">Pastoral</h2>
-              <h3 className="medium-title__red" >
-                Fe y Alegria una obra educativa evangelizadora
-              </h3>
-              <div className="pastoral__container-info">
-                <h4 className="small-title__red">
-                  Un movimiento nacido de la experiencia y compromiso de fe
-                </h4>
-                <p>
-                  Fe y Alegría se define a sí misma como un Movimiento de
-                  Educación Popular Integral y Promoción Social, nacido de la
-                  experiencia y compromiso de fe del Padre José María Vélaz, un
-                  hombre que, interpelado por la realidad de injusticia y
-                  exclusión, decide sumar esfuerzos por transformar y humanizar
-                  dicha realidad, y para ello, convoca y anima a otros a
-                  comprometerse en un proyecto de educación y de evangelización.
-                </p>
-                <p>
-                  Fe y Alegría desde sus inicios agrupó a personas de fe,
-                  religiosos(as) y laicos(as), quienes concibieron su acción
-                  educativa como compromiso cristiano de transformación de las
-                  estructuras de exclusión socioeducativas, para construir un
-                  mundo más justo y más humano. Este hecho le llevará a Vélaz a
-                  afirmar que{" "}
-                  <span>
-                    “…el motor que ha impulsado a tantas personas a
-                    comprometerse con amor y sacrificio en Fe y Alegría ha sido
-                    el espíritu cristiano”
-                  </span>
-                </p>
-              </div>
+        <div className="pastoral__container">
+          <div className="col s12 m8 l9">
+            <div className="information__container-info">
+              <h4 className="small-title__red">
+                Un movimiento nacido de la experiencia y compromiso de fe
+              </h4>
+              <p>
+                Fe y Alegría se define a sí misma como un Movimiento de
+                Educación Popular Integral y Promoción Social, nacido de la
+                experiencia y compromiso de fe del Padre José María Vélaz, un
+                hombre que, interpelado por la realidad de injusticia y
+                exclusión, decide sumar esfuerzos por transformar y humanizar
+                dicha realidad, y para ello, convoca y anima a otros a
+                comprometerse en un proyecto de educación y de evangelización.
+              </p>
+              <p>
+                Fe y Alegría desde sus inicios agrupó a personas de fe,
+                religiosos(as) y laicos(as), quienes concibieron su acción
+                educativa como compromiso cristiano de transformación de las
+                estructuras de exclusión socioeducativas, para construir un
+                mundo más justo y más humano. Este hecho le llevará a Vélaz a
+                afirmar que{" "}
+                <span>
+                  “…el motor que ha impulsado a tantas personas a comprometerse
+                  con amor y sacrificio en Fe y Alegría ha sido el espíritu
+                  cristiano”
+                </span>
+              </p>
             </div>
-            <div className="childrens__container">
-              <img src={childrens} alt="" className="responsive-img" />
-            </div>
+          </div>
+          <div className="col s12 m5 l3 childrens__container center">
+            <img src={childrens} alt="" className="responsive-img" />
           </div>
         </div>
       </div>
