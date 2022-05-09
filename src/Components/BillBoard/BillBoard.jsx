@@ -23,7 +23,14 @@ const BillBoard = () => {
 
   return (
     <section>
-      <div id="cincopa_db8771">...</div>
+      <div className="billboard">
+        <div id="cincopa_f37b37">...</div>
+      </div>
+      <div className="billboard2">
+        <div id="cincopa_25313b"></div>
+          
+      </div>
+
       {/* <div id="gallery_div">
         <div id="inner_cincopa_5f5afd" className="cp_reset_style">
           <div
