@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./styles.css";
 
 import logo2 from "../../images/logo2.svg";
-import M from "materialize-css";
+//import M from "materialize-css";
 
 const Header = () => {
   let [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -23,18 +23,18 @@ const Header = () => {
     }
   };
 
-  document.addEventListener("DOMContentLoaded", function () {
-    var elems = document.querySelectorAll(".sidenav");
-    var instances = M.Sidenav.init(elems, {
-      draggable: true,
-    });
-  });
-  document.addEventListener("DOMContentLoaded", function () {
-    var elems = document.querySelectorAll(".collapsible");
-    var instances = M.Collapsible.init(elems, {
-      accordion: true,
-    });
-  });
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   var elems = document.querySelectorAll(".sidenav");
+  //   var instances = M.Sidenav.init(elems, {
+  //     draggable: true,
+  //   });
+  // });
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   var elems = document.querySelectorAll(".collapsible");
+  //   var instances = M.Collapsible.init(elems, {
+  //     accordion: true,
+  //   });
+  // });
 
   return (
     <header>

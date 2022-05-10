@@ -6,13 +6,13 @@ import docenteAlumno from "../images/historypage/docente-alumno.jpg";
 import joseMariaVelaz from "../images/historypage/josemariavelaz.png";
 import alumnos from "../images/historypage/alumnos.jpg";
 
-import M from "materialize-css";
+//import M from "materialize-css";
 
 const History = () => {
-  document.addEventListener("DOMContentLoaded", function () {
-    var elems = document.querySelector(".collapsible");
-    var instances = M.Collapsible.init(elems, {});
-  });
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   var elems = document.querySelector(".collapsible");
+  //   var instances = M.Collapsible.init(elems, {});
+  // });
 
   return (
     <main className="history">

@@ -4,10 +4,10 @@ import LoginForm from '../Components/LoginForm/LoginForm'
 
 const Login = () => {
   return (
-    <main className='login-background'>
+    <div>
         <LoginForm>
         </LoginForm>
-    </main>
+    </div>
   )
 }
 

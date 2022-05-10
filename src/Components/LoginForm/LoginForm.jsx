@@ -8,53 +8,41 @@ const LoginForm = () => {
   let history = useHistory();
 
   return (
-    <section className="login">
-      <div className="login-container">
-        <h2>Ingresa tus datos</h2>
-        <div id="respuesta"></div>
-        <form
-          id="form"
-          onSubmit={() => {
-            history.push("/");
-          }}
-        >
-          <div id="user-form">
-            <label for="user">
-              <i className="material-icons icon-white">account_circle</i>
-              Nombre de usuario
-              <input type="text" placeholder="Tu usuario" id="user" />
-            </label>
-          </div>
-          <div id="password-form">
-            <label for="password">
-              <i className="material-icons icon-white">https</i> Contraseña
-              <input
-                type="password"
-                placeholder="Tu contraseña"
-                id="password"
-              />
-            </label>
-          </div>
-          <label for="sesion">
-            <input
-              type="submit"
-              name="sesion"
-              className="sesion-button"
-              value="Iniciar Sesión"
-              id="send"
-            />
+    <section className="login-background">
+      <form
+        action="home.html"
+        method=""
+        autocomplete="off"
+        class="full-box logInForm"
+      >
+        <p class="text-center text-muted">
+          <i class="zmdi zmdi-account-circle zmdi-hc-5x"></i>
+        </p>
+        <p class="text-center text-muted text-uppercase">
+          Inicia sesión con tu cuenta
+        </p>
+        <div class="form-group label-floating">
+          <label class="control-label" for="UserEmail">
+            E-mail
           </label>
-        </form>
-        <div className="registrar">
-          <p className="white-text center">No conoces los datos de tu cuenta?</p>
-          <Link
-            to="/iniciar-sesion/crear-cuenta/"
-            className="btn red white-text center"
-          >
-            Obten información
-          </Link>
+          <input class="form-control" id="UserEmail" type="email" />
+          <p class="help-block">Escribe tú E-mail</p>
         </div>
-      </div>
+        <div class="form-group label-floating">
+          <label class="control-label" for="UserPass">
+            Contraseña
+          </label>
+          <input class="form-control" id="UserPass" type="text" />
+          <p class="help-block">Escribe tú contraseña</p>
+        </div>
+        <div class="form-group text-center">
+          <input
+            type="submit"
+            value="Iniciar sesión"
+            class="btn btn-raised btn-danger"
+          />
+        </div>
+      </form>
     </section>
   );
 };
