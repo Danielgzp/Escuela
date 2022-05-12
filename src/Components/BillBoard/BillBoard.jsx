@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import "./styles.css";
-//import M from "materialize-css";
+import M from "materialize-css";
 
 import regresoAClases from "../../images/regresoaclases.jpg";
 import semanaSanta from "../../images/semanasanta.jpg";
@@ -9,17 +9,17 @@ import profeMusica from "../../images/joropo.JPG";
 import vacaciones from "../../images/vacaciones.jpg";
 
 const BillBoard = () => {
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   var elems = document.querySelector(".carousel");
-  //   var instances = M.Carousel.init(elems, {
-  //     duration: 600,
-  //     indicators: true,
-  //     fullWidth: true,
-  //     onCycleTo: setInterval(() => {
-  //       instances.next();
-  //     }, 6000),
-  //   });
-  // });
+  document.addEventListener("DOMContentLoaded", function () {
+    var elems = document.querySelector(".carousel");
+    var instances = M.Carousel.init(elems, {
+      duration: 600,
+      indicators: true,
+      fullWidth: true,
+      onCycleTo: setInterval(() => {
+        instances.next();
+      }, 6000),
+    });
+  });
 
   return (
     <section>

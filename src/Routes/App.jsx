@@ -1,7 +1,7 @@
 import React from "react";
 
-// import "../../node_modules/materialize-css/dist/css/materialize.min.css";
-// import "../../node_modules/materialize-css/dist/js//materialize";
+import "../../node_modules/materialize-css/dist/css/materialize.min.css";
+import "../../node_modules/materialize-css/dist/js/materialize";
 
 import { BrowserRouter, Link, Route, Routes, Switch } from "react-router-dom";
 import Layout from "../Components/Layout/Layout";
@@ -20,7 +20,7 @@ import AddStudent from "../Pages/AddStudent";
 const App = () => {
   return (
     <BrowserRouter>
-      {/* <Layout> */}
+       <Layout> 
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
@@ -33,7 +33,7 @@ const App = () => {
           <Route exact path="/admin/AddNewTeacher" component={AddTeacher} />
           <Route exact path="/admin/AddNewStudent" component={AddStudent} />
         </Switch>
-      {/* </Layout> */}
+       </Layout> 
     </BrowserRouter>
   );
 };
