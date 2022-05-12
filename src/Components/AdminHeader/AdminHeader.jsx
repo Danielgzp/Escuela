@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import HelperDialogue from "../HelperDialogue/HelperDialogue";
+
 const AdminHeader = () => {
   const [styles, setStyles] = useState({
     body: "",
@@ -22,18 +24,6 @@ const AdminHeader = () => {
       styles.sidebar.classList.add("hide-sidebar").remove("show-sidebar");
     }
   };
-
-  //   $(".btn-menu-dashboard").on("click", function () {
-  //     var body = $(".dashboard-contentPage");
-  //     var sidebar = $(".dashboard-sideBar");
-  //     if (sidebar.css("pointer-events") == "none") {
-  //       body.removeClass("no-paddin-left");
-  //       sidebar.removeClass("hide-sidebar").addClass("show-sidebar");
-  //     } else {
-  //       body.addClass("no-paddin-left");
-  //       sidebar.addClass("hide-sidebar").removeClass("show-sidebar");
-  //     }
-  //   });
 
   return (
     <React.Fragment>
@@ -68,6 +58,7 @@ const AdminHeader = () => {
           </li>
         </ul>
       </nav>
+      <HelperDialogue></HelperDialogue>
     </React.Fragment>
   );
 };

@@ -1,6 +1,11 @@
 import React from "react";
 
 const HelperDialogue = () => {
+
+  var modal = document.querySelector("body");
+  modal.classList.add("modal-open");
+
+  console.log(modal)
   return (
     <div>
       <div className="modal fade" tabIndex={-1} role="dialog" id="Dialog-Help">
