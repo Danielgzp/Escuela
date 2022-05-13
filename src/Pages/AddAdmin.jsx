@@ -2,7 +2,6 @@ import React from "react";
 import AdminHeader from "../Components/AdminHeader/AdminHeader";
 
 import AdminMenu from "../Components/AdminMenu/AdminMenu";
-import HelperDialogue from "../Components/HelperDialogue/HelperDialogue";
 
 import { TablesFadeIn } from "../js/tables";
 
@@ -246,7 +245,6 @@ const AddAdmin = () => {
               </div>
             </div>
           </div>
-          <HelperDialogue></HelperDialogue>
         </section>
       </div>
     </div>

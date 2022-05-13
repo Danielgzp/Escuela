@@ -74,6 +74,15 @@ header nav {
 .slide-menu {
   display: flex;
   flex-direction: column;
+  background-color:  black;
+}
+.slide-menu li a:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.slide-menu li a i:hover{
+  color: var(--dark-red2);
+  
 }
 .slider-container li a {
   color: white;
@@ -81,7 +90,6 @@ header nav {
   flex-direction: row;
   align-items: center;
   font-size: 1.2rem;
-  border-bottom: 1px solid #424242;
   padding: 5px 32px;
   height: fit-content;
 }
@@ -90,10 +98,12 @@ header nav {
 }
 .slider-container .collapsible-header {
   padding-left: 32px;
-  border-bottom: 1px solid #424242;
 }
 .slider-container .collapsible-body {
-  background-color: rgb(26, 26, 26);
+  background-color: rgba(0, 0, 0, 0.301);
+}
+.slider-container .collapsible-body li > a {
+  font-weight: 400;
 }
 .slider-container .collapsible-body li > a > i {
   margin: 0;
@@ -102,4 +112,21 @@ header nav {
 .slider-container .collapsible-body a {
   font-size: 1rem;
   color: white;
+}
+.user-view{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 15px !important;
+}
+.background {
+  margin: 0 -20px;
+  height: 100vh;
+  overflow: none;
+  background-image: url("../../images/fondoSideBar.jpg");
+  background-size: cover;
+  opacity: 0.18;
+}
+.circle{
+  border-radius: 0%;
+  margin: 0 auto;
+  
 }

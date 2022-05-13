@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 
-import HelperDialogue from "../HelperDialogue/HelperDialogue";
+import Swal from "sweetalert2";
+
+import M from "materialize-css";
 
 const AdminHeader = () => {
   const [styles, setStyles] = useState({
     body: "",
     sidebar: "",
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var elems = document.querySelectorAll(".sidenav");
+    var instances = M.Sidenav.init(elems, {});
   });
 
   useEffect(() => {
@@ -15,13 +22,28 @@ const AdminHeader = () => {
     });
   }, []);
 
+  const handleHelper = () => {
+    Swal.fire({
+      icon: "info",
+      title: "AYUDA",
+      text: "Si tiene algún problema contactar con el hijo de Naibys",
+    });
+  };
+
   const handleSidebarMenu = () => {
+    // Para eliminar propeidas de css con Javascript ////
+    // styles.sidebar.style.width = "270px";
+    // styles.sidebar.style.opacity = "1";
+
     if (styles.sidebar.classList.contains("hide-sidebar")) {
       styles.body.classList.remove("no-paddin-left");
       styles.sidebar.classList.remove("hide-sidebar").add("show-sidebar");
-    } else {
+    }
+    if (styles.sidebar.classList.contains("show-sidebar")) {
       styles.body.classList.add("no-paddin-left");
       styles.sidebar.classList.add("hide-sidebar").remove("show-sidebar");
+    } else {
+      styles.sidebar.classList.add("show-sidebar");
     }
   };
 
@@ -32,8 +54,8 @@ const AdminHeader = () => {
           <li class="pull-left">
             <a
               href="#!"
-              class="btn-menu-dashboard"
-              onClick={() => handleSidebarMenu()}
+              class="btn-menu-dashboard sidenav-trigger"
+              data-target="slide-out 2"
             >
               <i class="zmdi zmdi-more-vert"></i>
             </a>
@@ -52,13 +74,12 @@ const AdminHeader = () => {
 				</li>
 				*/}
           <li>
-            <a href="#!" class="btn-modal-help">
+            <a href="#!" class="btn-modal-help" onClick={() => handleHelper()}>
               <i class="zmdi zmdi-help-outline"></i>
             </a>
           </li>
         </ul>
       </nav>
-      <HelperDialogue></HelperDialogue>
     </React.Fragment>
   );
 };

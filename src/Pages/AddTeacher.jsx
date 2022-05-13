@@ -1,4 +1,6 @@
 import React from "react";
+
+import AdminHeader from "../Components/AdminHeader/AdminHeader";
 import AdminMenu from "../Components/AdminMenu/AdminMenu";
 
 import { TablesFadeIn } from "../js/tables";
@@ -7,19 +9,13 @@ const AddTeacher = () => {
   return (
     <div>
       <div>
-        <AdminMenu />
+        <AdminMenu></AdminMenu>
       </div>
       <div>
         <section className="full-box dashboard-contentPage">
           {/* Barra de navegación*/}
-          <nav className="full-box dashboard-Navbar">
-            <ul className="full-box list-unstyled text-right">
-              <li className="pull-left">
-                <a href="#!" className="btn-menu-dashboard">
-                  <i className="zmdi zmdi-more-vert" />
-                </a>
-              </li>
-              {/*
+          <AdminHeader />
+          {/*
 			<li>
 				<a href="#!" class="btn-Notifications-area">
 					<i class="zmdi zmdi-notifications-none"></i>
@@ -32,13 +28,7 @@ const AddTeacher = () => {
 				</a>
 			</li>
 			*/}
-              <li>
-                <a href="#!" className="btn-modal-help">
-                  <i className="zmdi zmdi-help-outline" />
-                </a>
-              </li>
-            </ul>
-          </nav>
+
           {/* Content page */}
           <div className="container-fluid">
             <div className="page-header">

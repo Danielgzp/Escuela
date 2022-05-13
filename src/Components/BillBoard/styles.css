@@ -1,11 +1,11 @@
-.background {
+/* .background {
   background-image: url("../../images/background.jpg");
   background-size: cover;
   width: 100vw;
   height: 420px;
   position: absolute;
   opacity: 0.2;
-}
+} */
 @media screen and (min-width: 600px) {
   .billboard{
     display: none;

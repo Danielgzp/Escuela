@@ -8,18 +8,33 @@ import M from "materialize-css";
 
 const Header = () => {
   let [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [menu, setMenu] = useState("");
+  const [state, setState] = useState({
+    menu: "",
+    iconRotate: "",
+  });
 
   useEffect(() => {
-    setMenu(document.querySelector(".menu"));
+    setState({
+      menu: document.querySelector(".menu"),
+
+      iconRotate: document.querySelector("i.material-icons.right"),
+    });
   }, []);
 
   const handleMenuShow = () => {
     setShowMobileMenu(!showMobileMenu);
     if (showMobileMenu) {
-      menu.classList.add("open");
+      state.menu.classList.add("open");
     } else {
-      menu.classList.remove("open");
+      state.classList.remove("open");
+    }
+  };
+
+  const handleRotateClick = () => {
+    if (state.iconRotate.classList.contains("zmdi-hc-rotate-180")) {
+      state.iconRotate.classList.remove("zmdi-hc-rotate-180");
+    } else {
+      state.iconRotate.classList.add("zmdi-hc-rotate-180");
     }
   };
 
@@ -60,23 +75,26 @@ const Header = () => {
           </i>
         </div>
         <div className="slider-container">
+          <div className="background-slider"></div>
           <ul id="slide-out" class="sidenav slide-menu">
             <li className="no-padding">
               <ul className="collapsible collapsible-accordion">
                 <div className="background-nav"></div>
-                <li>
-                  <div className="user-view">
-                    <img className="circle" src={logo2} />
 
-                    <span className="white-text name">John Doe</span>
+                <div className="user-view">
+                  <div className="background"></div>
+                  <img className="circle" src={logo2} />
 
-                    <span className="white-text email">
-                      jdandturk@gmail.com
-                    </span>
-                  </div>
-                </li>
+                  <span className="white-text name center">
+                    U.E Colegio Fe y Alegria San Francisco
+                  </span>
+                </div>
+
                 <li>
-                  <a className="collapsible-header">
+                  <a
+                    className="collapsible-header"
+                    onClick={() => handleRotateClick()}
+                  >
                     <i className="material-icons icon-white">account_balance</i>
                     Quienes Somos
                     <i className="material-icons right">arrow_drop_down</i>

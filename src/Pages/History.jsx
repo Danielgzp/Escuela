@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./styles/History.css";
 
@@ -9,10 +9,13 @@ import alumnos from "../images/historypage/alumnos.jpg";
 import M from "materialize-css";
 
 const History = () => {
-  document.addEventListener("DOMContentLoaded", function () {
-    var elems = document.querySelector(".collapsible");
-    var instances = M.Collapsible.init(elems, {});
-  });
+  
+  useEffect(() => {
+    document.addEventListener("DOMContentLoaded", function () {
+      var elems = document.querySelector(".collapsible");
+      var instances = M.Collapsible.init(elems, {});
+    });
+  }, []);
 
   return (
     <main className="history">
