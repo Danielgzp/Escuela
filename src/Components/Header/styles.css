@@ -12,16 +12,6 @@ header nav {
   height: fit-content;
   padding: 10px 0;
 }
-/* .slider-menu {
-  background-image: url("../../images/background.jpg");
-  left: 0;
-  z-index: 2;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: all 0.3s ease-in-out;
-} */
 .logo-container {
   width: 65%;
   padding-left: 30px;
@@ -57,32 +47,17 @@ header nav {
 .slide-menu {
   background-color: #131313;
 }
-/*.menu {
-  position: absolute;
-  background-color: #131313;
-  width: 100vw;
-  height: 94vh;
-  top: 63px;
-} */
-/* .open {
-  right: 0 !important;
-  transition-property: all;
-  transition-duration: 1.3s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
-} */
 .slide-menu {
   display: flex;
   flex-direction: column;
-  background-color:  black;
+  background-color: black;
 }
-.slide-menu li a:hover{
+.slide-menu li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.slide-menu li a i:hover{
+.slide-menu li a i:hover {
   color: var(--dark-red2);
-  
 }
 .slider-container li a {
   color: white;
@@ -113,20 +88,18 @@ header nav {
   font-size: 1rem;
   color: white;
 }
-.user-view{
+.user-view {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding-bottom: 15px !important;
 }
 .background {
-  margin: 0 -20px;
   height: 100vh;
   overflow: none;
   background-image: url("../../images/fondoSideBar.jpg");
   background-size: cover;
   opacity: 0.18;
 }
-.circle{
+.circle {
   border-radius: 0%;
   margin: 0 auto;
-  
 }

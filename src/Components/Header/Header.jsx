@@ -76,7 +76,7 @@ const Header = () => {
         </div>
         <div className="slider-container">
           <div className="background-slider"></div>
-          <ul id="slide-out" class="sidenav slide-menu">
+          <ul id="slide-out" className="sidenav slide-menu">
             <li className="no-padding">
               <ul className="collapsible collapsible-accordion">
                 <div className="background-nav"></div>

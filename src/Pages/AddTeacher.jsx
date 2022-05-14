@@ -17,14 +17,14 @@ const AddTeacher = () => {
           <AdminHeader />
           {/*
 			<li>
-				<a href="#!" class="btn-Notifications-area">
-					<i class="zmdi zmdi-notifications-none"></i>
-					<span class="badge">7</span>
+				<a href="#!" className="btn-Notifications-area">
+					<i className="zmdi zmdi-notifications-none"></i>
+					<span className="badge">7</span>
 				</a>
 			</li>
 			<li>
-				<a href="#!" class="btn-search">
-					<i class="zmdi zmdi-search"></i>
+				<a href="#!" className="btn-search">
+					<i className="zmdi zmdi-search"></i>
 				</a>
 			</li>
 			*/}

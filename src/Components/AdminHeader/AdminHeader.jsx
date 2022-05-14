@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from "react";
 
 import Swal from "sweetalert2";
-
 import M from "materialize-css";
 
 const AdminHeader = () => {
+  var [menuIsOpen, setMenuIsOpen] = useState(true);
   const [styles, setStyles] = useState({
     body: "",
     sidebar: "",
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    var elems = document.querySelectorAll(".sidenav");
-    var instances = M.Sidenav.init(elems, {});
+    target: "",
   });
 
   useEffect(() => {
+    document.addEventListener("DOMContentLoaded", function () {
+      var elems = document.querySelectorAll(".sidenav");
+      var instances = M.Sidenav.init(elems, {});
+    });
     setStyles({
       body: document.querySelector(".dashboard-contentPage"),
-      sidebar: document.querySelector(".dashboard-sideBar"),
+      sidebar: document.querySelector(".secundary"),
+      target: document.querySelector("slide-out"),
     });
   }, []);
 
@@ -35,47 +36,63 @@ const AdminHeader = () => {
     // styles.sidebar.style.width = "270px";
     // styles.sidebar.style.opacity = "1";
 
-    if (styles.sidebar.classList.contains("hide-sidebar")) {
-      styles.body.classList.remove("no-paddin-left");
-      styles.sidebar.classList.remove("hide-sidebar").add("show-sidebar");
-    }
-    if (styles.sidebar.classList.contains("show-sidebar")) {
+    if (menuIsOpen) {
       styles.body.classList.add("no-paddin-left");
-      styles.sidebar.classList.add("hide-sidebar").remove("show-sidebar");
+      styles.sidebar.style.transform = "translateX(-105%)";
+      styles.sidebar.style.transition = "0.3s all ease-out";
     } else {
-      styles.sidebar.classList.add("show-sidebar");
+      styles.body.classList.remove("no-paddin-left");
+      styles.sidebar.style.transform = "translateX(0%)";
+      styles.sidebar.style.transition = "0.3s all ease-in";
     }
+
+    setMenuIsOpen(!menuIsOpen);
+
+    // if (styles.sidebar.classList.contains("no-paddin-left")) {
+    //   styles.body.classList.remove("no-paddin-left");
+    //   styles.sidebar.classList.remove("hide-sidebar").add("show-sidebar");
+    // }
+    // if (styles.sidebar.classList.contains("show-sidebar")) {
+    //   styles.body.classList.add("no-paddin-left");
+    //   styles.sidebar.classList.add("hide-sidebar").remove("show-sidebar");
+    // } else {
+    //   styles.sidebar.classList.add("show-sidebar");
+    // }
   };
 
   return (
     <React.Fragment>
-      <nav class="full-box dashboard-Navbar">
-        <ul class="full-box list-unstyled text-right">
-          <li class="pull-left">
+      <nav className="full-box dashboard-Navbar">
+        <ul className="full-box list-unstyled text-right">
+          <li className="pull-left" onClick={() => handleSidebarMenu()}>
             <a
               href="#!"
-              class="btn-menu-dashboard sidenav-trigger"
-              data-target="slide-out 2"
+              className="btn-menu-dashboard"
+              data-target="slide-out second"
             >
-              <i class="zmdi zmdi-more-vert"></i>
+              <i className="zmdi zmdi-more-vert"></i>
             </a>
           </li>
           {/*
 				<li>
-					<a href="#!" class="btn-Notifications-area">
-						<i class="zmdi zmdi-notifications-none"></i>
-						<span class="badge">7</span>
+					<a href="#!" className="btn-Notifications-area">
+						<i className="zmdi zmdi-notifications-none"></i>
+						<span className="badge">7</span>
 					</a>
 				</li>
 				<li>
-					<a href="#!" class="btn-search">
-						<i class="zmdi zmdi-search"></i>
+					<a href="#!" className="btn-search">
+						<i className="zmdi zmdi-search"></i>
 					</a>
 				</li>
 				*/}
           <li>
-            <a href="#!" class="btn-modal-help" onClick={() => handleHelper()}>
-              <i class="zmdi zmdi-help-outline"></i>
+            <a
+              href="#!"
+              className="btn-modal-help"
+              onClick={() => handleHelper()}
+            >
+              <i className="zmdi zmdi-help-outline"></i>
             </a>
           </li>
         </ul>

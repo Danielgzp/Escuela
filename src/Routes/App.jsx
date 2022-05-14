@@ -20,8 +20,8 @@ import AddStudent from "../Pages/AddStudent";
 const App = () => {
   return (
     <BrowserRouter>
-       <Layout> 
-        <Switch>
+      <Switch>
+        <Layout>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/pastoral" component={Pastoral} />
@@ -32,8 +32,8 @@ const App = () => {
           <Route exact path="/admin/AddNewAdmin" component={AddAdmin} />
           <Route exact path="/admin/AddNewTeacher" component={AddTeacher} />
           <Route exact path="/admin/AddNewStudent" component={AddStudent} />
-        </Switch>
-       </Layout> 
+        </Layout>
+      </Switch>
     </BrowserRouter>
   );
 };

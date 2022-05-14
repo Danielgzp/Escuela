@@ -2,7 +2,7 @@ import React from "react";
 
 import AdminHeader from "../Components/AdminHeader/AdminHeader";
 import AdminMenu from "../Components/AdminMenu/AdminMenu";
-import AdminContainer from "../Components/AdminContainer/AdminContainer";
+import AdminContainerArticles from "../Components/AdminContainerArticles/AdminContainerArticles";
 
 const AdminHome = () => {
   return (
@@ -11,20 +11,39 @@ const AdminHome = () => {
         <AdminMenu></AdminMenu>
       </div>
       <div>
-        <section class="full-box dashboard-contentPage">
+        <section className="full-box dashboard-contentPage">
           <AdminHeader></AdminHeader>
 
           {/* Cotenido principal  */}
-          <div class="container-fluid">
-            <div class="page-header">
-              <h1 class="text-titles">
+          <div className="container-fluid">
+            <div className="page-header">
+              <h1 className="text-titles">
                 Administración<small> Usuarios registrados:</small>
               </h1>
             </div>
           </div>
-
-          <div>
-            <AdminContainer></AdminContainer>
+          <div
+            className="full-box text-center"
+            style={{ padding: "30px 10px" }}
+          >
+            <AdminContainerArticles
+              link={"/admin/addnewadmin"}
+              registered={"7"}
+              title={"Administradores"}
+              icon={"zmdi zmdi-account"}
+            />
+            <AdminContainerArticles
+              link={"/admin/addnewteacher"}
+              registered={"10"}
+              title={"Docentes"}
+              icon={"zmdi zmdi-male-alt"}
+            />
+            <AdminContainerArticles
+              link={"/admin/addnewstudent"}
+              registered={"70"}
+              title={"Estudiantes"}
+              icon={"zmdi zmdi-face"}
+            />
           </div>
         </section>
       </div>

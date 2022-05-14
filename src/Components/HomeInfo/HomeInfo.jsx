@@ -12,12 +12,12 @@ const HomeInfo = () => {
   return (
     <section className="section home-info">
       <div className="row">
-        <div className="col s12 m6 l6">
+        <div className="col s12 m6 l4">
           <div className="card z-depth-3">
             <div className="card-image">
               <img src={pastoral} />
-              <a class="btn-floating halfway-fab waves-effect waves-light red">
-                <i class="material-icons">add</i>
+              <a className="btn-floating halfway-fab waves-effect waves-light red">
+                <i className="material-icons">add</i>
               </a>
             </div>
             <div className="card-content">
@@ -36,12 +36,12 @@ const HomeInfo = () => {
             </div>
           </div>
         </div>
-        <div className="col s12 m6 l6">
+        <div className="col s12 m6 l4">
           <div className="card z-depth-3">
             <div className="card-image">
               <img src={biblioteca} />
-              <a class="btn-floating halfway-fab waves-effect waves-light red">
-                <i class="material-icons">add</i>
+              <a className="btn-floating halfway-fab waves-effect waves-light red">
+                <i className="material-icons">add</i>
               </a>
             </div>
             <div className="card-content">
@@ -61,12 +61,12 @@ const HomeInfo = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col s12 m6 l6">
+        <div className="col s12 m6 l4">
           <div className="card z-depth-3">
             <div className="card-image">
               <img src={psicopedagogia} />
-              <a class="btn-floating halfway-fab waves-effect waves-light red">
-                <i class="material-icons">add</i>
+              <a className="btn-floating halfway-fab waves-effect waves-light red">
+                <i className="material-icons">add</i>
               </a>
             </div>
             <div className="card-content">
@@ -83,12 +83,12 @@ const HomeInfo = () => {
             </div>
           </div>
         </div>
-        <div className="col s12 m6 l6">
+        <div className="col s12 m6 l4">
           <div className="card z-depth-3">
             <div className="card-image">
               <img src={computacion} />
-              <a class="btn-floating halfway-fab waves-effect waves-light red">
-                <i class="material-icons">add</i>
+              <a className="btn-floating halfway-fab waves-effect waves-light red">
+                <i className="material-icons">add</i>
               </a>
             </div>
             <div className="card-content">

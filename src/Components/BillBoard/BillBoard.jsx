@@ -28,7 +28,6 @@ const BillBoard = () => {
       </div>
       <div className="billboard2">
         <div id="cincopa_25313b"></div>
-          
       </div>
 
       {/* <div id="gallery_div">
