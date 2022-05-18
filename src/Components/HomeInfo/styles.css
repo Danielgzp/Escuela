@@ -27,6 +27,17 @@ border-radius: 4px;
 .home-info a:hover {
   color: black !important;
 }
+.home-info .card{
+  margin: .5rem 10px 1rem 10px;
+  display: flex;
+  flex-direction: column;
+}
+.home-info .card-content{
+  height: 50%;
+}
+.home-info .card-image{
+  height: 50%;
+}
 .pastoral-container,
 .bienestar-container {
   margin-bottom: 15px;

@@ -12,7 +12,7 @@ const HomeInfo = () => {
   return (
     <section className="section home-info">
       <div className="row">
-        <div className="col s12 m6 l4">
+        <div className="col s12 m6 l6">
           <div className="card z-depth-3">
             <div className="card-image">
               <img src={pastoral} />
@@ -36,7 +36,7 @@ const HomeInfo = () => {
             </div>
           </div>
         </div>
-        <div className="col s12 m6 l4">
+        <div className="col s12 m6 l6">
           <div className="card z-depth-3">
             <div className="card-image">
               <img src={biblioteca} />
@@ -61,7 +61,7 @@ const HomeInfo = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col s12 m6 l4">
+        <div className="col s12 m6 l6">
           <div className="card z-depth-3">
             <div className="card-image">
               <img src={psicopedagogia} />
@@ -83,7 +83,7 @@ const HomeInfo = () => {
             </div>
           </div>
         </div>
-        <div className="col s12 m6 l4">
+        <div className="col s12 m6 l6">
           <div className="card z-depth-3">
             <div className="card-image">
               <img src={computacion} />

@@ -4,19 +4,14 @@ header {
 header nav {
   background-color: #131313;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  height: fit-content;
   line-height: 20px;
   border-bottom: 8px solid red;
-  height: fit-content;
-  padding: 10px 0;
 }
 .logo-container {
   width: 65%;
   padding-left: 30px;
 }
-.logo-container span {
+.logo-container {
   font-size: 1.2rem;
   padding-left: 15px;
 }
@@ -32,8 +27,40 @@ header nav {
   width: fit-content;
   height: 45px;
 }
+.logo-big {
+  height: 100%;
+  font-size: 18px;
+  padding-left: 20px;
+}
+.logo-big img {
+  margin-right: 15px;
+  margin-top: 5px;
+}
+.nav-wrapper .dropdown-trigger i {
+  line-height: 33px;
+  height: 0px;
+}
+.nav-navigator__list {
+  height: 100%;
+}
+.nav-navigator__list li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-navigator__list li:hover a {
+  color: red;
+}
+.dropdown-content li {
+  display: block !important;
+  height: 0%;
+}
+.btn-menu__container {
+  height: 100%;
+  display: none;
+}
 .btn-menu {
-  margin-top: 2px;
+  margin: 4px 10px 0 0;
   width: 40px;
   height: 40px;
   border: 2px white solid;
@@ -41,8 +68,6 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  right: 20px;
-  position: absolute;
 }
 .slide-menu {
   background-color: #131313;
@@ -102,4 +127,12 @@ header nav {
 .circle {
   border-radius: 0%;
   margin: 0 auto;
+}
+@media (max-width: 850px) {
+  .nav-navigator__list {
+    display: none;
+  }
+  .btn-menu__container {
+    display: block;
+  }
 }

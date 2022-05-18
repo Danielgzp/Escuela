@@ -17,18 +17,19 @@ const Home = () => {
           <BillBoard></BillBoard>
         </div>
       </div>
-
-      <div className="row">
-        <div className="col m12 l12 s12">
-          <HomeInfo />
-        </div>
-        {/* <div className="col m4 l3 s12">
+      <div className="container">
+        <div className="row">
+          <div className="col m12 l12 s12">
+            <HomeInfo />
+          </div>
+          {/* <div className="col m4 l3 s12">
           <News />
         </div> */}
-      </div>
-      <div className="row">
-        <div className="col l12 s12">
-          <h2>Pago</h2>
+        </div>
+        <div className="row">
+          <div className="col l12 s12">
+            <h2>Pago</h2>
+          </div>
         </div>
       </div>
       <div className="row">

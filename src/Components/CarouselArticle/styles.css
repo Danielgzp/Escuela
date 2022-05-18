@@ -1,0 +1,152 @@
+#billboard .carousel {
+  background-color: #3a3a3a;
+  height: 550px;
+}
+#billboard .carousel-background {
+  background-image: url("../../images/loginFont.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+}
+#billboard .carousel-item {
+  width: 78%;
+  /* height: 85%;  */
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+}
+#billboard .carousel-item__image {
+  width: 100%;
+  height: 70%;
+}
+#billboard .carousel-item__image img {
+  height: 100%;
+  width: 101%;
+  border-radius: 15px 15px 0 0;
+  margin-left: -1px;
+}
+#billboard .carousel-item__info {
+  width: 100%;
+  height: 130%;
+  padding: 0px 10px 10px 10px;
+}
+#billboard .carousel-item__info p {
+  font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;;
+  line-height: 20px;
+  text-align: justify;
+}
+#billboard .carousel-item__info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  color: var(--dark-red2);
+  padding: 10px 0;
+  font-weight: 600;
+  font-family: "Fira Sans";
+  color: var(--dark-red);
+  text-align: center;
+}
+#billboard .btn {
+  margin-top: 10px;
+  position: relative;
+  height: 30px;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+#billboard .btn:hover {
+  background-color: rgb(241, 60, 60);
+}
+#billboard .carousel .indicators .indicator-item {
+  background-color: white;
+}
+#billboard .carousel .indicators .indicator-item.active {
+  background-color: red;
+}
+#billboard .indicator-item {
+  margin: 14px 4px;
+}
+
+@media (min-width: 768px) {
+  #billboard .carousel {
+    height: 420px;
+  }
+  #billboard .carousel-item {
+    width: 78%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 15px;
+    min-height: 0%;
+  }
+  #billboard .carousel-item__image {
+    width: 100%;
+    height: 100%;
+  }
+  #billboard .carousel-item__image img {
+    height: 100%;
+    width: 101%;
+    border-radius: 15px 0 0 15px;
+    margin-left: -1px;
+  }
+  #billboard .carousel-item__info {
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px 15px 15px;
+  }
+}
+@media (min-width: 1024px) {
+  #billboard .carousel {
+    height: 460px;
+  }
+  #billboard .carousel-item {
+    width: 60%;
+    height: 82%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 0;
+    margin-top: -20px;
+  }
+  #billboard .carousel-item__image {
+    width: 95%;
+    height: 100%;
+  }
+  #billboard .carousel-item__image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+  #billboard .carousel-item__info {
+    width: 105%;
+    height: 100%;
+    padding: 25px 40px 0 40px;
+  }
+  #billboard .carousel-item__info h4 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+#billboard .carousel-item__info p {
+  font-size: 14px;
+  text-align: left;
+}
+#billboard .btn {
+  float: left;
+  margin-top: 20px;
+}
+#billboard .btn i{
+  
+  margin-top: -2px;
+}
+
+}
+@media (min-width: 1444px) {
+  .history-frame {
+    width: 850px;
+    height: 600px;
+  }
+}
