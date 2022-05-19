@@ -13,7 +13,7 @@ const CarouselArticle = ({ img, title, description, link }) => {
         <h4>{title}</h4>
         <p>{description}</p>
 
-        <Link href={link} className="btn waves-effect red white-text">
+        <Link to={link} className="btn waves-effect red white-text">
           Ver mas
           <i className="material-icons right">arrow_forward</i>
         </Link>

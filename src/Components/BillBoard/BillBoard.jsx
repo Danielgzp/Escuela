@@ -274,5 +274,5 @@ export default BillBoard;
             ></div>
           </div>
         </ul>{" "} 
-        <ul class="indicators"></ul>
+        <ul className="indicators"></ul>
       </div>*/
