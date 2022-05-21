@@ -74,133 +74,134 @@ const AdminMenu = ({}) => {
   // });
 
   return (
-    <ul id="slide-out" className="sidenav secundary">
-      <ul>
-        <li>
-          <div className="user-view">
-            <div className="background"></div>
-            {/* Nombre del Colegio  */}
-            <div className="full-box text-center text-titles">
-              <i
-                className="zmdi zmdi-close btn-menu-dashboard visible-xs"
-                onClick={() => handleCloseMenu()}
-              />
-              U.E Colegio Fe y Alegria San Francisco
-            </div>
-            <div className="user-view__container text-center">
-              <figcaption>
-                <img src={admin} className="circle" />
-              </figcaption>
+    <aside>
+      <ul id="slide-out" className="sidenav secundary">
+        <ul>
+          <li>
+            <div className="user-view">
+              <div className="background"></div>
+              {/* Nombre del Colegio  */}
+              <div className="full-box text-center text-titles">
+                <i
+                  className="zmdi zmdi-close btn-menu-dashboard visible-xs"
+                  onClick={() => handleCloseMenu()}
+                />
+                U.E Colegio Fe y Alegria San Francisco
+              </div>
+              <div className="user-view__container text-center">
+                <figcaption>
+                  <img src={admin} className="circle" />
+                </figcaption>
 
-              <a href="#name">
-                <span className="white-text name">John Doe</span>
-              </a>
-              <a href="#email">
-                <span className="white-text email">jdandturk@gmail.com</span>
-              </a>
+                <a href="#name">
+                  <span className="white-text name">John Doe</span>
+                </a>
+                <a href="#email">
+                  <span className="white-text email">jdandturk@gmail.com</span>
+                </a>
+              </div>
+              <div className="full-box dashboard-sideBar-UserInfo">
+                {/* Botones de iniciar sesión y configuración*/}
+                <ul className="full-box list-unstyled text-center">
+                  <li className="center">
+                    <a href="#!" className="enter">
+                      <i className="zmdi zmdi-settings" />
+                    </a>
+                  </li>
+                  <li
+                    onClick={() => {
+                      Swal.fire({
+                        title: "¿Estas seguro?",
+                        text: "La sesión actual se cerrará",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText:
+                          '<i className="zmdi zmdi-run"></i> Salir',
+                      }).then((result) => {
+                        if (result.isConfirmed) {
+                          window.location.href = "/login";
+                        }
+                      });
+                    }}
+                  >
+                    <a href="#!" className="btn-exit-system center">
+                      <i className="zmdi zmdi-power" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="full-box dashboard-sideBar-UserInfo">
-              {/* Botones de iniciar sesión y configuración*/}
-              <ul className="full-box list-unstyled text-center">
-                <li className="center">
-                  <a href="#!" className="enter">
-                    <i className="zmdi zmdi-settings" />
-                  </a>
-                </li>
-                <li
-                  onClick={() => {
-                    Swal.fire({
-                      title: "¿Estas seguro?",
-                      text: "La sesión actual se cerrará",
-                      icon: "warning",
-                      showCancelButton: true,
-                      confirmButtonColor: "#3085d6",
-                      cancelButtonColor: "#d33",
-                      confirmButtonText:
-                        '<i className="zmdi zmdi-run"></i> Salir',
-                    }).then((result) => {
-                      if (result.isConfirmed) {
-                        window.location.href = "/login";
-                      }
-                    });
-                  }}
-                >
-                  <a href="#!" className="btn-exit-system center">
-                    <i className="zmdi zmdi-power" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      </ul>
-      {/* Nombre del Colegio  */}
-      {/* <div className="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+          </li>
+        </ul>
+        {/* Nombre del Colegio  */}
+        {/* <div className="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
           U.E Colegio Fe y Alegria San Francisco
         </div> */}
-      {/* Menu de barra deslizante*/}
-      <ul className="list-unstyled full-box dashboard-sideBar-Menu">
-        <li>
-          <Link to="/admin">
-            <i className="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Home
-          </Link>
-        </li>
-        {/*Administrar */}
-        <li>
-          <a
-            href="#!"
-            className="btn-sideBar-SubMenu"
-            onClick={() => handleOnClick()}
-          >
-            <i className="zmdi zmdi-case zmdi-hc-fw" /> Administrar{" "}
-            <i className="zmdi zmdi-caret-down pull-right" />
-          </a>
-          {/* Submenú de Administrar*/}
-          <ul className="list-unstyled full-box">
-            <li>
-              <a href="subject.html">
-                <i className="zmdi zmdi-book zmdi-hc-fw" />
-                {"   "} Materias
-              </a>
-            </li>
-            <li>
-              <a href="section.html">
-                <i className="zmdi zmdi-graduation-cap zmdi-hc-fw" />
-                {"   "} Secciones
-              </a>
-            </li>
-          </ul>
-        </li>
-        {/* Usuarios */}
-        <li>
-          <a
-            href="#!"
-            className="btn-sideBar-SubMenu"
-            onClick={() => handleOnClick()}
-          >
-            <i className="zmdi zmdi-account-add zmdi-hc-fw" /> Usuarios{" "}
-            <i className="zmdi zmdi-caret-down pull-right" />
-          </a>
-          {/* Submenú de usuarios*/}
-          <ul className="list-unstyled full-box">
-            <li>
-              <Link to="/admin/addnewadmin">
-                <i className="zmdi zmdi-account zmdi-hc-fw" /> Administradores
-              </Link>
-            </li>
-            <li>
-              <Link to="/admin/addnewteacher">
-                <i className="zmdi zmdi-male-alt zmdi-hc-fw" /> Docentes
-              </Link>
-            </li>
-            <li>
-              <Link to="/admin/addnewstudent">
-                <i className="zmdi zmdi-face zmdi-hc-fw" /> Estudiantes
-              </Link>
-            </li>
-          </ul>
-        </li>
-        {/* Metodos de Pago
+        {/* Menu de barra deslizante*/}
+        <ul className="list-unstyled full-box dashboard-sideBar-Menu">
+          <li>
+            <Link to="/admin">
+              <i className="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Home
+            </Link>
+          </li>
+          {/*Administrar */}
+          <li>
+            <a
+              href="#!"
+              className="btn-sideBar-SubMenu"
+              onClick={() => handleOnClick()}
+            >
+              <i className="zmdi zmdi-case zmdi-hc-fw" /> Administrar{" "}
+              <i className="zmdi zmdi-caret-down pull-right" />
+            </a>
+            {/* Submenú de Administrar*/}
+            <ul className="list-unstyled full-box">
+              <li>
+                <a href="subject.html">
+                  <i className="zmdi zmdi-book zmdi-hc-fw" />
+                  {"   "} Materias
+                </a>
+              </li>
+              <li>
+                <a href="section.html">
+                  <i className="zmdi zmdi-graduation-cap zmdi-hc-fw" />
+                  {"   "} Secciones
+                </a>
+              </li>
+            </ul>
+          </li>
+          {/* Usuarios */}
+          <li>
+            <a
+              href="#!"
+              className="btn-sideBar-SubMenu"
+              onClick={() => handleOnClick()}
+            >
+              <i className="zmdi zmdi-account-add zmdi-hc-fw" /> Usuarios{" "}
+              <i className="zmdi zmdi-caret-down pull-right" />
+            </a>
+            {/* Submenú de usuarios*/}
+            <ul className="list-unstyled full-box">
+              <li>
+                <Link to="/admin/addnewadmin">
+                  <i className="zmdi zmdi-account zmdi-hc-fw" /> Administradores
+                </Link>
+              </li>
+              <li>
+                <Link to="/admin/addnewteacher">
+                  <i className="zmdi zmdi-male-alt zmdi-hc-fw" /> Docentes
+                </Link>
+              </li>
+              <li>
+                <Link to="/admin/addnewstudent">
+                  <i className="zmdi zmdi-face zmdi-hc-fw" /> Estudiantes
+                </Link>
+              </li>
+            </ul>
+          </li>
+          {/* Metodos de Pago
 				<li>
 					<a href="#!" className="btn-sideBar-SubMenu">
 						<i className="zmdi zmdi-card zmdi-hc-fw"></i> Payments <i className="zmdi zmdi-caret-down pull-right"></i>
@@ -229,8 +230,9 @@ const AdminMenu = ({}) => {
 			</ul>
 		</div>
 	        */}
+        </ul>
       </ul>
-    </ul>
+    </aside>
   );
 };
 

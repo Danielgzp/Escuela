@@ -10,6 +10,7 @@ import credentials from "../credentials";
 const mapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${credentials.mapsKey}`;
 
 const Home = () => {
+  
   return (
     <main>
       <div className="row">

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./styles.css";
 import M from "materialize-css";
@@ -22,7 +22,7 @@ const BillBoard = () => {
 
   return (
     <section id="billboard">
-      <div id="cincopa_d0220b">...</div>
+      {/* <div id="cincopa_d0220b">...</div> */}
       <div className="carousel carousel-slider center">
         <div className="carousel-background"></div>
         <CarouselArticle

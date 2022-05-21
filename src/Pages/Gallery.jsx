@@ -1,9 +1,11 @@
 import React from "react";
+import Datatables from "../Components/Tables/Datatables";
 
 const Gallery = () => {
   return (
-    
-      <div><h1>Esta sera la galeria</h1></div>
+    <div>
+      <Datatables />
+    </div>
   );
 };
 

@@ -1,81 +1,38 @@
-import React from 'react'
+import React from "react";
 
 const Tables = () => {
   return (
-    <div id="myTabContent" className="tab-content">
-      <div className="tab-pane fade active in" id="new">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-xs-12 col-md-10 col-md-offset-1">
-              <form action>
-                <div className="form-group label-floating">
-                  <label className="control-label">Nombre</label>
-                  <input className="form-control" type="text" />
-                </div>
-                <div className="form-group label-floating">
-                  <label className="control-label">Apellido</label>
-                  <input className="form-control" type="text" />
-                </div>
-                <div className="form-group label-floating">
-                  <label className="control-label">Dirección</label>
-                  <textarea className="form-control" defaultValue={""} />
-                </div>
-                <div className="form-group label-floating">
-                  <label className="control-label">Correo</label>
-                  <input className="form-control" type="text" />
-                </div>
-                <div className="form-group label-floating">
-                  <label className="control-label">Telefono</label>
-                  <input className="form-control" type="text" />
-                </div>
-                <div className="form-group">
-                  <label className="control-label">Foto</label>
-                  <div>
-                    <input
-                      type="text"
-                      readOnly
-                      className="form-control"
-                      placeholder="Buscar..."
-                    />
-                    <input type="file" />
-                  </div>
-                </div>
-                <p className="text-center">
-                  <button href="#!" className="btn btn-info btn-raised btn-sm">
-                    <i className="zmdi zmdi-floppy" /> Guardar
-                  </button>
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section>
       <div className="tab-pane fade" id="list">
         <div className="table-responsive">
-          <table className="table table-hover text-center">
-            <thead>
+          <table className="table table-bordered align-middle">
+            <thead className="table-dark">
               <tr>
-                <th className="text-center">#</th>
-                <th className="text-center">Nombre</th>
-                <th className="text-center">Apellido</th>
-                <th className="text-center">Direccion</th>
-                <th className="text-center">Correo</th>
-                <th className="text-center">Telefono</th>
-                <th className="text-center">Actualizar</th>
-                <th className="text-center">Borrar</th>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Grado</th>
+                <th>Sección</th>
+                <th>Ver perfil</th>
+                <th>Borrar</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Carlos</td>
-                <td>Alfaro</td>
+                <td>Carlos Gabriel</td>
+                <td>Alfaro Dominguez</td>
                 <td>Barquisimeto</td>
-                <td>carlos@gmail.com</td>
+                <td>carlosalfaro@gmail.com</td>
                 <td>04245974905</td>
+                <td>1er Grado</td>
+                <td>A</td>
                 <td>
                   <a href="#!" className="btn btn-success btn-raised btn-xs">
-                    <i className="zmdi zmdi-refresh" />
+                    <i className="zmdi zmdi-account" />
                   </a>
                 </td>
                 <td>
@@ -91,9 +48,11 @@ const Tables = () => {
                 <td>Barquisimeto</td>
                 <td>alicia@gmail.com</td>
                 <td>04245974905</td>
+                <td>1er Grado</td>
+                <td>A</td>
                 <td>
                   <a href="#!" className="btn btn-success btn-raised btn-xs">
-                    <i className="zmdi zmdi-refresh" />
+                    <i className="zmdi zmdi-account" />
                   </a>
                 </td>
                 <td>
@@ -109,9 +68,11 @@ const Tables = () => {
                 <td>Barquisimeto</td>
                 <td>sarai@gmail.com</td>
                 <td>04245974905</td>
+                <td>1er Grado</td>
+                <td>A</td>
                 <td>
                   <a href="#!" className="btn btn-success btn-raised btn-xs">
-                    <i className="zmdi zmdi-refresh" />
+                    <i className="zmdi zmdi-account" />
                   </a>
                 </td>
                 <td>
@@ -127,9 +88,11 @@ const Tables = () => {
                 <td>Barquisimeto</td>
                 <td>alba@gmail.com</td>
                 <td>04245974905</td>
+                <td>1er Grado</td>
+                <td>A</td>
                 <td>
                   <a href="#!" className="btn btn-success btn-raised btn-xs">
-                    <i className="zmdi zmdi-refresh" />
+                    <i className="zmdi zmdi-account" />
                   </a>
                 </td>
                 <td>
@@ -165,8 +128,8 @@ const Tables = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
-export default Tables
+export default Tables;
