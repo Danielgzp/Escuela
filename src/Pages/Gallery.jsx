@@ -1,12 +1,9 @@
-import React from "react";
-import Datatables from "../Components/Tables/Datatables";
+import React from 'react'
 
 const Gallery = () => {
   return (
-    <div>
-      <Datatables />
-    </div>
-  );
-};
+    <div>Gallery</div>
+  )
+}
 
-export default Gallery;
+export default Gallery

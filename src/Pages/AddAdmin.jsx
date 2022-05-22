@@ -7,6 +7,7 @@ import Tables from "../Components/Tables/Tables";
 
 import { TablesFadeIn } from "../js/tables";
 import M from "materialize-css";
+import DataTable from "../Components/Tables/MyDataTable";
 
 const AddAdmin = () => {
   
@@ -186,7 +187,7 @@ const AddAdmin = () => {
                     </div>
                   </div>
                 </div>
-                <Tables />
+                <DataTable />
               </div>
             </div>
           </div>
