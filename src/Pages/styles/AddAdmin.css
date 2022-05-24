@@ -1,0 +1,10 @@
+.dataMenu{
+    
+}
+.dataMenu .indicator{
+    background-color: red;
+}
+.dataMenu .tab a{
+    text-decoration: none;
+    color: black !important;
+}

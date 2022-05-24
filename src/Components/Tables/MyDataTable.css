@@ -1,3 +1,84 @@
-.students-table select{
-    display: block !important;
+.students-table{
+    margin: 10px;
+}
+.students-table nav {
+  height: auto;
+  line-height: normal;
+}
+.students-table select {
+  display: inline-block !important;
+}
+#search-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#search-container form {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  background-color: transparent;
+}
+#search-container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  margin-right: 10px;
+  
+}
+#search-container input {
+  margin: 0;
+  border: 1px rgba(128, 128, 128, 0.507) solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 0.9rem;
+  height: 99%;
+}
+#search-container input[type="text"]:focus {
+  box-shadow: none;
+}
+#search-container h2{
+    font-size: 1.2rem;
+    color: rgb(67, 67, 223);
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+}
+.rdt_Pagination{
+    display: flex;
+    align-items: center;
+}
+.rdt_Pagination button{
+    border-right: 1px grey solid;
+    border-radius: 0%;
+    padding: 0;
+    width: 60px;
+    height: 40px;
+    color: white;
+    background-color: rgb(77, 88, 233)
+}
+.rdt_Pagination i{
+    height: 100% !important;
+    line-height: 40px !important;
+}
+.rdt_TableHeadRow{
+    background-color: rgb(77, 88, 233) !important;
+    color: white;
+}
+/* .rdt_TableCol{
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+    margin-bottom: -1px;
+}
+.rdt_TableCell{
+    border-right: 1px grey solid;
+    border-bottom: 1px grey solid;
+    margin-top: -1px;
+} */
+.rdt_Table{
+    text-align: center;
 }

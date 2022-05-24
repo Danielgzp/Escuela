@@ -1,0 +1,9 @@
+.fasfagaInfo-container{
+   margin-top: 20px;
+   padding: 0 20px;
+}
+.fasfagaInfo-container span{
+font-size: 1.4rem;
+color: grey;
+font-weight: 400;
+}

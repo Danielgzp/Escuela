@@ -1,12 +1,14 @@
 import React, { useEffect, useMemo, useState } from "react";
 
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { Pagination } from "react-bootstrap";
 import DataTable from "react-data-table-component";
 
 import "./MyDataTable.css";
 import Loader from "../Loader/Loader";
 import PageError from "../Error/PageError";
 import { Link } from "react-router-dom";
+import SearchTable from "./SearchTable";
 
 const columnas = [
   {
@@ -14,6 +16,9 @@ const columnas = [
     selector: (row) => row.id,
     sortable: true,
     reorder: true,
+    style: {
+      backgroundColor: "rgba(187, 204, 221, 1)",
+    },
   },
   {
     name: "Nombre",
@@ -43,9 +48,9 @@ const columnas = [
   },
   {
     cell: (row) => (
-      <Link to={row.url} target="_blank" rel="noopener noreferrer">
+      <a href={row.url} target="_blank" rel="noopener noreferrer">
         <i className="zmdi zmdi-account"></i>
-      </Link>
+      </a>
     ),
     name: "Ver perfil",
     sorteble: true,
@@ -54,21 +59,26 @@ const columnas = [
 ];
 
 const paginationOptions = {
-  rowsPerPageText: "Filas por pagina",
-  rangeSeparatorText: "de",
+  rowsPerPageText: "",
+  rangeSeparatorText: "of",
+  noRowsPerPage: false,
   selectAllRowsItem: true,
-  selectAllRowsItemText: "Todos",
+  selectAllRowsItemText: "All",
 };
+
+
 
 const MyDataTable = () => {
   const [state, setState] = useState({
     loading: false,
     error: null,
   });
+
   const [api, setApi] = useState([]);
   let [numberPage, setnumberPage] = useState(1);
   const [search, setSearch] = useState("");
   const API_URL = `https://rickandmortyapi.com/api/character/?page=${numberPage}`;
+  let lastPage = document.getElementById("pagination-last-page");
 
   useEffect(() => {
     async function fetchData() {
@@ -117,8 +127,8 @@ const MyDataTable = () => {
   const handleChangeButton = (e) => {
     setSearch(e.target.value);
   };
-  const handleClick = () => {
-    setnumberPage(numberPage = numberPage + 1);
+  const handleClickNext = () => {
+    setnumberPage((numberPage = numberPage + 1));
     async function fetchChangePage() {
       try {
         const data = await fetch(API_URL);
@@ -127,6 +137,26 @@ const MyDataTable = () => {
       } catch (error) {}
     }
     fetchChangePage();
+  };
+  const handleClickPrev = () => {
+    setnumberPage((numberPage = numberPage - 1));
+    async function fetchChangePage() {
+      try {
+        const data = await fetch(API_URL);
+        const response = await data.json();
+        setApi(response.results);
+      } catch (error) {}
+    }
+    fetchChangePage();
+  };
+  const PaginationComponent = () => {
+    return (
+      <Pagination>
+        <Pagination.Prev />
+        <Pagination.Item>1</Pagination.Item>
+        <Pagination.Next onClick={handleClickNext} />
+      </Pagination>
+    );
   };
 
   // if (state.loading) {
@@ -137,42 +167,40 @@ const MyDataTable = () => {
   // }
 
   return (
-    <div className="table-responsive table-striped students-table">
-      <button onClick={handleClick}>CAMBIA</button>
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s6">
-            <button>
-              <i class="material-icons prefix">search</i>
-            </button>
-            <input
-              type="text"
-              placeholder="Buscar..."
-              value={state.search}
-              onChange={handleChangeButton}
-            />
-          </div>
-        </div>
-      </form>
+    <div className="table-responsive students-table z-depth-3">
       <DataTable
-        className="table-stripe"
         columns={columnas}
         data={filter}
-        title="Lista de Alumnos"
-        // paginationComponentOptions={paginationOptions}
+        title=""
+        paginationComponentOptions={paginationOptions}
         fixedHeader
-        //theme="dark"
         striped={true}
         noDataComponent={<h2>No se encontro ningun elemento</h2>}
         progressPending={state.loading}
         progressComponent={<Loader />}
         pagination
+        paginationComponent={PaginationComponent}
+        paginationIconNext={<text onClick={handleClickNext}>Next</text>}
+        paginationIconPrevious={<text onClick={handleClickPrev}>Previus</text>}
+        paginationIconFirstPage={
+          <i className="material-icons icon-white">fast_rewind</i>
+        }
+        paginationIconLastPage={
+          <i className="material-icons icon-white">fast_forward</i>
+        }
         paginationServer
         paginationTotalRows={826}
         selectableRows
         onChangeRowsPerPage={20}
-        onChangePage={handleClick}
         fixedHeaderScrollHeight="500px"
+        subHeader
+        subHeaderComponent={
+          <SearchTable
+            handleClickButton={handleClickNext}
+            handleChangeButton2={handleChangeButton}
+            props={state.search}
+          />
+        }
       />
       {/* <DataTable
         className="table-stripe"
