@@ -16,11 +16,16 @@ const AdminMenu = ({}) => {
     sidebar: "",
     target: "",
   });
-
+  
+  //  document.addEventListener("click", function () {
+  //    let icon = document.querySelector(
+  //      "a.btn-sideBar-SubMenu > i.zmdi-caret-down"
+  //    );
+  //  });
   useEffect(() => {
     setMenu({
-      subMenu: document.querySelector(".btn-sideBar-SubMenu"),
-      btnSubMenu: document.querySelectorAll(
+      subMenu: document.querySelectorAll(".btn-sideBar-SubMenu"),
+      btnSubMenu: document.querySelector(
         "ul.dashboard-sideBar-Menu > li > ul"
       ),
 
@@ -34,19 +39,48 @@ const AdminMenu = ({}) => {
   }, []);
 
   const handleOnClick = () => {
-    for (var i = 0; i < menu.iconSubMenuBtn.length; i++) {
-      if (showArrowDownMenu) {
-        menu.btnSubMenu[i].classList.remove("show-sideBar-SubMenu");
-        menu.iconSubMenuBtn[i].classList.remove("zmdi-hc-rotate-180");
-        // menu.btnSubMenu[i].classList.remove("show-sideBar-SubMenu");
-        // menu.iconSubMenuBtn[i].classList.remove("zmdi-hc-rotate-180");
-      } else {
-        menu.iconSubMenuBtn[i].classList.add("zmdi-hc-rotate-180");
-        menu.btnSubMenu[i].classList.add("show-sideBar-SubMenu");
-      }
-      // menu.iconSubMenuBtn[i].classList.add("zmdi-hc-rotate-180");
-      // menu.btnSubMenu[i].classList.add("show-sideBar-SubMenu");
-    }
+    menu.subMenu.forEach((men) => {
+      men.addEventListener("click", () => {
+        let btnSubMenu = men.nextSibling
+        let iconDown = men.lastChild;
+        if (showArrowDownMenu) {
+          btnSubMenu.classList.remove("show-sideBar-SubMenu");
+          iconDown.classList.remove("zmdi-hc-rotate-180");
+          // menu.btnSubMenu[i].classList.remove("show-sideBar-SubMenu");
+          // menu.iconSubMenuBtn[i].classList.remove("zmdi-hc-rotate-180");
+        } else {
+          btnSubMenu.classList.add("show-sideBar-SubMenu");
+          iconDown.classList.add("zmdi-hc-rotate-180");
+        }
+      })
+    })
+    
+    // menu.subMenu.
+    // menu.subMenu.forEach((iconos) => {
+    //   iconos.addEventListener("click", () => {
+
+    //     if (showArrowDownMenu) {
+    //       menu.btnSubMenu[0].classList.remove("show-sideBar-SubMenu");
+    //     } else {
+    //       menu.btnSubMenu[0].classList.add("show-sideBar-SubMenu");
+    //     }
+    //   });
+    // });
+    // console.log(menu.subMenu)
+
+    // for (var i = 0; i < menu.iconSubMenuBtn.length; i++) {
+    //   if (showArrowDownMenu) {
+    //     menu.btnSubMenu[i].classList.remove("show-sideBar-SubMenu");
+    //     menu.iconSubMenuBtn[i].classList.remove("zmdi-hc-rotate-180");
+    //     // menu.btnSubMenu[i].classList.remove("show-sideBar-SubMenu");
+    //     // menu.iconSubMenuBtn[i].classList.remove("zmdi-hc-rotate-180");
+    //   } else {
+    //     menu.iconSubMenuBtn[i].classList.add("zmdi-hc-rotate-180");
+    //     menu.btnSubMenu[i].classList.add("show-sideBar-SubMenu");
+    //   }
+    //   // menu.iconSubMenuBtn[i].classList.add("zmdi-hc-rotate-180");
+    //   // menu.btnSubMenu[i].classList.add("show-sideBar-SubMenu");
+    // }
     setArrowDowMenu(!showArrowDownMenu);
   };
 
@@ -159,13 +193,13 @@ const AdminMenu = ({}) => {
             {/* Submenú de Administrar*/}
             <ul className="list-unstyled full-box">
               <li>
-                <a href="subject.html">
+                <a href="#">
                   <i className="zmdi zmdi-book zmdi-hc-fw" />
                   {"   "} Materias
                 </a>
               </li>
               <li>
-                <a href="section.html">
+                <a href="#">
                   <i className="zmdi zmdi-graduation-cap zmdi-hc-fw" />
                   {"   "} Secciones
                 </a>

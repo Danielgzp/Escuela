@@ -10,11 +10,9 @@ import M from "materialize-css";
 
 const History = () => {
   useEffect(() => {
-    document.addEventListener("DOMContentLoaded", function () {
-      var elems = document.querySelector(".collapsible");
-      var instances = M.Collapsible.init(elems, {
-        accordion: true
-      });
+    var elems = document.querySelector(".collapsible");
+    var instances = M.Collapsible.init(elems, {
+      accordion: true,
     });
   }, []);
 

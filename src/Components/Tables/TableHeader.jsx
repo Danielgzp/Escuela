@@ -1,20 +1,20 @@
 import React from "react";
 
-const SearchTable = ({ handleClickButton, props, handleChangeButton2 }) => {
+const TableHeader = ({ props, changeButton }) => {
   return (
-    <div id="search-container">
-      <h2>Lista de Alumnos</h2>
+    <div id="headerTable-container">
+      <h2 className="table-title">Lista de Alumnos</h2>
 
       <div className="search-bar">
         <p>
           <i class="material-icons">search</i>
-          Buscar: 
+          Buscar:
         </p>
         <form>
           <input
             type="text"
             value={props}
-            onChange={handleChangeButton2}
+            onChange={changeButton}
             className="z-depth-2"
           />
         </form>
@@ -23,4 +23,4 @@ const SearchTable = ({ handleClickButton, props, handleChangeButton2 }) => {
   );
 };
 
-export default SearchTable;
+export default TableHeader;

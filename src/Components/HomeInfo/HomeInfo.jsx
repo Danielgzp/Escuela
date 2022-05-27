@@ -16,7 +16,7 @@ const HomeInfo = () => {
           <div className="card z-depth-3">
             <div className="card-image">
               <img src={pastoral} />
-              <a className="btn-floating halfway-fab waves-effect waves-light red">
+              <a href="/pastoral" className="btn-floating halfway-fab waves-effect waves-light red">
                 <i className="material-icons">add</i>
               </a>
             </div>

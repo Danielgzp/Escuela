@@ -12,7 +12,7 @@ import CarouselArticle from "../CarouselArticle/CarouselArticle";
 import "./styles.css";
 
 const BillBoard = () => {
-  document.addEventListener("DOMContentLoaded", function () {
+  useEffect(() => {
     var elems = document.querySelector(".carousel");
     var instances = M.Carousel.init(elems, {
       duration: 600,

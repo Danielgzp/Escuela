@@ -1,23 +1,21 @@
 import React, { useEffect } from "react";
 
-import './styles/AddAdmin.css'
+import "./styles/AddAdmin.css";
 import AdminHeader from "../Components/AdminHeader/AdminHeader";
 import AdminMenu from "../Components/AdminMenu/AdminMenu";
 
 import M from "materialize-css";
-import DataTable from "../Components/Tables/MyDataTable";
 import AddAdminForm from "../Components/FormsFasfaga/AddAdminForm";
 import InformatioFasfaga from "../Components/InformationFasfaga/InformationFasfaga";
+import MyDataTable from "../Components/Tables/MyDataTable";
 
 const AddAdmin = () => {
-  document.addEventListener("DOMContentLoaded", function () {
+  useEffect(() => {
     var elems = document.querySelectorAll("select");
+    var elems2 = document.querySelectorAll(".tabs");
     var instances = M.FormSelect.init(elems, {});
-  });
-  document.addEventListener("DOMContentLoaded", function () {
-    var elems = document.querySelectorAll(".tabs");
-    var instance = M.Tabs.init(elems, {});
-  });
+    var instance2 = M.Tabs.init(elems2, {});
+  }, []);
 
   return (
     <main className="addAdmin">
@@ -25,26 +23,23 @@ const AddAdmin = () => {
       <section className="full-box dashboard-contentPage">
         <AdminHeader></AdminHeader>
         <InformatioFasfaga user="Administradores" icon="account" />
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col s12">
-              <ul id="tabs-swipe-demo" class="tabs dataMenu">
-                <li class="tab col s6">
-                  <a href="#test-swipe-1" class="active">
-                    Nuevo Admin
-                  </a>
-                </li>
-                <li class="tab col s6">
-                  <a href="#test-swipe-2">Administradores</a>
-                </li>
-              </ul>
-              <div id="test-swipe-1" class="col s12 active">
-                <AddAdminForm />
-              </div>
-              <div id="test-swipe-2" class="col s12">
-                <DataTable />
-              </div>
-            </div>
+
+        <div className="swipes-container">
+          <ul id="swipeList" class="tabs dataMenu">
+            <li class="tab">
+              <a href="#swipeForm" class="active">
+                Nuevo Admin
+              </a>
+            </li>
+            <li class="tab ">
+              <a href="#swipeTable">Administradores</a>
+            </li>
+          </ul>
+          <div id="swipeForm" class=" active">
+            <AddAdminForm />
+          </div>
+          <div id="swipeTable" class="">
+            <MyDataTable />
           </div>
         </div>
       </section>

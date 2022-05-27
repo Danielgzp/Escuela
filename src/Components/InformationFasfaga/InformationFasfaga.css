@@ -1,9 +1,19 @@
 .fasfagaInfo-container{
-   margin-top: 20px;
-   padding: 0 20px;
+   padding: 20px 20px;
+   background-image: url("../../images/loginFont.jpg");
+   background-size: cover;
+  background-position: center;
 }
 .fasfagaInfo-container span{
-font-size: 1.4rem;
-color: grey;
+font-size: 1.5rem;
+color: white;
 font-weight: 400;
+}
+.fasfagaInfo-container h1{
+   color: red;
+}
+.fasfagaInfo-container p{
+   font-size: 1.3rem;
+   font-family: var(--font-text);
+   color: white;
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Swal from "sweetalert2";
 import M from "materialize-css";
+import { Link } from "react-router-dom";
 
 const AdminHeader = () => {
   var [menuIsOpen, setMenuIsOpen] = useState(true);
@@ -12,10 +13,9 @@ const AdminHeader = () => {
   });
 
   useEffect(() => {
-    document.addEventListener("DOMContentLoaded", function () {
-      var elems = document.querySelectorAll(".sidenav");
-      var instances = M.Sidenav.init(elems, {});
-    });
+    var elems = document.querySelectorAll(".sidenav");
+    var instances = M.Sidenav.init(elems, {});
+
     setStyles({
       body: document.querySelector(".dashboard-contentPage"),
       sidebar: document.querySelector(".secundary"),
@@ -73,6 +73,7 @@ const AdminHeader = () => {
               <i className="zmdi zmdi-more-vert"></i>
             </a>
           </li>
+
           {/*
 				<li>
 					<a href="#!" className="btn-Notifications-area">
@@ -86,14 +87,15 @@ const AdminHeader = () => {
 					</a>
 				</li>
 				*/}
-          <li>
-            <a
-              href="#!"
-              className="btn-modal-help"
-              onClick={() => handleHelper()}
-            >
+          <li className="right" onClick={() => handleHelper()}>
+            <a href="#!" className="btn-modal-help">
               <i className="zmdi zmdi-help-outline"></i>
             </a>
+          </li>
+          <li className="right">
+            <Link to="/">
+              <i className="material-icons">home</i>
+            </Link>
           </li>
         </ul>
       </nav>
