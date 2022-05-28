@@ -1,16 +1,12 @@
 #swipeForm {
-    height: 100%;
+  height: 100%;
+  padding: 30px;
 }
 .newAdmin-form__container {
-  width: 100%;
-  height: 100%;
-  padding: 10px 0;
 }
 #newAdmin-form {
-  width: 100%;
-  height: 100%;
 }
-#newAdmin-form label {
+#swipeForm label {
   font-size: 1rem;
   font-weight: 400;
   top: -20px;
@@ -18,25 +14,30 @@
   font-family: "RobotoCondensed";
 }
 #newAdmin-form input {
-  width: 400px;
-  font-size: 1rem;
-  font-weight: lighter;
-  border: 2px solid var(--blue-text);
-  border-radius: 4px;
-  background-color: white;
-  padding-left: 10px;
-  box-sizing: border-box;
 }
 .inputField {
+  width: 100%;
+  margin-top: 10px;
+}
+.phones {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.phones input{
+  width: 40% !important;
+}
+.phones label{
+  width: 100%;
 }
 .personalInfo {
- display: flex;
- justify-content: space-between;
- flex-direction: column;
- padding: 10px 20px;
+  padding: 10px 20px;
 }
 .personalInfo h4 {
   width: 100%;
+}
+
+@media (min-width: 650px) {
+  #newAdmin-form input {
+  }
 }
