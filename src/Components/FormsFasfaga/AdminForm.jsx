@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 
-import "./AddAdminForm.css";
+//import "./AdminForm.css";
 
 import M from "materialize-css";
 
-const AddAdminForm = () => {
+const AdminForm = () => {
   useEffect(() => {
     var instances = M.updateTextFields();
   }, []);
+
   return (
     <section className="section">
       <form action id="newAdmin-form">
@@ -56,14 +57,13 @@ const AddAdminForm = () => {
           </div>
 
           <div className="inputField">
+            <label for="addressAdmin">Direccion</label>
             <textarea
               id="addressAdmin"
               class="materialize-textarea"
               placeholder="address"
               required
             ></textarea>
-
-            <label for="addressAdmin">Direccion</label>
           </div>
 
           <div className="inputField">
@@ -143,4 +143,4 @@ const AddAdminForm = () => {
   );
 };
 
-export default AddAdminForm;
+export default AdminForm;

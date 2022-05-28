@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
+import M from 'materialize-css';
 
 const StudentForm = () => {
+  useEffect(() => {
+    var elems = document.querySelectorAll("select");
+    var instances = M.FormSelect.init(elems, {});
+  }, []);
+    
   return (
     <div>
       <form onSubmit={""} id="newStudent-form" action>
@@ -16,41 +23,26 @@ const StudentForm = () => {
             <label for="last_name">Apellidos</label>
             <input id="last_name" className="validate" type="text" required />
           </div>
-          <div className="input-field">
-            <label for="dni">Cédula *en caso de que tenga</label>
-            <select>
-              <option value=""></option>
-              <option value="Venezolana">V</option>
-              <option value="Extranjera">E</option>
-            </select>
-            <input
-              id="dni"
-              className="validate"
-              type="number"
-              placeholder="000000000"
-            />
-          </div>
-          <div className="input-field">
-            <textarea
-              id="address"
-              class="materialize-textarea"
-              required
-            ></textarea>
-            <label for="address">Direccion</label>
-          </div>
-
           <div class="input-field">
             <input id="date" type="date" className="validate" required />
             <label for="date">Fecha de nacimiento</label>
           </div>
-
           <div className="input-field">
-            <label for="email">Correo *en caso de que tenga</label>
-            <input id="email" className="validate" type="email" />
+            <label for="birthplace">Lugar de Nacimiento</label>
+            <input id="birthplace" className="validate" type="text" required />
           </div>
           <div className="input-field">
-            <label for="telephone">Telefono *en caso de que tenga</label>
-            <input id="telephone" type="tel" class="validate" />
+            <label for="dni">Cédula de identidad escolar</label>
+            {/* <select>
+              <option value=""></option>
+              <option value="Venezolana">V</option>
+              <option value="Extranjera">E</option>
+            </select> */}
+            <input
+              id="dni"
+              className="validate"
+              type="number"
+            />
           </div>
           <div>
             <label for="sex">Sexo</label>
@@ -68,24 +60,22 @@ const StudentForm = () => {
             </p>
           </div>
           <div className="input-field">
-            <label for="picture">Buscar foto...</label>
-            <div>
-              <input type="text" readOnly />
-              <input id="picture" className="validate" type="file" />
-            </div>
+            <textarea
+              id="address"
+              class="materialize-textarea"
+              required
+            ></textarea>
+            <label for="address">Direccion</label>
           </div>
-        </div>
-        {/*-----------------Informacion Familiar------------------*/}
-        <div>
-          <h4>Informacion familiar o del representante</h4>
+          {/*-----------------Informacion Familiar------------------*/}
           <div className="input-field">
-            <label for="representative_name">Nombre del representante</label>
             <input
-              id="representative_name"
+              id="representerName"
               className="validate"
               type="text"
               required
             />
+            <label for="representerName">Nombre del Representante</label>
           </div>
           <div className="input-field">
             <label for="representative_dni">Cedula del representante</label>
@@ -96,76 +86,30 @@ const StudentForm = () => {
               required
             />
           </div>
-          <div className="input-field">
-            <label for="representative_dni">Telefono</label>
-            <input
-              id="representative_dni"
-              className="validate"
-              type="text"
-              required
-            />
-          </div>
 
           <div className="input-field">
-            <label for="representative_email">Correo</label>
-            <input
-              id="representative_email"
-              className="validate"
-              type="email"
-              required
-            />
+            <label for="telephone">Telefonos</label>
+            <input id="telephone" type="tel" class="validate" />
+            <input id="telephone2" type="tel" />
           </div>
           <div className="input-field">
-            <span>Parentesco</span>
-            <select required>
-              <option disabled selected>
-                Elige...
-              </option>
-              <option value="1">Padre/Madre</option>
-              <option value="2">Hermano/Hermana</option>
-              <option value="3">Tío/Tía</option>
-              <option value="4">Abuelo/Abuela</option>
-              <option value="5">Primo/Prima</option>
-              <option value="6">Otro</option>
-            </select>
+            <label for="email">Correo</label>
+            <input id="email" className="validate" type="email" />
           </div>
-          <div>
-            <h6>Con quién vive?</h6>
-            <p>
-              <label for="parents">
-                <input id="parents" className="validate" type="checkbox" />
-                <span>Padres</span>
-              </label>
-            </p>
-            <p>
-              <label for="brothers">
-                <input id="brothers" className="validate" type="checkbox" />
-                <span>Hermanos</span>
-              </label>
-            </p>
-            <p>
-              <label for="uncles">
-                <input
-                  id="uncles"
-                  className="validate"
-                  type="checkbox"
-                  class="filled-in"
-                />
-                <span>Tíos</span>
-              </label>
-            </p>
-            <p>
-              <label for="grandparents">
-                <input id="grandparents" type="checkbox" />
-                <span>Abuelos</span>
-              </label>
-            </p>
-            <p>
-              <label for="others">
-                <input id="others" className="validate" type="checkbox" />
-                <span>Otros</span>
-              </label>
-            </p>
+          <div className="input-field">
+            <input
+              id="living"
+              className="validate"
+              type="text"
+            />
+            <label for="living">Condición de vivienda</label>
+          </div>
+          <div className="input-field">
+            <label for="picture">Buscar foto...</label>
+            <div>
+              <input type="text" readOnly />
+              <input id="picture" className="validate" type="file" />
+            </div>
           </div>
         </div>
         {/*-----------------Informacion Academica------------------*/}
@@ -204,86 +148,6 @@ const StudentForm = () => {
           </div>
         </div>
 
-        {/*-----------------Informacion de Salud------------------*/}
-        <div className="healthy">
-          <h4>Informacion de Salud</h4>
-          <p>
-            <label for="Esquizofrenia">
-              <input id="Esquizofrenia" className="validate" type="checkbox" />
-              <span>Esquizofrenia*</span>
-            </label>
-          </p>
-          <p>
-            <label for="bipolaridad">
-              <input id="bipolaridad" className="validate" type="checkbox" />
-              <span>Bipolaridad</span>
-            </label>
-          </p>
-          <p>
-            <label for="Nervios">
-              <input
-                id="Nervios"
-                className="validate"
-                type="checkbox"
-                class="filled-in"
-              />
-              <span>Nervios</span>
-            </label>
-          </p>
-          <p>
-            <label for="Alergias">
-              <input id="Alergias" type="checkbox" />
-              <span>Alergias*</span>
-            </label>
-          </p>
-          <p>
-            <label for="Diabetes">
-              <input id="Diabetes" className="validate" type="checkbox" />
-              <span>Diabetes*</span>
-            </label>
-          </p>
-          <p>
-            <label for="Migrañas">
-              <input id="Migrañas" className="validate" type="checkbox" />
-              <span>Migrañas</span>
-            </label>
-          </p>
-          <p>
-            <label for="Asma">
-              <input id="Asma" className="validate" type="checkbox" />
-              <span>Asma</span>
-            </label>
-          </p>
-          <p>
-            <label for="Rinitis">
-              <input id="Rinitis" className="validate" type="checkbox" />
-              <span>Rinitis*</span>
-            </label>
-          </p>
-          <div>
-            <h5>Presenta alguna condicion</h5>
-            <p>
-              <label>
-                <input class="with-gap" name="conditionGroup" type="radio" />
-                <span>Si</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input class="with-gap" name="conditionGroup" type="radio" />
-                <span>No</span>
-              </label>
-            </p>
-          </div>
-          <div className="input-field">
-            <textarea
-              id="condition"
-              name="conditionGroup"
-              class="materialize-textarea"
-            />
-            <label for="condition">Que tipo de condicion presenta:</label>
-          </div>
-        </div>
         <button class="btn red waves-effect" type="submit" name="action">
           Submit
           <i class="material-icons right">send</i>
@@ -294,3 +158,165 @@ const StudentForm = () => {
 }
 
 export default StudentForm
+
+{
+  /*-----------------Informacion Familiar------------------*/
+}
+/*<div>
+  <h4>Informacion familiar o del representante</h4>
+  <div className="input-field">
+    <label for="representative_name">Nombre del representante</label>
+    <input id="representative_name" className="validate" type="text" required />
+  </div>
+  <div className="input-field">
+    <label for="representative_dni">Cedula del representante</label>
+    <input id="representative_dni" className="validate" type="text" required />
+  </div>
+  <div className="input-field">
+    <label for="representative_dni">Telefono</label>
+    <input id="representative_dni" className="validate" type="text" required />
+  </div>
+
+  <div className="input-field">
+    <label for="representative_email">Correo</label>
+    <input
+      id="representative_email"
+      className="validate"
+      type="email"
+      required
+    />
+  </div>
+  <div className="input-field">
+    <span>Parentesco</span>
+    <select required>
+      <option disabled selected>
+        Elige...
+      </option>
+      <option value="1">Padre/Madre</option>
+      <option value="2">Hermano/Hermana</option>
+      <option value="3">Tío/Tía</option>
+      <option value="4">Abuelo/Abuela</option>
+      <option value="5">Primo/Prima</option>
+      <option value="6">Otro</option>
+    </select>
+  </div>
+  <div>
+    <h6>Con quién vive?</h6>
+    <p>
+      <label for="parents">
+        <input id="parents" className="validate" type="checkbox" />
+        <span>Padres</span>
+      </label>
+    </p>
+    <p>
+      <label for="brothers">
+        <input id="brothers" className="validate" type="checkbox" />
+        <span>Hermanos</span>
+      </label>
+    </p>
+    <p>
+      <label for="uncles">
+        <input
+          id="uncles"
+          className="validate"
+          type="checkbox"
+          class="filled-in"
+        />
+        <span>Tíos</span>
+      </label>
+    </p>
+    <p>
+      <label for="grandparents">
+        <input id="grandparents" type="checkbox" />
+        <span>Abuelos</span>
+      </label>
+    </p>
+    <p>
+      <label for="others">
+        <input id="others" className="validate" type="checkbox" />
+        <span>Otros</span>
+      </label>
+    </p>
+  </div>
+</div>;*/
+{/*-----------------Informacion de Salud------------------*/}
+        // <div className="healthy">
+        //   <h4>Informacion de Salud</h4>
+        //   <p>
+        //     <label for="Esquizofrenia">
+        //       <input id="Esquizofrenia" className="validate" type="checkbox" />
+        //       <span>Esquizofrenia*</span>
+        //     </label>
+        //   </p>
+        //   <p>
+        //     <label for="bipolaridad">
+        //       <input id="bipolaridad" className="validate" type="checkbox" />
+        //       <span>Bipolaridad</span>
+        //     </label>
+        //   </p>
+        //   <p>
+        //     <label for="Nervios">
+        //       <input
+        //         id="Nervios"
+        //         className="validate"
+        //         type="checkbox"
+        //         class="filled-in"
+        //       />
+        //       <span>Nervios</span>
+        //     </label>
+        //   </p>
+        //   <p>
+        //     <label for="Alergias">
+        //       <input id="Alergias" type="checkbox" />
+        //       <span>Alergias*</span>
+        //     </label>
+        //   </p>
+        //   <p>
+        //     <label for="Diabetes">
+        //       <input id="Diabetes" className="validate" type="checkbox" />
+        //       <span>Diabetes*</span>
+        //     </label>
+        //   </p>
+        //   <p>
+        //     <label for="Migrañas">
+        //       <input id="Migrañas" className="validate" type="checkbox" />
+        //       <span>Migrañas</span>
+        //     </label>
+        //   </p>
+        //   <p>
+        //     <label for="Asma">
+        //       <input id="Asma" className="validate" type="checkbox" />
+        //       <span>Asma</span>
+        //     </label>
+        //   </p>
+        //   <p>
+        //     <label for="Rinitis">
+        //       <input id="Rinitis" className="validate" type="checkbox" />
+        //       <span>Rinitis*</span>
+        //     </label>
+        //   </p>
+        //   <div>
+        //     <h5>Presenta alguna condicion</h5>
+        //     <p>
+        //       <label>
+        //         <input class="with-gap" name="conditionGroup" type="radio" />
+        //         <span>Si</span>
+        //       </label>
+        //     </p>
+        //     <p>
+        //       <label>
+        //         <input class="with-gap" name="conditionGroup" type="radio" />
+        //         <span>No</span>
+        //       </label>
+        //     </p>
+        //   </div>
+        //   <div className="input-field">
+        //     <textarea
+        //       id="condition"
+        //       name="conditionGroup"
+        //       class="materialize-textarea"
+        //     />
+        //     <label for="condition">Que tipo de condicion presenta:</label>
+        //   </div>
+        // </div>
+        

@@ -5,7 +5,7 @@ import AdminHeader from "../Components/AdminHeader/AdminHeader";
 import AdminMenu from "../Components/AdminMenu/AdminMenu";
 
 import M from "materialize-css";
-import AddAdminForm from "../Components/FormsFasfaga/AddAdminForm";
+import AddAdminForm from "../Components/FormsFasfaga/AdminForm";
 import InformatioFasfaga from "../Components/InformationFasfaga/InformationFasfaga";
 import MyDataTable from "../Components/Tables/MyDataTable";
 

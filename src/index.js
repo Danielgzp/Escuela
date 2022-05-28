@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from "./Routes/App";
 
-import M from 'materialize-css';
 import './index.css';
 import "./css/main.css";
 

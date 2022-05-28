@@ -7,16 +7,16 @@ import "./styles.css";
 import admin from "../../images/admin.jpg";
 
 const AdminMenu = ({}) => {
-  var [showArrowDownMenu, setArrowDowMenu] = useState(false);
+  let [showArrowDownMenu, setArrowDowMenu] = useState(false);
   const [menu, setMenu] = useState({
     subMenu: "",
-    btnSubMenu: "",
-    iconSubMenuBtn: "",
+    /*btnSubMenu: "",
+    iconSubMenuBtn: "",*/
     body: "",
     sidebar: "",
     target: "",
   });
-  
+
   //  document.addEventListener("click", function () {
   //    let icon = document.querySelector(
   //      "a.btn-sideBar-SubMenu > i.zmdi-caret-down"
@@ -25,13 +25,11 @@ const AdminMenu = ({}) => {
   useEffect(() => {
     setMenu({
       subMenu: document.querySelectorAll(".btn-sideBar-SubMenu"),
-      btnSubMenu: document.querySelector(
-        "ul.dashboard-sideBar-Menu > li > ul"
-      ),
+     /* btnSubMenu: document.querySelector("ul.dashboard-sideBar-Menu > li > ul"),
 
       iconSubMenuBtn: document.querySelectorAll(
         "a.btn-sideBar-SubMenu > i.zmdi-caret-down"
-      ),
+      ),*/
       body: document.querySelector(".dashboard-contentPage"),
       sidebar: document.querySelector(".secundary"),
       target: document.querySelector("slide-out"),
@@ -39,10 +37,11 @@ const AdminMenu = ({}) => {
   }, []);
 
   const handleOnClick = () => {
-    menu.subMenu.forEach((men) => {
-      men.addEventListener("click", () => {
-        let btnSubMenu = men.nextSibling
-        let iconDown = men.lastChild;
+    
+    menu.subMenu.forEach((submenu) => {
+      submenu.addEventListener("click", () => {
+        const btnSubMenu = submenu.nextSibling; // con nextSibling me devuelve el elemento hermano
+        const iconDown = submenu.lastChild; // con lastChild me devuelve el ultimo hijo del elmento
         if (showArrowDownMenu) {
           btnSubMenu.classList.remove("show-sideBar-SubMenu");
           iconDown.classList.remove("zmdi-hc-rotate-180");
@@ -52,9 +51,9 @@ const AdminMenu = ({}) => {
           btnSubMenu.classList.add("show-sideBar-SubMenu");
           iconDown.classList.add("zmdi-hc-rotate-180");
         }
-      })
-    })
-    
+      });
+    });
+
     // menu.subMenu.
     // menu.subMenu.forEach((iconos) => {
     //   iconos.addEventListener("click", () => {
@@ -185,7 +184,7 @@ const AdminMenu = ({}) => {
             <a
               href="#!"
               className="btn-sideBar-SubMenu"
-              onClick={() => handleOnClick()}
+              onClick={handleOnClick}
             >
               <i className="zmdi zmdi-case zmdi-hc-fw" /> Administrar{" "}
               <i className="zmdi zmdi-caret-down pull-right" />
@@ -211,7 +210,7 @@ const AdminMenu = ({}) => {
             <a
               href="#!"
               className="btn-sideBar-SubMenu"
-              onClick={() => handleOnClick()}
+              onClick={handleOnClick}
             >
               <i className="zmdi zmdi-account-add zmdi-hc-fw" /> Usuarios{" "}
               <i className="zmdi zmdi-caret-down pull-right" />

@@ -10,9 +10,6 @@ import M from "materialize-css";
 
 const AddStudent = () => {
   useEffect(() => {
-    var elems = document.querySelectorAll("select");
-    var instances = M.FormSelect.init(elems, {});
-
     var elems2 = document.querySelectorAll(".tabs");
     var instance2 = M.Tabs.init(elems2, {});
   }, []);
@@ -36,7 +33,7 @@ const AddStudent = () => {
               <a href="#swipeTable">Estudiantes</a>
             </li>
           </ul>
-          <div id="swipeForm" class=" active">
+          <div id="swipeForm" class="active">
             <StudentForm />
           </div>
           <div id="swipeTable" class="">
