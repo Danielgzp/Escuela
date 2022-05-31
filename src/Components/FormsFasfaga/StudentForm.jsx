@@ -11,143 +11,148 @@ const StudentForm = () => {
 
   return (
     <React.Fragment>
+      <div className="formTitle">
+        <h2>Datos del Estudiante</h2>
+      </div>
+
       <form onSubmit={""} id="newStudent-form" action>
-        <fieldset>Datos del estudiante</fieldset>
         {/*-----------------Informacion Personal------------------*/}
-        <h4>Informacion personal</h4>
-        <div className="inputField">
-          <label for="names">Nombres</label>
-          <input id="names" className="validate" type="text" required />
-        </div>
-        <div className="inputField">
-          <label for="last_name">Apellidos</label>
-          <input id="last_name" className="validate" type="text" required />
-        </div>
-        <div class="inputField">
-          <label for="date">Fecha de nacimiento</label>
-          <input id="date" type="date" className="validate" required />
-        </div>
-        <div className="inputField">
-          <label for="birthplace">Lugar de Nacimiento</label>
-          <input id="birthplace" className="validate" type="text" required />
-        </div>
-        <div className="inputField">
-          <label for="dni">Cédula de identidad escolar</label>
-          {/* <select>
+        {/* <h4>Informacion personal</h4> */}
+        <div className="form-container">
+          <div className="inputField">
+            <label for="names">Nombres</label>
+            <input id="names" type="text" required />
+          </div>
+          <div className="inputField">
+            <label for="last_name">Apellidos</label>
+            <input id="last_name" className="validate" type="text" required />
+          </div>
+          <div class="inputField">
+            <label for="date">Fecha de nacimiento</label>
+            <input id="date" type="date" className="validate" required />
+          </div>
+          <div className="inputField">
+            <label for="birthplace">Lugar de Nacimiento</label>
+            <input id="birthplace" className="validate" type="text" required />
+          </div>
+          <div className="inputField">
+            <label for="dni">Cédula de identidad escolar</label>
+            {/* <select>
               <option value=""></option>
               <option value="Venezolana">V</option>
               <option value="Extranjera">E</option>
             </select> */}
-          <input id="dni" className="validate" type="number" />
-        </div>
-        <div>
-          <label for="sex">Sexo</label>
-          <p>
-            <label for="masculine">
-              <input name="group1" id="masculine" type="radio" required />
-              <span>Masculino</span>
-            </label>
-          </p>
-          <p>
-            <label for="femenine">
-              <input name="group1" type="radio" id="femenine" />
-              <span>Femenino</span>
-            </label>
-          </p>
-        </div>
-        <div className="inputField">
-          <label for="address">Direccion</label>
-          <textarea
-            id="address"
-            class="materialize-textarea"
-            required
-          ></textarea>
-        </div>
-        {/*-----------------Informacion Familiar------------------*/}
-        <div className="inputField">
-          <label for="representerName">Nombre del Representante</label>
-          <input
-            id="representerName"
-            className="validate"
-            type="text"
-            required
-          />
-        </div>
-        <div className="inputField">
-          <label for="representative_dni">Cedula del representante</label>
-          <input
-            id="representative_dni"
-            className="validate"
-            type="text"
-            required
-          />
-        </div>
-
-        <div className="inputField phones">
-          <label for="telephone" className="center">
-            Telefonos
-          </label>
-          <input id="telephone" type="tel" class="validate " />
-          <input id="telephone2" type="tel" />
-        </div>
-
-        <div className="inputField">
-          <label for="email">Correo</label>
-          <input id="email" className="validate" type="email" />
-        </div>
-        <div className="inputField">
-          <label for="living">Condición de vivienda</label>
-          <input id="living" className="validate" type="text" />
-        </div>
-        <div class="file-field input-field">
-          <div class="btn red">
-            <span>File</span>
-            <input type="file" />
+            <input id="dni" className="validate" type="number" />
           </div>
-          <div class="file-path-wrapper">
-            <input class="file-path validate" type="text" />
+          <div className="inputField">
+            <label for="sex">Sexo</label>
+            <p>
+              <label for="masculine">
+                <input name="group1" id="masculine" type="radio" required />
+                <span>Masculino</span>
+              </label>
+            </p>
+            <p>
+              <label for="femenine">
+                <input name="group1" type="radio" id="femenine" />
+                <span>Femenino</span>
+              </label>
+            </p>
           </div>
+          <div className="inputField">
+            <label for="address">Direccion</label>
+            <textarea
+              id="address"
+              class="materialize-textarea"
+              required
+            ></textarea>
+          </div>
+          {/*-----------------Informacion Familiar------------------*/}
+          <div className="inputField">
+            <label for="representerName">Nombre del Representante</label>
+            <input
+              id="representerName"
+              className="validate z-depth-1"
+              type="text"
+              required
+            />
+          </div>
+          <div className="inputField">
+            <label for="representative_dni">Cedula del representante</label>
+            <input
+              id="representative_dni"
+              className="validate"
+              type="text"
+              required
+            />
+          </div>
+
+          <div className="inputField phones">
+            <label for="telephone" className="center">
+              Telefonos
+            </label>
+            <input id="telephone" type="tel" class="validate " />
+            <input id="telephone2" type="tel" />
+          </div>
+
+          <div className="inputField">
+            <label for="email">Correo</label>
+            <input id="email" className="validate" type="email" />
+          </div>
+          <div className="inputField">
+            <label for="living">Condición de vivienda</label>
+            <input id="living" className="validate" type="text" />
+          </div>
+
+          {/*-----------------Informacion Academica------------------*/}
+
+          {/* <h4 className="center">Informacion academica</h4> */}
+          <div className="inputField">
+            <label>Grado que cursa?</label>
+            <select name="sectionsStudent">
+              <option>Selecciona el grado</option>
+
+              <optgroup label="1°">
+                <option value="1er Grado A">1er Grado A</option>
+                <option value="1er Grado B">1er Grado B</option>
+              </optgroup>
+              <optgroup label="2°">
+                <option value="2do Grado A">2do Grado A</option>
+                <option value="2do Grado B">2do Grado B</option>
+              </optgroup>
+              <optgroup label="3°">
+                <option value="3er Grado A">3er Grado A</option>
+                <option value="3er Grado B">3er Grado B</option>
+              </optgroup>
+              <optgroup label="4°">
+                <option value="4to Grado A">4to Grado A</option>
+                <option value="4to Grado B">4to Grado B</option>
+              </optgroup>
+              <optgroup label="5°">
+                <option value="5to Grado A">5to Grado A</option>
+                <option value="5to Grado B">5to Grado B</option>
+              </optgroup>
+              <optgroup label="6°">
+                <option value="6to Grado A">6to Grado A</option>
+                <option value="6to Grado B">6to Grado B</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="file-field input-field">
+            <div class="btn red">
+              <span>File</span>
+              <input type="file" />
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" />
+            </div>
+          </div>
+
+          <button class="btn red waves-effect" type="submit" name="action">
+            Guardar
+            <i class="material-icons right">save</i>
+          </button>
         </div>
-
-        {/*-----------------Informacion Academica------------------*/}
-
-        <h4 className="center">Informacion academica</h4>
-        <div className="inputField">
-          <h6>Grado que cursa?</h6>
-          <select name="sectionsStudent">
-            <option>Selecciona el grado</option>
-
-            <optgroup label="1°">
-              <option value="1er Grado A">1er Grado A</option>
-              <option value="1er Grado B">1er Grado B</option>
-            </optgroup>
-            <optgroup label="2°">
-              <option value="2do Grado A">2do Grado A</option>
-              <option value="2do Grado B">2do Grado B</option>
-            </optgroup>
-            <optgroup label="3°">
-              <option value="3er Grado A">3er Grado A</option>
-              <option value="3er Grado B">3er Grado B</option>
-            </optgroup>
-            <optgroup label="4°">
-              <option value="4to Grado A">4to Grado A</option>
-              <option value="4to Grado B">4to Grado B</option>
-            </optgroup>
-            <optgroup label="5°">
-              <option value="5to Grado A">5to Grado A</option>
-              <option value="5to Grado B">5to Grado B</option>
-            </optgroup>
-            <optgroup label="6°">
-              <option value="6to Grado A">6to Grado A</option>
-              <option value="6to Grado B">6to Grado B</option>
-            </optgroup>
-          </select>
-        </div>
-
-        <button class="btn red waves-effect" type="submit" name="action">
-          Submit
-          <i class="material-icons right">send</i>
-        </button>
       </form>
     </React.Fragment>
   );

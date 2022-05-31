@@ -1,37 +1,51 @@
-.swipes-container{
-    height: 100%;
-    margin-top: 20px;
+/* .dashboard-contentPage{
+    background-image: url("../../images/loginFont.jpg");
+   height: 100%;
+} */
+.swipes-container {
+  height: 100%;
+  margin-top: 20px;
 }
-.dataMenu{
-    background-color: var(--blue-text);
-    width: 40%;
-    text-align: center;
-    border-radius: 12px 12px 0 0;
-    overflow-x: hidden;
+.dataMenu {
+  width: 40%;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.096);
 }
-.dataMenu li{
-    color: red;
-    width: 50%;
-    
+.dataMenu li {
+  color: white;
+  width: 50%;
+
 }
-.dataMenu .indicator{
-    background-color: red;
-   
+.dataMenu .indicator {
+  background-color: transparent;
 }
-.dataMenu .tab a{
-    text-decoration: none;
+.dataMenu .tab a {
+  text-decoration: none;
+  /* color: rgb(250, 182, 56); */
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.dataMenu .tab a:hover {
+  /* color: rgb(2, 255, 2); */
+  background-color: rgb(43, 42, 42) !important;
+}
+.dataMenu .tab a:focus,
+.dataMenu .tab a:focus.active {
+  background-color: rgb(0, 0, 0);
+  /* color: rgb(2, 255, 2) !important; */
+  color: white;
+}
+.dataMenu .tab a:hover, .dataMenu .tab a.active{
     color: white;
-}
-.dataMenu .tab a:hover{
-    color: red;
-}
-.dataMenu .tab a:focus, .dataMenu .tab a:focus.active{
-    background-color: rgb(2, 2, 131) !important;
-    color: white !important;
+    background-color: black;
 }
 
-@media (max-width: 800px){
-    .dataMenu{
-        width: 100%;
-    }
+@media (max-width: 800px) {
+  .dataMenu {
+    width: 100%;
+  }
 }

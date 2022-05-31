@@ -25,7 +25,7 @@ const AddAdmin = () => {
         <InformatioFasfaga user="Administradores" icon="account" />
 
         <div className="swipes-container">
-          <ul id="swipeList" class="tabs dataMenu">
+          <ul id="swipeList" class="tabs dataMenu z-depth-4">
             <li class="tab">
               <a href="#swipeForm" class="active">
                 Nuevo Admin
@@ -36,6 +36,7 @@ const AddAdmin = () => {
             </li>
           </ul>
           <div id="swipeForm" class=" active">
+            
             <AddAdminForm />
           </div>
           <div id="swipeTable" class="">

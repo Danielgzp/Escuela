@@ -15,13 +15,13 @@ export const columnas = [
     reorder: true,
   },
   {
-    name: "Estado",
+    name: "Apellidos",
     selector: (row) => row.status,
     sortable: true,
     reorder: true,
   },
   {
-    name: "Especie",
+    name: "Sexo",
     selector: (row) => row.species,
     sortable: true,
     reorder: true,
@@ -30,17 +30,83 @@ export const columnas = [
     cell: (row) => (
       <img height="56px" width="56px" alt={row.name} src={row.image} />
     ),
-    name: "Imagen",
+    name: "Fecha de Nacimiento",
     selector: (row) => row.image,
     sorteble: true,
   },
   {
+    selector: (row) => row.species,
+    name: "Lugar de Nacimiento",
+    sortable: true,
+    reorder: true,
+  },
+  {
+    name: "C.I Escolar",
+    selector: (row) => row.species,
+    sortable: true,
+    reorder: true,
+  },
+  {
+    name: "Direccion",
+    selector: (row) => row.species,
+    sortable: true,
+    reorder: true,
+  },
+  {
+    name: "C.I Escolar",
+    selector: (row) => row.species,
+    sortable: true,
+    reorder: true,
+  },
+  {
+    name: "Nombre del representante",
+    selector: (row) => row.species,
+    sortable: true,
+    reorder: true,
+  },
+  {
+    name: "C.I Representante",
+    selector: (row) => row.species,
+    sortable: true,
+    reorder: true,
+  },
+  {
+    name: "Telefonos",
+    selector: (row) => row.species,
+    sortable: true,
+    reorder: true,
+  },
+  {
+    name: "Correo",
+    selector: (row) => row.species,
+    sortable: true,
+    reorder: true,
+  },
+  {
+    name: "Vivienda",
+    selector: (row) => row.species,
+    sortable: true,
+    reorder: true,
+  },
+  {
     cell: (row) => (
       <a href={row.url} target="_blank" rel="noopener noreferrer">
-        <i className="zmdi zmdi-account"></i>
+        <i className="material-icons">account_box</i>
       </a>
     ),
     name: "Ver perfil",
+    selector: (row) => row.species,
+    sortable: true,
+    reorder: true,
+  },
+  {
+    cell: (row) => (
+      <a href={row.url} target="_blank" rel="noopener noreferrer">
+        <i className="material-icons">delete</i>
+      </a>
+    ),
+    name: "Eliminar",
+    selector: (row) => row.species,
     sortable: true,
     reorder: true,
   },

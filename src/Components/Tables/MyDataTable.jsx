@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+//import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"; 
+// este boopstrap da en el carousel
 import DataTable from "react-data-table-component";
 
 import "./MyDataTable.css";

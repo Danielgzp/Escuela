@@ -1,33 +1,71 @@
 #swipeForm {
-  height: 100%;
-  padding: 30px;
+  padding-top: 0px;
+  /* background-image: url("../../images/loginFont.jpg"); */
 }
-.newAdmin-form__container {
+/* .form-background{
+  width: 100%;
+  height: 70%;
+  background-image: url("../../images/loginFont.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 101;
+  left: 0;
+} */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  padding: 20px;
+  background-color: rgb(255, 235, 235);
+  /* border: 1px darkred solid; */
 }
-#newAdmin-form {
+.form-container .btn{
+ margin-top: 10px;
+}
+#swipeForm .form-container input {
+  margin-top: 5px;
+  background-color: white;
+  color: black;
+  font-weight: 400;
+  /* border: 1px solid black; */
+  padding: 0 10px;
+  border: red;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(255, 0, 0, 0.14), 0 3px 1px -2px rgba(255, 0, 0, 0.12), 0 1px 5px 0 rgba(255, 0, 0, 0.2) !important;
+}
+.select-wrapper .caret{
+  z-index: 1;
+}
+#swipeForm .form-container textarea {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px 0 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%) !important;
 }
 #swipeForm label {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 600;
   top: -20px;
-  color: black;
+  color: var(--dark-red2);
   font-family: "RobotoCondensed";
 }
-#newAdmin-form input {
-}
 .inputField {
-  width: 100%;
-  margin-top: 10px;
+  width: 300px;
+  margin: 10px 10px;
 }
 .phones {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.phones input{
+.phones input {
   width: 40% !important;
 }
-.phones label{
+.phones label {
   width: 100%;
 }
 .personalInfo {
@@ -36,7 +74,15 @@
 .personalInfo h4 {
   width: 100%;
 }
-
+.formTitle {
+  background-color: darkred;
+  padding: 15px;
+}
+.formTitle h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem;
+}
 @media (min-width: 650px) {
   #newAdmin-form input {
   }

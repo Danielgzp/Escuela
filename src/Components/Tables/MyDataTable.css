@@ -9,7 +9,8 @@
   display: inline-block !important;
 }
 .students-table header{
-  background-color: rgb(23, 21, 29);
+   background-color: var(--blue-text); 
+  border-bottom: 1px rgba(128, 128, 128, 0.295) solid;
 }
 #headerTable-container {
   width: 100%;
@@ -28,23 +29,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: grey;
+  color: white;
   margin-right: 10px;
 }
 #headerTable-container input {
   margin: 0;
-  border: 1px rgba(128, 128, 128, 0.507) solid;
-  border-radius: 5px;
+  border: 1px blue solid;
+  border-radius: 2px;
   padding-left: 10px;
   font-size: 0.9rem;
-  height: 99%;
+  height: 85%;
+  background-color: white;
 }
 #headerTable-container input[type="text"]:focus {
   box-shadow: none;
 }
 #headerTable-container h2 {
   font-family: "RobotoCondensed";
-  color: rgb(83, 83, 235);
+  /* color: rgb(2, 255, 2); */
+  color: white;
+  font-size: 1.4rem;
   margin: 0;
 }
 .search-bar {
@@ -54,6 +58,7 @@
 .rdt_Pagination {
   display: flex;
   align-items: center;
+ 
 }
 .rdt_Pagination button {
   border-right: 1px grey solid;
@@ -62,15 +67,20 @@
   width: 60px;
   height: 40px;
   color: white;
-  background-color: rgb(77, 88, 233);
+  background-color: rgb(223, 233, 77);
 }
 .rdt_Pagination i {
   height: 100% !important;
   line-height: 40px !important;
 }
 .rdt_TableHeadRow {
-  background-color: rgb(77, 88, 233) !important;
-  color: white;
+  /* background-color: #FFCE54 !important; */
+  color: rgb(31, 128, 255);
+  font-size: 1rem;
+  font-weight: 500;
+  height: 40px;
+  padding: 10px;
+  font-family: "RobotoCondensed";
 }
 .rdt_TableCol_Sortable img {
   height: 20px;
@@ -79,14 +89,26 @@
 }
 .rdt_TableCol {
   justify-content: center;
+  max-width: fit-content !important;
+  min-width: 50px !important;
 }
 .rdt_TableCell {
   justify-content: center;
 }
+.rdt_TableCell i{
+  color: orange;
+}
+.rdt_TableCell>div {
+  text-align: center;
+  white-space: normal !important;
+}
 .pagination-container{
   margin: 15px 20px;
 }
+.pagination-container li a{
+  color: black;
+}
 .pagination {
-  background-color: bisque;
+  background-color: var(--blue-text); 
   margin: 0;
 }

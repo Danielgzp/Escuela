@@ -30,10 +30,11 @@ const AddStudent = () => {
               </a>
             </li>
             <li class="tab ">
-              <a href="#swipeTable">Estudiantes</a>
+              <a href="#swipeTable">Nomina de Estudiantes</a>
             </li>
           </ul>
           <div id="swipeForm" class="active">
+            
             <StudentForm />
           </div>
           <div id="swipeTable" class="">

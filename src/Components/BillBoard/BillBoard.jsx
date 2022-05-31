@@ -12,7 +12,7 @@ import CarouselArticle from "../CarouselArticle/CarouselArticle";
 import "./styles.css";
 
 const BillBoard = () => {
-  useEffect(() => {
+  document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelector(".carousel");
     var instances = M.Carousel.init(elems, {
       duration: 600,
@@ -22,7 +22,7 @@ const BillBoard = () => {
 
   return (
     <section id="billboard">
-      {/* <div id="cincopa_d0220b">...</div> */}
+      <div id="cincopa_d0220b">...</div>
       <div className="carousel carousel-slider center">
         <div className="carousel-background"></div>
         <CarouselArticle
