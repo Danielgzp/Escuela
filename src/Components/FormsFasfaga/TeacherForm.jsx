@@ -1,4 +1,6 @@
-import React from 'react'
+import React from "react";
+
+import "./styles/FormsFasfaga.css";
 
 const TeacherForm = () => {
   return (
@@ -7,15 +9,15 @@ const TeacherForm = () => {
         <div className="personal">
           <h4>Informacion personal</h4>
           <div className="input-field">
-            <label for="namesTeacher">Nombres</label>
+            <label htmlFor="namesTeacher">Nombres</label>
             <input id="namesTeacher" className="validate" type="text" />
           </div>
           <div className="input-field">
-            <label for="last_nameTeacher">Apellidos</label>
+            <label htmlFor="last_nameTeacher">Apellidos</label>
             <input id="last_nameTeacher" className="validate" type="text" />
           </div>
           <div className="input-field">
-            <label for="dniTeacher">Cédula</label>
+            <label htmlFor="dniTeacher">Cédula</label>
             <select>
               <option value=""></option>
               <option value="Venezolana">V</option>
@@ -31,41 +33,41 @@ const TeacherForm = () => {
           <div className="input-field">
             <textarea
               id="addressTeacher"
-              class="materialize-textarea"
+              className="materialize-textarea"
             ></textarea>
-            <label for="addressTeacher">Direccion</label>
-          </div>
-
-          <div class="input-field">
-            <input id="dateTeacher" type="date" className="validate" />
-            <label for="dateTeacher">Fecha de nacimiento</label>
+            <label htmlFor="addressTeacher">Direccion</label>
           </div>
 
           <div className="input-field">
-            <label for="emailTeacher">Correo</label>
+            <input id="dateTeacher" type="date" className="validate" />
+            <label htmlFor="dateTeacher">Fecha de nacimiento</label>
+          </div>
+
+          <div className="input-field">
+            <label htmlFor="emailTeacher">Correo</label>
             <input id="emailTeacher" className="validate" type="email" />
           </div>
           <div className="input-field">
-            <label for="telephoneTeacher">Telefono</label>
-            <input id="telephoneTeacher" type="tel" class="validate" />
+            <label htmlFor="telephoneTeacher">Telefono</label>
+            <input id="telephoneTeacher" type="tel" className="validate" />
           </div>
           <div>
-            <label for="sexTeacher">Sexo</label>
+            <label htmlFor="sexTeacher">Sexo</label>
             <p>
-              <label for="masculineTeacher">
+              <label htmlFor="masculineTeacher">
                 <input name="group1" id="masculineTeacher" type="radio" />
                 <span>Masculino</span>
               </label>
             </p>
             <p>
-              <label for="femenineTeacher">
+              <label htmlFor="femenineTeacher">
                 <input name="group1" type="radio" id="femenineTeacher" />
                 <span>Femenino</span>
               </label>
             </p>
           </div>
           <div className="input-field">
-            <label for="pictureTeacher">Buscar foto...</label>
+            <label htmlFor="pictureTeacher">Buscar foto...</label>
             <div>
               <input type="text" readOnly />
               <input id="pictureTeacher" className="validate" type="file" />
@@ -109,7 +111,7 @@ const TeacherForm = () => {
           </div>
           <div className="input-field">
             <input id="dateTeacherIn" type="date" className="validate" />
-            <label for="dateTeacherIn">
+            <label htmlFor="dateTeacherIn">
               Fecha en la cual ingresó a la institución
             </label>
           </div>
@@ -119,54 +121,53 @@ const TeacherForm = () => {
         <div className="healthy">
           <h4>Informacion de Salud</h4>
           <p>
-            <label for="Esquizofrenia">
+            <label htmlFor="Esquizofrenia">
               <input id="Esquizofrenia" className="validate" type="checkbox" />
               <span>Esquizofrenia*</span>
             </label>
           </p>
           <p>
-            <label for="bipolaridad">
+            <label htmlFor="bipolaridad">
               <input id="bipolaridad" className="validate" type="checkbox" />
               <span>Bipolaridad</span>
             </label>
           </p>
           <p>
-            <label for="Nervios">
+            <label htmlFor="Nervios">
               <input
                 id="Nervios"
-                className="validate"
+                className="validate filled-in"
                 type="checkbox"
-                class="filled-in"
               />
               <span>Nervios</span>
             </label>
           </p>
           <p>
-            <label for="Alergias">
+            <label htmlFor="Alergias">
               <input id="Alergias" type="checkbox" />
               <span>Alergias*</span>
             </label>
           </p>
           <p>
-            <label for="Diabetes">
+            <label htmlFor="Diabetes">
               <input id="Diabetes" className="validate" type="checkbox" />
               <span>Diabetes*</span>
             </label>
           </p>
           <p>
-            <label for="Migrañas">
+            <label htmlFor="Migrañas">
               <input id="Migrañas" className="validate" type="checkbox" />
               <span>Migrañas</span>
             </label>
           </p>
           <p>
-            <label for="Asma">
+            <label htmlFor="Asma">
               <input id="Asma" className="validate" type="checkbox" />
               <span>Asma</span>
             </label>
           </p>
           <p>
-            <label for="Rinitis">
+            <label htmlFor="Rinitis">
               <input id="Rinitis" className="validate" type="checkbox" />
               <span>Rinitis*</span>
             </label>
@@ -175,13 +176,21 @@ const TeacherForm = () => {
             <h5>Presenta alguna condicion</h5>
             <p>
               <label>
-                <input class="with-gap" name="conditionGroup" type="radio" />
+                <input
+                  className="with-gap"
+                  name="conditionGroup"
+                  type="radio"
+                />
                 <span>Si</span>
               </label>
             </p>
             <p>
               <label>
-                <input class="with-gap" name="conditionGroup" type="radio" />
+                <input
+                  className="with-gap"
+                  name="conditionGroup"
+                  type="radio"
+                />
                 <span>No</span>
               </label>
             </p>
@@ -190,18 +199,18 @@ const TeacherForm = () => {
             <textarea
               id="condition"
               name="conditionGroup"
-              class="materialize-textarea"
+              className="materialize-textarea"
             />
-            <label for="condition">Que tipo de condicion presenta:</label>
+            <label htmlFor="condition">Que tipo de condicion presenta:</label>
           </div>
         </div>
-        <button class="btn red waves-effect" type="submit" name="action">
+        <button className="btn red waves-effect" type="submit" name="action">
           Submit
-          <i class="material-icons right">send</i>
+          <i className="material-icons right">send</i>
         </button>
       </form>
     </div>
   );
-}
+};
 
-export default TeacherForm
+export default TeacherForm;

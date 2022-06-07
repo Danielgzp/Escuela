@@ -21,7 +21,7 @@ const Home = () => {
       <div className="container">
         <div className="row">
           <div className="col m12 l12 s12">
-            <HomeInfo />
+            {/* <HomeInfo /> */}
           </div>
           {/* <div className="col m4 l3 s12">
           <News />

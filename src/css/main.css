@@ -355,6 +355,8 @@
 }
 .tile-number > small {
   font-size: 17px;
+  float: right;
+  margin-right: 32px;
 }
 /*TimeLine*/
 .cd-container {

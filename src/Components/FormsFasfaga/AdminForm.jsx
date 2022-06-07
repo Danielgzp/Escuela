@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import "./AdminForm.css";
+import "./styles/FormsFasfaga.css";
 
 import M from "materialize-css";
 
@@ -11,11 +11,11 @@ const AdminForm = () => {
 
   return (
     <React.Fragment>
-      <form action id="newAdmin-form">
+      <form action="a" id="newAdmin-form">
         {/* <h4 className="center">Informacion personal</h4> */}
         <div className="form-container">
           <div className="inputField">
-            <label for="namesAdmin">Nombres</label>
+            <label htmlFor="namesAdmin">Nombres</label>
             <input
               id="namesAdmin"
               className="validate"
@@ -26,7 +26,7 @@ const AdminForm = () => {
           </div>
 
           <div className="inputField">
-            <label for="last_nameAdmin">Apellidos</label>
+            <label htmlFor="last_nameAdmin">Apellidos</label>
             <input
               id="last_nameAdmin"
               placeholder="nickname"
@@ -42,7 +42,7 @@ const AdminForm = () => {
                     <option value="V">V</option>
                     <option value="E">E</option>
                   </select> */}
-            <label for="dniNumberAdmin">Cédula</label>
+            <label htmlFor="dniNumberAdmin">Cédula</label>
             <input
               id="dniNumberAdmin"
               className="validate"
@@ -51,8 +51,8 @@ const AdminForm = () => {
             />
           </div>
 
-          <div class="input-field">
-            <label for="dateAdmin">Fecha de nacimiento</label>
+          <div className="input-field">
+            <label htmlFor="dateAdmin">Fecha de nacimiento</label>
             <input
               id="dateAdmin"
               type="date"
@@ -63,7 +63,7 @@ const AdminForm = () => {
           </div>
 
           <div className="inputField">
-            <label for="addressAdmin">Direccion</label>
+            <label htmlFor="addressAdmin">Direccion</label>
             <textarea
               id="addressAdmin"
               placeholder="address"
@@ -72,7 +72,7 @@ const AdminForm = () => {
           </div>
 
           <div className="inputField">
-            <label for="emailAdmin">Correo</label>
+            <label htmlFor="emailAdmin">Correo</label>
             <input
               id="emailAdmin"
               className="validate"
@@ -82,19 +82,19 @@ const AdminForm = () => {
           </div>
 
           <div className="inputField">
-            <label for="telephoneAdmin">Telefono</label>
+            <label htmlFor="telephoneAdmin">Telefono</label>
             <input
               id="telephoneAdmin"
               type="tel"
-              class="validate"
+              className="validate"
               placeholder="+##########"
             />
           </div>
 
           <div>
-            <h6 for="sex">Sexo</h6>
+            <h6 htmlFor="sex">Sexo</h6>
             <p>
-              <label for="masculineAdmin">
+              <label htmlFor="masculineAdmin">
                 <input
                   name="group1"
                   id="masculineAdmin"
@@ -105,7 +105,7 @@ const AdminForm = () => {
               </label>
             </p>
             <p>
-              <label for="femenineAdmin">
+              <label htmlFor="femenineAdmin">
                 <input name="group1" type="radio" id="femenineAdmin" />
                 <span>Femenino</span>
               </label>
@@ -113,7 +113,7 @@ const AdminForm = () => {
           </div>
 
           <div className="inputField">
-            <label for="adminFunction">Cargo del administrador</label>
+            <label htmlFor="adminFunction">Cargo del administrador</label>
             <input
               id="adminFunction"
               className="validate"
@@ -122,23 +122,23 @@ const AdminForm = () => {
             />
           </div>
 
-          <div class="file-field input-field">
-            <div class="btn red">
+          <div className="file-field input-field">
+            <div className="btn red">
               <span>File</span>
               <input type="file" />
             </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text" />
+            <div className="file-path-wrapper">
+              <input className="file-path validate" type="text" />
             </div>
           </div>
 
           <button
-            class="btn red waves-effect waves-light"
+            className="btn red waves-effect waves-light"
             type="submit"
             name="action"
           >
             Submit
-            <i class="material-icons right">send</i>
+            <i className="material-icons right">send</i>
           </button>
         </div>
       </form>

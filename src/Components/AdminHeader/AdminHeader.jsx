@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+import './AdminHeader.css'
 
 import Swal from "sweetalert2";
 import M from "materialize-css";
-import { Link } from "react-router-dom";
+
 
 const AdminHeader = () => {
   var [menuIsOpen, setMenuIsOpen] = useState(true);
@@ -39,11 +42,13 @@ const AdminHeader = () => {
     if (menuIsOpen) {
       styles.body.classList.add("no-paddin-left");
       styles.sidebar.style.transform = "translateX(-105%)";
-      styles.sidebar.style.transition = "0.3s all ease-out";
+      styles.sidebar.style.transition = "0.4s all ease-out";
+      styles.sidebar.style.transitionDelay = "0.085s";
     } else {
       styles.body.classList.remove("no-paddin-left");
       styles.sidebar.style.transform = "translateX(0%)";
-      styles.sidebar.style.transition = "0.3s all ease-in";
+      styles.sidebar.style.transition = "0.4s all ease-in";
+      styles.sidebar.style.transitionDelay = "-0.19s";
     }
 
     setMenuIsOpen(!menuIsOpen);

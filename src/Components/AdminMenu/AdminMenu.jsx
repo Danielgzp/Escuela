@@ -10,6 +10,7 @@ const AdminMenu = ({}) => {
   let [showArrowDownMenu, setArrowDowMenu] = useState(false);
   const [menu, setMenu] = useState({
     subMenu: "",
+    showSubMenu: false,
     /*btnSubMenu: "",
     iconSubMenuBtn: "",*/
     body: "",
@@ -25,7 +26,8 @@ const AdminMenu = ({}) => {
   useEffect(() => {
     setMenu({
       subMenu: document.querySelectorAll(".btn-sideBar-SubMenu"),
-     /* btnSubMenu: document.querySelector("ul.dashboard-sideBar-Menu > li > ul"),
+
+      /* btnSubMenu: document.querySelector("ul.dashboard-sideBar-Menu > li > ul"),
 
       iconSubMenuBtn: document.querySelectorAll(
         "a.btn-sideBar-SubMenu > i.zmdi-caret-down"
@@ -34,10 +36,12 @@ const AdminMenu = ({}) => {
       sidebar: document.querySelector(".secundary"),
       target: document.querySelector("slide-out"),
     });
+    setArrowDowMenu(false);
   }, []);
 
   const handleOnClick = () => {
-    
+    console.log(showArrowDownMenu);
+
     menu.subMenu.forEach((submenu) => {
       submenu.addEventListener("click", () => {
         const btnSubMenu = submenu.nextSibling; // con nextSibling me devuelve el elemento hermano
@@ -80,6 +84,8 @@ const AdminMenu = ({}) => {
     //   // menu.iconSubMenuBtn[i].classList.add("zmdi-hc-rotate-180");
     //   // menu.btnSubMenu[i].classList.add("show-sideBar-SubMenu");
     // }
+
+    console.log(showArrowDownMenu);
     setArrowDowMenu(!showArrowDownMenu);
   };
 
@@ -114,14 +120,14 @@ const AdminMenu = ({}) => {
             <div className="user-view">
               <div className="background"></div>
               {/* Nombre del Colegio  */}
-              <div className="full-box text-center text-titles">
+              <div className="full-box center text-titles">
                 <i
                   className="zmdi zmdi-close btn-menu-dashboard visible-xs"
                   onClick={() => handleCloseMenu()}
                 />
                 U.E Colegio Fe y Alegria San Francisco
               </div>
-              <div className="user-view__container text-center">
+              <div className="user-view__container center">
                 <figcaption>
                   <img src={admin} className="circle" />
                 </figcaption>
@@ -135,7 +141,7 @@ const AdminMenu = ({}) => {
               </div>
               <div className="full-box dashboard-sideBar-UserInfo">
                 {/* Botones de iniciar sesión y configuración*/}
-                <ul className="full-box list-unstyled text-center">
+                <ul className="full-box list-unstyled center">
                   <li className="center">
                     <a href="#!" className="enter">
                       <i className="zmdi zmdi-settings" />
@@ -169,7 +175,7 @@ const AdminMenu = ({}) => {
           </li>
         </ul>
         {/* Nombre del Colegio  */}
-        {/* <div className="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+        {/* <div className="full-box text-uppercase center text-titles dashboard-sideBar-title">
           U.E Colegio Fe y Alegria San Francisco
         </div> */}
         {/* Menu de barra deslizante*/}

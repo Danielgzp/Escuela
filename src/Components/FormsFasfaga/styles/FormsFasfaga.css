@@ -54,7 +54,7 @@
   font-family: "RobotoCondensed";
 }
 .inputField {
-  width: 300px;
+  width: 100%;
   margin: 10px 10px;
 }
 .phones {
@@ -84,6 +84,12 @@
   font-size: 1.5rem;
 }
 @media (min-width: 650px) {
-  #newAdmin-form input {
-  }
+  
+}
+
+
+/*                 Student Form                                    */
+
+.select-dropdown{
+    max-height: 450px;
 }

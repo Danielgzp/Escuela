@@ -6,14 +6,14 @@ const AdminContainerArticles = ({ link, title, registered, icon }) => {
     <React.Fragment>
       <Link to={link}>
         <article className="full-box tile">
-          <div className="full-box tile-title text-center text-titles text-uppercase">
+          <div className="full-box tile-title center text-titles text-uppercase">
             {title}
           </div>
-          <div className="full-box tile-icon text-center">
+          <div className="full-box tile-icon center">
             <i className={icon}></i>
           </div>
           <div className="full-box tile-number text-titles">
-            <p className="full-box">{registered}</p>
+            <p className="full-box center">{registered}</p>
             <small>Registrados</small>
           </div>
         </article>

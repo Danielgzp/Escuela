@@ -7,7 +7,7 @@ const TableHeader = ({ props, changeButton }) => {
 
       <div className="search-bar">
         <p>
-          {/* <i class="material-icons">search</i> */}
+          {/* <i className="material-icons">search</i> */}
           Buscar:
         </p>
         <form>

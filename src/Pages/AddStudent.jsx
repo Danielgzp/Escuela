@@ -23,21 +23,20 @@ const AddStudent = () => {
         <AdminHeader></AdminHeader>
         <InformationFasfaga user="Estudiantes" icon="student" />
         <div className="swipes-container">
-          <ul id="swipeList" class="tabs dataMenu">
-            <li class="tab">
-              <a href="#swipeForm" class="active">
+          <ul id="swipeList" className="tabs dataMenu">
+            <li className="tab">
+              <a href="#swipeForm" className="active">
                 Nuevo Estudiante
               </a>
             </li>
-            <li class="tab ">
+            <li className="tab ">
               <a href="#swipeTable">Nomina de Estudiantes</a>
             </li>
           </ul>
-          <div id="swipeForm" class="active">
-            
+          <div id="swipeForm" className="active">
             <StudentForm />
           </div>
-          <div id="swipeTable" class="">
+          <div id="swipeTable" className="">
             <MyDataTable />
           </div>
         </div>

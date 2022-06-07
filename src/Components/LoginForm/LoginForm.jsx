@@ -22,14 +22,14 @@ const LoginForm = () => {
           Inicia sesión con tu cuenta
         </p>
         <div className="form-group label-floating">
-          <label className="control-label" for="UserEmail">
+          <label className="control-label" htmlFor="UserEmail">
             E-mail
           </label>
           <input className="form-control" id="UserEmail" type="email" />
           <p className="help-block">Escribe tú E-mail</p>
         </div>
         <div className="form-group label-floating">
-          <label className="control-label" for="UserPass">
+          <label className="control-label" htmlFor="UserPass">
             Contraseña
           </label>
           <input className="form-control" id="UserPass" type="text" />

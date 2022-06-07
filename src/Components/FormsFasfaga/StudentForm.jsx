@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
 
-import "./AdminForm.css";
+import "./styles/FormsFasfaga.css";
 import M from "materialize-css";
 
 const StudentForm = () => {
   useEffect(() => {
     var elems = document.querySelectorAll("select");
     var instances = M.FormSelect.init(elems, {});
+
+    var elems2 = document.querySelectorAll(".collapsible");
+    var instances2 = M.Collapsible.init(elems2, {});
   }, []);
 
   return (
@@ -15,28 +18,28 @@ const StudentForm = () => {
         <h2>Datos del Estudiante</h2>
       </div>
 
-      <form onSubmit={""} id="newStudent-form" action>
+      <form onSubmit={() => ""} id="newStudent-form" action="">
         {/*-----------------Informacion Personal------------------*/}
         {/* <h4>Informacion personal</h4> */}
         <div className="form-container">
           <div className="inputField">
-            <label for="names">Nombres</label>
+            <label htmlFor="names">Nombres</label>
             <input id="names" type="text" required />
           </div>
           <div className="inputField">
-            <label for="last_name">Apellidos</label>
+            <label htmlFor="last_name">Apellidos</label>
             <input id="last_name" className="validate" type="text" required />
           </div>
-          <div class="inputField">
-            <label for="date">Fecha de nacimiento</label>
+          <div className="inputField">
+            <label htmlFor="date">Fecha de nacimiento</label>
             <input id="date" type="date" className="validate" required />
           </div>
           <div className="inputField">
-            <label for="birthplace">Lugar de Nacimiento</label>
+            <label htmlFor="birthplace">Lugar de Nacimiento</label>
             <input id="birthplace" className="validate" type="text" required />
           </div>
           <div className="inputField">
-            <label for="dni">Cédula de identidad escolar</label>
+            <label htmlFor="dni">Cédula de identidad escolar</label>
             {/* <select>
               <option value=""></option>
               <option value="Venezolana">V</option>
@@ -45,31 +48,31 @@ const StudentForm = () => {
             <input id="dni" className="validate" type="number" />
           </div>
           <div className="inputField">
-            <label for="sex">Sexo</label>
+            <label htmlFor="sex">Sexo</label>
             <p>
-              <label for="masculine">
+              <label htmlFor="masculine">
                 <input name="group1" id="masculine" type="radio" required />
                 <span>Masculino</span>
               </label>
             </p>
             <p>
-              <label for="femenine">
+              <label htmlFor="femenine">
                 <input name="group1" type="radio" id="femenine" />
                 <span>Femenino</span>
               </label>
             </p>
           </div>
           <div className="inputField">
-            <label for="address">Direccion</label>
+            <label htmlFor="address">Direccion</label>
             <textarea
               id="address"
-              class="materialize-textarea"
+              className="materialize-textarea"
               required
             ></textarea>
           </div>
           {/*-----------------Informacion Familiar------------------*/}
           <div className="inputField">
-            <label for="representerName">Nombre del Representante</label>
+            <label htmlFor="representerName">Nombre del Representante</label>
             <input
               id="representerName"
               className="validate z-depth-1"
@@ -78,7 +81,7 @@ const StudentForm = () => {
             />
           </div>
           <div className="inputField">
-            <label for="representative_dni">Cedula del representante</label>
+            <label htmlFor="representative_dni">Cedula del representante</label>
             <input
               id="representative_dni"
               className="validate"
@@ -88,72 +91,112 @@ const StudentForm = () => {
           </div>
 
           <div className="inputField phones">
-            <label for="telephone" className="center">
+            <label htmlFor="telephone" className="center">
               Telefonos
             </label>
-            <input id="telephone" type="tel" class="validate " />
+            <input id="telephone" type="tel" className="validate " />
             <input id="telephone2" type="tel" />
           </div>
 
           <div className="inputField">
-            <label for="email">Correo</label>
+            <label htmlFor="email">Correo</label>
             <input id="email" className="validate" type="email" />
           </div>
           <div className="inputField">
-            <label for="living">Condición de vivienda</label>
+            <label htmlFor="living">Condición de vivienda</label>
             <input id="living" className="validate" type="text" />
           </div>
 
           {/*-----------------Informacion Academica------------------*/}
 
           {/* <h4 className="center">Informacion academica</h4> */}
-          <div className="inputField">
-            <label>Grado que cursa?</label>
-            <select name="sectionsStudent">
-              <option>Selecciona el grado</option>
 
-              <optgroup label="1°">
-                <option value="1er Grado A">1er Grado A</option>
-                <option value="1er Grado B">1er Grado B</option>
-              </optgroup>
-              <optgroup label="2°">
-                <option value="2do Grado A">2do Grado A</option>
-                <option value="2do Grado B">2do Grado B</option>
-              </optgroup>
-              <optgroup label="3°">
-                <option value="3er Grado A">3er Grado A</option>
-                <option value="3er Grado B">3er Grado B</option>
-              </optgroup>
-              <optgroup label="4°">
-                <option value="4to Grado A">4to Grado A</option>
-                <option value="4to Grado B">4to Grado B</option>
-              </optgroup>
-              <optgroup label="5°">
-                <option value="5to Grado A">5to Grado A</option>
-                <option value="5to Grado B">5to Grado B</option>
-              </optgroup>
-              <optgroup label="6°">
-                <option value="6to Grado A">6to Grado A</option>
-                <option value="6to Grado B">6to Grado B</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="file-field input-field">
-            <div class="btn red">
+          <div className="file-field input-field">
+            <div className="btn red">
               <span>File</span>
               <input type="file" />
             </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text" />
+            <div className="file-path-wrapper">
+              <input className="file-path validate" type="text" />
             </div>
           </div>
 
-          <button class="btn red waves-effect" type="submit" name="action">
+          <button className="btn red waves-effect" type="submit" name="action">
             Guardar
-            <i class="material-icons right">save</i>
+            <i className="material-icons right">save</i>
           </button>
         </div>
       </form>
+      <div className="row">
+        <div className="col s12 l6 collapsible">
+          <li>
+            <div className="collapsible-header">
+              <h3 className="collapsible-title">
+                <i className="material-icons icon-red">arrow_drop_down</i>
+                Agregar grado que cursa
+              </h3>
+            </div>
+            <div className="collapsible-body">
+              <div className="inputField">
+                <label>Grado que cursa?</label>
+                <select name="sectionsStudent">
+                  <option>Selecciona el grado o fase</option>
+                  <option value="2da Fase">2da Fase</option>
+                  <option value="3ra Fase">3ra Fase</option>
+                  <optgroup label="1°">
+                    <option value="1er Grado A">1er Grado A</option>
+                    <option value="1er Grado B">1er Grado B</option>
+                  </optgroup>
+                  <optgroup label="2°">
+                    <option value="2do Grado A">2do Grado A</option>
+                    <option value="2do Grado B">2do Grado B</option>
+                  </optgroup>
+                  <optgroup label="3°">
+                    <option value="3er Grado A">3er Grado A</option>
+                    <option value="3er Grado B">3er Grado B</option>
+                  </optgroup>
+                  <optgroup label="4°">
+                    <option value="4to Grado A">4to Grado A</option>
+                    <option value="4to Grado B">4to Grado B</option>
+                  </optgroup>
+                  <optgroup label="5°">
+                    <option value="5to Grado A">5to Grado A</option>
+                    <option value="5to Grado B">5to Grado B</option>
+                  </optgroup>
+                  <optgroup label="6°">
+                    <option value="6to Grado A">6to Grado A</option>
+                    <option value="6to Grado B">6to Grado B</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div className="col s12 l6 collapsible">
+          <li>
+            <div className="collapsible-header">
+              <h3 className="collapsible-title">
+                <i className="material-icons icon-red">arrow_drop_down</i>
+                Agregar o modificar período escolar
+              </h3>
+            </div>
+            <div className="collapsible-body">
+              <div className="inputField">
+                <label htmlFor="scholarchipPeriod">
+                  Agregar Período Escolar
+                </label>
+                <select name="scholarchipPeriod">
+                  <option value="2019-2020">Período Escolar 2019-2020</option>
+                  <option value="2020-2021">Período Escolar 2020-2021</option>
+                  <option value="2021-2022">Período Escolar 2021-2022</option>
+                  <option value="2022-2023">Período Escolar 2022-2023</option>
+                  <option value="2023-2024">Período Escolar 2023-2024</option>
+                </select>
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
     </React.Fragment>
   );
 };
@@ -166,20 +209,20 @@ export default StudentForm;
 /*<div>
   <h4>Informacion familiar o del representante</h4>
   <div className="inputField">
-    <label for="representative_name">Nombre del representante</label>
+    <label htmlFor="representative_name">Nombre del representante</label>
     <input id="representative_name" className="validate" type="text" required />
   </div>
   <div className="inputField">
-    <label for="representative_dni">Cedula del representante</label>
+    <label htmlFor="representative_dni">Cedula del representante</label>
     <input id="representative_dni" className="validate" type="text" required />
   </div>
   <div className="inputField">
-    <label for="representative_dni">Telefono</label>
+    <label htmlFor="representative_dni">Telefono</label>
     <input id="representative_dni" className="validate" type="text" required />
   </div>
 
   <div className="inputField">
-    <label for="representative_email">Correo</label>
+    <label htmlFor="representative_email">Correo</label>
     <input
       id="representative_email"
       className="validate"
@@ -204,36 +247,36 @@ export default StudentForm;
   <div>
     <h6>Con quién vive?</h6>
     <p>
-      <label for="parents">
+      <label htmlFor="parents">
         <input id="parents" className="validate" type="checkbox" />
         <span>Padres</span>
       </label>
     </p>
     <p>
-      <label for="brothers">
+      <label htmlFor="brothers">
         <input id="brothers" className="validate" type="checkbox" />
         <span>Hermanos</span>
       </label>
     </p>
     <p>
-      <label for="uncles">
+      <label htmlFor="uncles">
         <input
           id="uncles"
           className="validate"
           type="checkbox"
-          class="filled-in"
+          className="filled-in"
         />
         <span>Tíos</span>
       </label>
     </p>
     <p>
-      <label for="grandparents">
+      <label htmlFor="grandparents">
         <input id="grandparents" type="checkbox" />
         <span>Abuelos</span>
       </label>
     </p>
     <p>
-      <label for="others">
+      <label htmlFor="others">
         <input id="others" className="validate" type="checkbox" />
         <span>Otros</span>
       </label>
@@ -246,54 +289,54 @@ export default StudentForm;
 // <div className="healthy">
 //   <h4>Informacion de Salud</h4>
 //   <p>
-//     <label for="Esquizofrenia">
+//     <label htmlFor="Esquizofrenia">
 //       <input id="Esquizofrenia" className="validate" type="checkbox" />
 //       <span>Esquizofrenia*</span>
 //     </label>
 //   </p>
 //   <p>
-//     <label for="bipolaridad">
+//     <label htmlFor="bipolaridad">
 //       <input id="bipolaridad" className="validate" type="checkbox" />
 //       <span>Bipolaridad</span>
 //     </label>
 //   </p>
 //   <p>
-//     <label for="Nervios">
+//     <label htmlFor="Nervios">
 //       <input
 //         id="Nervios"
 //         className="validate"
 //         type="checkbox"
-//         class="filled-in"
+//         className="filled-in"
 //       />
 //       <span>Nervios</span>
 //     </label>
 //   </p>
 //   <p>
-//     <label for="Alergias">
+//     <label htmlFor="Alergias">
 //       <input id="Alergias" type="checkbox" />
 //       <span>Alergias*</span>
 //     </label>
 //   </p>
 //   <p>
-//     <label for="Diabetes">
+//     <label htmlFor="Diabetes">
 //       <input id="Diabetes" className="validate" type="checkbox" />
 //       <span>Diabetes*</span>
 //     </label>
 //   </p>
 //   <p>
-//     <label for="Migrañas">
+//     <label htmlFor="Migrañas">
 //       <input id="Migrañas" className="validate" type="checkbox" />
 //       <span>Migrañas</span>
 //     </label>
 //   </p>
 //   <p>
-//     <label for="Asma">
+//     <label htmlFor="Asma">
 //       <input id="Asma" className="validate" type="checkbox" />
 //       <span>Asma</span>
 //     </label>
 //   </p>
 //   <p>
-//     <label for="Rinitis">
+//     <label htmlFor="Rinitis">
 //       <input id="Rinitis" className="validate" type="checkbox" />
 //       <span>Rinitis*</span>
 //     </label>
@@ -302,13 +345,13 @@ export default StudentForm;
 //     <h5>Presenta alguna condicion</h5>
 //     <p>
 //       <label>
-//         <input class="with-gap" name="conditionGroup" type="radio" />
+//         <input className="with-gap" name="conditionGroup" type="radio" />
 //         <span>Si</span>
 //       </label>
 //     </p>
 //     <p>
 //       <label>
-//         <input class="with-gap" name="conditionGroup" type="radio" />
+//         <input className="with-gap" name="conditionGroup" type="radio" />
 //         <span>No</span>
 //       </label>
 //     </p>
@@ -317,8 +360,8 @@ export default StudentForm;
 //     <textarea
 //       id="condition"
 //       name="conditionGroup"
-//       class="materialize-textarea"
+//       className="materialize-textarea"
 //     />
-//     <label for="condition">Que tipo de condicion presenta:</label>
+//     <label htmlFor="condition">Que tipo de condicion presenta:</label>
 //   </div>
 // </div>

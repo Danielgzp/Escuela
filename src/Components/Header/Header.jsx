@@ -70,12 +70,41 @@ const Header = () => {
         </li>
         <li className="divider"></li>
       </ul>
-      <div class="navbar-fixed">
+      <ul id="dropdown2" className="dropdown-content">
+        <li>
+          <Link to="/services/biblioteca">
+            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+            Biblioteca
+          </Link>
+        </li>
+        <li className="divider"></li>
+        <li>
+          <Link to="/mision-vision">
+            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+            Computación
+          </Link>
+        </li>
+        <li className="divider"></li>
+        <li>
+          <Link to="#">
+            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+            Psicología
+          </Link>
+        </li>
+        <li className="divider"></li>
+        <li>
+          <Link to="#">
+            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+            Psicopedagogía
+          </Link>
+        </li>
+      </ul>
+      <div className="navbar-fixed">
         <nav>
           <div className="nav-wrapper fixed">
             <Link to="/" className="logo-big left">
               <img src={logo2} alt="Logo del colegio" className="logo" />
-              U.E.C Fe y Alegría San Francisco
+              <span>U.E.C Fe y Alegría San Francisco</span>
             </Link>
             <ul className="right nav-navigator__list">
               {/* <!-- Dropdown Trigger --> */}
@@ -101,12 +130,29 @@ const Header = () => {
                   Publicaciones
                 </Link>
               </li>
-
               <li>
+                <Link to="/admin">
+                  {/* <i className="material-icons icon-white">description</i> */}
+                  ADMIN
+                </Link>
+              </li>
+
+              {/* <li>
                 <Link to="#">
-                  {/* <i className="material-icons icon-white">contacts</i> */}
+                   <i className="material-icons icon-white">contacts</i> 
                   Contacto
                 </Link>
+              </li> */}
+              <li>
+                {/* <i className="material-icons icon-white">contacts</i> */}
+                <a
+                  className="dropdown-trigger"
+                  href="#!"
+                  data-target="dropdown2"
+                >
+                  Servicios
+                  <i className="material-icons right">arrow_drop_down</i>
+                </a>
               </li>
 
               <li>
@@ -195,14 +241,41 @@ const Header = () => {
                     Publicaciones
                   </Link>
                 </li>
+                <ul className="collapsible">
+                  <li>
+                    <a
+                      className="collapsible-header"
+                      onClick={() => handleRotateClick()}
+                    >
+                      <i className="material-icons">school</i>
+                      Servicios
+                      <i className="material-icons right">arrow_drop_down</i>
+                    </a>
+                    <div className="collapsible-body">
+                      <ul>
+                        <li>
+                          <Link to="/services/biblioteca">
+                            <i className="tiny material-icons icon-white">
+                              chevron_right
+                            </i>
+                            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+                            Biblioteca
+                          </Link>
+                        </li>
 
-                <li>
-                  <Link to="#">
-                    <i className="material-icons icon-white">contacts</i>
-                    Contacto
-                  </Link>
-                </li>
-
+                        <li>
+                          <Link to="/mision-vision">
+                            <i className="tiny material-icons icon-white">
+                              chevron_right
+                            </i>
+                            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+                            Computación
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
                 <li>
                   <Link to="/login">
                     <i className="material-icons icon-white">account_circle</i>

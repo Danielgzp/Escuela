@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
-//import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"; 
+//import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 // este boopstrap da en el carousel
 import DataTable from "react-data-table-component";
 
@@ -94,36 +94,41 @@ const MyDataTable = () => {
 
   const PaginationTable = () => {
     return (
-      <ul class="pagination justify-content-end">
-        <div className="pagination-container">
-          <li class="page-item" onClick={handleClickPrev}>
-            <a class="page-link">Previous</a>
-          </li>
-          <li class="page-item activw">
-            <a class="page-link" href="#">
-              1
-            </a>
-          </li>
-          <li class="page-item" aria-current="page">
-            <a class="page-link" href="#">
-              2
-            </a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">
-              3
-            </a>
-          </li>
-          <li class="page-item" onClick={handleClickNext}>
-            <a class="page-link" href="#">
-              Next
-            </a>
-          </li>
+      <div className="table-pagination">
+        <div className="pagination-button">
+          <a onClick={""}>Pre-Escolar</a>
         </div>
-      </ul>
+        <ul className="pagination right">
+          <div className="pagination-container">
+            <li className="page-item" onClick={handleClickPrev}>
+              <a className="page-link">Previous</a>
+            </li>
+            <li className="page-item activw">
+              <a className="page-link" href="#">
+                1
+              </a>
+            </li>
+            <li className="page-item" aria-current="page">
+              <a className="page-link" href="#">
+                2
+              </a>
+            </li>
+            <li className="page-item">
+              <a className="page-link" href="#">
+                3
+              </a>
+            </li>
+            <li className="page-item" onClick={handleClickNext}>
+              <a className="page-link" href="#">
+                Next
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
     );
   };
- 
+
   // if (state.loading) {
   //   return <Loader />;
   // }

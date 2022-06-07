@@ -14,7 +14,7 @@ const InformationFasfaga = ({ icon, user }) => {
 
   return (
     <div>
-      <div class="parallax-container">
+      <div className="parallax-container">
         <div className="fasfagaInfo-container">
           <h1 className="center">
             <i className={`zmdi zmdi-${icon} zmdi-hc-fw`} /> Usuarios{" "}
@@ -22,7 +22,7 @@ const InformationFasfaga = ({ icon, user }) => {
           </h1>
           <p className="center">Puede añadir más {user} en este apartado</p>
         </div>
-        <div class="parallax">
+        <div className="parallax">
           <img src={background} />
         </div>
       </div>

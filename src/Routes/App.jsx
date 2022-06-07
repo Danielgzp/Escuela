@@ -17,12 +17,13 @@ import AddAdmin from "../Pages/AddAdmin";
 import AddTeacher from "../Pages/AddTeacher";
 import AddStudent from "../Pages/AddStudent";
 import NotFoundPage from "../Pages/NotFoundPage";
+import Biblioteca from "../Pages/Biblioteca";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        {/* <Layout> */}
+        <Layout>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/pastoral" component={Pastoral} />
@@ -33,8 +34,9 @@ const App = () => {
           <Route exact path="/admin/addnewadmin" component={AddAdmin} />
           <Route exact path="/admin/addnewteacher" component={AddTeacher} />
           <Route exact path="/admin/addnewstudent" component={AddStudent} />
+          <Route exact path="/services/biblioteca" component={Biblioteca} />
           {/* <Route component={NotFoundPage} /> */}
-        {/* </Layout> */}
+        </Layout>
       </Switch>
     </BrowserRouter>
   );

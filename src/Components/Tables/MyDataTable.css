@@ -8,8 +8,8 @@
 .students-table select {
   display: inline-block !important;
 }
-.students-table header{
-   background-color: var(--blue-text); 
+.students-table header {
+  background-color: var(--blue-text);
   border-bottom: 1px rgba(128, 128, 128, 0.295) solid;
 }
 #headerTable-container {
@@ -55,12 +55,10 @@
   display: flex;
   align-items: center;
 }
-.rdt_Pagination {
-  display: flex;
-  align-items: center;
- 
+.search-bar p{
+  margin-top: 0 !important;
 }
-.rdt_Pagination button {
+/* .rdt_Pagination button {
   border-right: 1px grey solid;
   border-radius: 0%;
   padding: 0;
@@ -72,7 +70,7 @@
 .rdt_Pagination i {
   height: 100% !important;
   line-height: 40px !important;
-}
+} */
 .rdt_TableHeadRow {
   /* background-color: #FFCE54 !important; */
   color: rgb(31, 128, 255);
@@ -95,20 +93,74 @@
 .rdt_TableCell {
   justify-content: center;
 }
-.rdt_TableCell i{
+.rdt_TableCell i {
   color: orange;
 }
-.rdt_TableCell>div {
+.rdt_TableCell > div {
   text-align: center;
   white-space: normal !important;
 }
-.pagination-container{
-  margin: 15px 20px;
+.pagination {
+  display: flex;
+  justify-content: flex-end;
 }
-.pagination-container li a{
+.pagination-container {
+  margin: 10px 20px;
+  background-color: white;
+  border-radius: 3px;
+}
+.pagination-container li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  height: 30px;
+}
+.pagination-container li a {
+  font-family: "RobotoCondensed";
   color: black;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.table-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue-text);
+}
+.pagination-button {
+  margin-left: 20px;
+}
+.pagination-button a {
+  font-family: "Roboto";
+  font-family: 400;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+.pagination-button a:hover {
+  background-color: rgb(247, 59, 59);
+}
+.pagination-container li a:hover {
+  color: var(--blue-text);
 }
 .pagination {
-  background-color: var(--blue-text); 
+  background-color: var(--blue-text);
   margin: 0;
 }
