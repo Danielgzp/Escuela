@@ -89,7 +89,22 @@
 
 
 /*                 Student Form                                    */
-
+#swipeForm .collapsible{
+  border: none;
+}
+#swipeForm .collapsible-body{
+  border: none;
+}
+#swipeForm .collapsible-header{
+border-top: none;
+  padding: 5px;
+}
+#swipeForm .collapsible-title{
+  line-height: 30px;
+}
+.collapsible-button {
+  margin-bottom: 12px;
+}
 .select-dropdown{
     max-height: 450px;
 }

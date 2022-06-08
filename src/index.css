@@ -31,9 +31,9 @@ code {
 strong {
   font-weight: bold !important;
 }
-p{
+/* p{
   margin-bottom: 0 !important;
-}
+} */
 .row .col {
   padding: 0;
 }

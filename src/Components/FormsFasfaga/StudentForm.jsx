@@ -127,8 +127,9 @@ const StudentForm = () => {
           </button>
         </div>
       </form>
+
       <div className="row">
-        <div className="col s12 l6 collapsible">
+        <form onSubmit={""} action="" className="col s12 l6 collapsible">
           <li>
             <div className="collapsible-header">
               <h3 className="collapsible-title">
@@ -169,10 +170,17 @@ const StudentForm = () => {
                   </optgroup>
                 </select>
               </div>
+
+              <button
+                className="btn red waves-effect right collapsible-button"
+                type="submit"
+              >
+                Save
+              </button>
             </div>
           </li>
-        </div>
-        <div className="col s12 l6 collapsible">
+        </form>
+        <form onSubmit={""} action="" className="col s12 l6 collapsible">
           <li>
             <div className="collapsible-header">
               <h3 className="collapsible-title">
@@ -193,9 +201,15 @@ const StudentForm = () => {
                   <option value="2023-2024">Período Escolar 2023-2024</option>
                 </select>
               </div>
+              <button
+                className="btn red waves-effect right collapsible-button"
+                type="submit"
+              >
+                Save
+              </button>
             </div>
           </li>
-        </div>
+        </form>
       </div>
     </React.Fragment>
   );
