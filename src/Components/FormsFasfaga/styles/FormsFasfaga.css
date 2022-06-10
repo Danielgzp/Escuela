@@ -17,8 +17,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  z-index: 100;
   padding: 20px;
   background-color: rgb(255, 235, 235);
   /* border: 1px darkred solid; */
@@ -54,7 +52,6 @@
   font-family: "RobotoCondensed";
 }
 .inputField {
-  width: 100%;
   margin: 10px 10px;
 }
 .phones {
@@ -82,6 +79,7 @@
   color: white;
   margin: 0;
   font-size: 1.5rem;
+  text-align: center;
 }
 @media (min-width: 650px) {
   
