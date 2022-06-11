@@ -1,0 +1,43 @@
+.studentInfo{
+    width: 100%;
+    height: 100%;
+}
+.studentInfo-header{
+    width: 100%;
+    display: flex;
+    border: 1px grey solid;
+    padding: 20px;
+}
+.studentInfo-header img{
+    width: 200px;
+}
+.studentInfo-header h2{
+    font-size: 2.4rem;
+}
+.studentInfo-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(214, 213, 213);
+    /* padding: 25px; */
+}
+.studentInfo-container .input-field{
+    padding: 0 0.85rem !important;
+}
+.studentInfo-container .input-field label{
+    position: relative;
+    width: 100%;
+    left: 0;
+    font-family: "RobotoCondensed";
+}
+.studentInfo-container .row{
+    border-bottom: 2px black solid;
+}
+.studentInfo .input-field input{
+    background-color: white;
+    border: 1px solid red !important;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.field-title{
+    font-size: 1.6rem;
+}

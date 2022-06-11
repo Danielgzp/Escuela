@@ -90,7 +90,7 @@ export const columnas = [
   },
   {
     cell: (row) => (
-      <a href={row.url} target="_blank" rel="noopener noreferrer">
+      <a href="/admin/studentprofile" target="_blank" rel="noopener noreferrer">
         <i className="material-icons">account_box</i>
       </a>
     ),
