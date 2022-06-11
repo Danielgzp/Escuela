@@ -23,7 +23,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        {/* <Layout> */}
+        <Layout>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/pastoral" component={Pastoral} />
@@ -36,7 +36,7 @@ const App = () => {
           <Route exact path="/admin/addnewstudent" component={AddStudent} />
           <Route exact path="/services/biblioteca" component={Biblioteca} />
           {/* <Route component={NotFoundPage} /> */}
-        {/* </Layout> */}
+        </Layout>
       </Switch>
     </BrowserRouter>
   );

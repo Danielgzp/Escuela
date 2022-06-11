@@ -2,7 +2,6 @@ import React from "react";
 
 import BillBoard from "../Components/BillBoard/BillBoard";
 import HomeInfo from "../Components/HomeInfo/HomeInfo";
-import News from "../Components/News/News";
 
 import Map from "../hooks/Map";
 import credentials from "../credentials";

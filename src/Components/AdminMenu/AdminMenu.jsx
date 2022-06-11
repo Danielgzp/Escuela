@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Swal from "sweetalert2";
-import "./styles.css";
 
+import "./styles.css";
 import admin from "../../images/admin.jpg";
 
 const AdminMenu = ({}) => {
@@ -36,7 +36,6 @@ const AdminMenu = ({}) => {
       sidebar: document.querySelector(".secundary"),
       target: document.querySelector("slide-out"),
     });
-    setArrowDowMenu(false);
   }, []);
 
   const handleOnClick = () => {
@@ -57,19 +56,6 @@ const AdminMenu = ({}) => {
         }
       });
     });
-
-    // menu.subMenu.
-    // menu.subMenu.forEach((iconos) => {
-    //   iconos.addEventListener("click", () => {
-
-    //     if (showArrowDownMenu) {
-    //       menu.btnSubMenu[0].classList.remove("show-sideBar-SubMenu");
-    //     } else {
-    //       menu.btnSubMenu[0].classList.add("show-sideBar-SubMenu");
-    //     }
-    //   });
-    // });
-    // console.log(menu.subMenu)
 
     // for (var i = 0; i < menu.iconSubMenuBtn.length; i++) {
     //   if (showArrowDownMenu) {
@@ -93,24 +79,6 @@ const AdminMenu = ({}) => {
     menu.sidebar.style.transform = "translateX(-105%)";
     menu.sidebar.style.transition = "0.3s all ease-out";
   };
-
-  // useEffect(() => {
-  //   setMenu(document.querySelector(".menu"));
-  // }, []);
-
-  //////////////////////////////////importante///////////////////////////////////////////////////////
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   var elems = document.querySelectorAll(".sidenav");
-  //   var instances = M.Sidenav.init(elems, {
-  //     draggable: true,
-  //   });
-  // });
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   var elems = document.querySelectorAll(".collapsible");
-  //   var instances = M.Collapsible.init(elems, {
-  //     accordion: true,
-  //   });
-  // });
 
   return (
     <aside>
@@ -174,10 +142,6 @@ const AdminMenu = ({}) => {
             </div>
           </li>
         </ul>
-        {/* Nombre del Colegio  */}
-        {/* <div className="full-box text-uppercase center text-titles dashboard-sideBar-title">
-          U.E Colegio Fe y Alegria San Francisco
-        </div> */}
         {/* Menu de barra deslizante*/}
         <ul className="list-unstyled full-box dashboard-sideBar-Menu">
           <li>

@@ -57,14 +57,14 @@ const Header = () => {
       <ul id="dropdown1" className="dropdown-content">
         <li>
           <Link to="/history">
-            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+            
             Historia
           </Link>
         </li>
         <li className="divider"></li>
         <li>
           <Link to="/mision-vision">
-            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+            
             Mision y Vision
           </Link>
         </li>
@@ -73,28 +73,24 @@ const Header = () => {
       <ul id="dropdown2" className="dropdown-content">
         <li>
           <Link to="/services/biblioteca">
-            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
             Biblioteca
           </Link>
         </li>
         <li className="divider"></li>
         <li>
           <Link to="/mision-vision">
-            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
             Computación
           </Link>
         </li>
         <li className="divider"></li>
         <li>
           <Link to="#">
-            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
             Psicología
           </Link>
         </li>
         <li className="divider"></li>
         <li>
           <Link to="#">
-            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
             Psicopedagogía
           </Link>
         </li>

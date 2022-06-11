@@ -10,7 +10,7 @@ const MisionVision = () => {
       <div className="layout-background"></div>
       <h2 className="big-title__red">Mision y Vision</h2>
       <div className="row">
-        <div className="col s12 l12">
+        <div className="col s12">
           <span>
             <strong>
               Somos un Movimiento de Educación Popular y Promoción Social, aquí
@@ -35,7 +35,7 @@ const MisionVision = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col s12 l12">
+        <div className="col s12">
           <div className="mision-vision__container">
             <div className="center">
               <h3 className="medium-title__red">Mision</h3>

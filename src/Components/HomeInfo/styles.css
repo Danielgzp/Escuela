@@ -6,24 +6,6 @@
   color: black;
   font-style: normal;
 }
-/* .home-info img {
-  padding: 4px;
-  border: 1px solid #999999;
-} */
-/* .home-info p{
-    color: #666666;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2rem;
-    font-weight: lighter;
-} */
-/* .home-info a{
-color: var(--dark-red);
-font-weight: 350;
-letter-spacing: 1px;
-font-size: 1rem;
-text-transform: none;
-border-radius: 4px;
-}  */
 .home-info a:hover {
   color: black !important;
 }

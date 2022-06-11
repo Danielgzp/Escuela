@@ -2,7 +2,7 @@ import React from "react";
 
 import "./styles/Pastoral.css";
 
-import childrens from "../images/pastoralpage/childrens.jpg";
+import childrens from "../images/pastoralpage/childrens-2.jpg";
 
 const Pastoral = () => {
   return (
@@ -49,7 +49,7 @@ const Pastoral = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col s12 l12">
+        <div className="col s12">
           <div className="mision-vision__container">
             <div>
               <h4 className="center">MISIÓN</h4>
@@ -77,7 +77,7 @@ const Pastoral = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col s12 l12">
+        <div className="col s12">
           <div className="pastoral-caracteristics">
             <p>Por lo tanto es una pastoral que:</p>
             <ul>

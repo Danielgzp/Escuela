@@ -7,9 +7,9 @@ import AdminContainerArticles from "../Components/AdminContainerArticles/AdminCo
 const AdminHome = () => {
   return (
     <div>
-      <div>
+      <aside>
         <AdminMenu></AdminMenu>
-      </div>
+      </aside>
       <div>
         <section className="full-box dashboard-contentPage">
           <AdminHeader></AdminHeader>
