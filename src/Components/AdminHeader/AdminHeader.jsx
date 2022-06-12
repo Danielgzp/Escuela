@@ -92,12 +92,12 @@ const AdminHeader = () => {
 					</a>
 				</li>
 				*/}
-          <li className="right" onClick={() => handleHelper()}>
+          <li className="" onClick={() => handleHelper()}>
             <a href="#!" className="btn-modal-help">
               <i className="zmdi zmdi-help-outline"></i>
             </a>
           </li>
-          <li className="right">
+          <li className="">
             <Link to="/">
               <i className="material-icons">home</i>
             </Link>

@@ -43,7 +43,9 @@
     color: white;
     background-color: black;
 }
-
+.dashboard-contentPage{
+  margin-top: 50px;
+}
 @media (max-width: 800px) {
   .dataMenu {
     width: 100%;

@@ -8,40 +8,43 @@ const StudentInfo = () => {
   return (
     <section className="studentInfo">
       <div className="studentInfo-header">
-        <figure>
+        
           <img src={avatar} alt="Foto Estudiante" />
-        </figure>
-        <h2>Datos Personales del Estudiante</h2>
+        
+        <div>
+          <h2 className="center">Datos Personales del Estudiante</h2>
+        </div>
       </div>
       <div className="studentInfo-container">
         <div className="row">
-          <div className="input-field col s12 l4">
+          <div className="input-field col s12 m5 l4">
             <label htmlFor="">Nombres</label>
             <input type="text" disabled value={"Javier Pepito"} />
           </div>
-          <div className="input-field col s12 l4">
+          <div className="input-field col m4 s12 l4">
             <label htmlFor="">Apellidos</label>
             <input type="text" disabled value={"Gonzalez Perez"} />
           </div>
-          <div className="input-field col s12 l3">
+          <div className="input-field col s12 m3 l3">
             <label htmlFor="">Fecha de Nacimiento</label>
             <input type="text" disabled value="date" />
           </div>
         </div>
         <div className="row">
-          <div className="input-field col s12 l6">
+          <div className="input-field col s12 m6 l6">
             <label htmlFor="">Lugar de Nacimiento</label>
-            <input
+            <textarea
               type="text"
-              disabled
+              className="materialize-textarea"
               value={"Av Los Leones, Clinica Con un Nombre"}
+              disabled
             />
           </div>
-          <div className="input-field col s12 l4">
+          <div className="input-field col s12 m3 l4">
             <label htmlFor="">Cédula de Identidad Escolar</label>
             <input type="text" disabled value="28585670" />
           </div>
-          <div className="input-field col s12 l2">
+          <div className="input-field col s12 m3 l2">
             <label htmlFor="sex">Sexo</label>
             <p>
               <label htmlFor="masculine">
@@ -58,26 +61,39 @@ const StudentInfo = () => {
           </div>
         </div>
         <div className="row">
-          <div className="input-field col s12 l6">
+          <div className="input-field col s12 m7 l6">
             <label htmlFor="address">Direccion</label>
-            <textarea
+            <input
               id="address"
               className="materialize-textarea"
               disabled
-            ></textarea>
+              value={"Barrio San Francisco Calle 6"}
+            />
           </div>
-          <div className="input-field col s12 l4">
+          <div className="input-field col s12 m5 l4">
             <label htmlFor="email">Correo</label>
-            <input id="email" className="validate" type="email" disabled value={"amanciocrack123@gmail.com"}/>
+            <input
+              id="email"
+              className="validate"
+              type="email"
+              disabled
+              value={"amanciocrack123@gmail.com"}
+            />
           </div>
-          <div className="input-field col s12 l2">
+          <div className="input-field col s12 m4 l2">
             <label htmlFor="living">Condición de vivienda</label>
-            <input id="living" className="validate" type="text" disable value={"Propia"}/>
+            <input
+              id="living"
+              className="validate"
+              type="text"
+              disable
+              value={"Propia"}
+            />
           </div>
         </div>
         <div className="row">
           <h3 className="field-title">Informacion Del Representante</h3>
-          <div className="input-field col s12 l4">
+          <div className="input-field col s12 m6 l4">
             <label htmlFor="representerName">Nombre del Representante</label>
             <input
               id="representerName"
@@ -87,7 +103,7 @@ const StudentInfo = () => {
               value={"Amancio Ortega"}
             />
           </div>
-          <div className="input-field col s12 l3">
+          <div className="input-field col s12 m6 l3">
             <label htmlFor="representative_dni">Cedula del representante</label>
             <input
               id="representative_dni"
@@ -98,7 +114,7 @@ const StudentInfo = () => {
             />
           </div>
 
-          <div className="input-field phones col s12 l5">
+          <div className="input-field phones2 col s12 m6 l5 center">
             <label htmlFor="telephone" className="center">
               Telefonos
             </label>

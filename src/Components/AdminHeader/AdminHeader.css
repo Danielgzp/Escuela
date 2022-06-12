@@ -2,3 +2,10 @@
     transition: 0.4s all ease !important;
     /* transition-delay: -0.1s !important; */
 }
+.dashboard-Navbar{
+    position: fixed;
+    z-index: 997;
+}
+/* .dashboard-Navbar li{
+    z-index: 999;
+} */
