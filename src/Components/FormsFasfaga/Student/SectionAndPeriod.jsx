@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 
-const SectionAndPeriod = ({ grades }) => {
+const SectionAndPeriod = ({ grades, data, setData }) => {
+	
   return (
     <div className="row">
       <form onSubmit={""} action="" className="col s12 l6 collapsible">
@@ -14,16 +15,17 @@ const SectionAndPeriod = ({ grades }) => {
           <div className="collapsible-body">
             <div className="inputField">
               <label>Grado que cursa</label>
-              <select name="sectionsStudent">
+              <select name="sectionsStudent" onChange={(e) => setData({...data, section: e.target.value})}>
+                <option value="undefined">Selecciona el grado o fase</option>
                 {grades === "primaria" ? (
                   <React.Fragment>
                     <optgroup label="1°">
-                      <option value="1er Grado A">1er Grado A</option>
-                      <option value="1er Grado B">1er Grado B</option>
+                      <option value="1">1er Grado A</option>
+                      <option value="2">1er Grado B</option>
                     </optgroup>
                     <optgroup label="2°">
-                      <option value="2do Grado A">2do Grado A</option>
-                      <option value="2do Grado B">2do Grado B</option>
+                      <option value="3">2do Grado A</option>
+                      <option value="4">2do Grado B</option>
                     </optgroup>
                     <optgroup label="3°">
                       <option value="3er Grado A">3er Grado A</option>
@@ -44,11 +46,10 @@ const SectionAndPeriod = ({ grades }) => {
                   </React.Fragment>
                 ) : (
                   <React.Fragment>
-                    <option value="2da Fase">2da Fase</option>
-                    <option value="3ra Fase">3ra Fase</option>
+                    <option value="7">2da Fase</option>
+                    <option value="8">3ra Fase</option>
                   </React.Fragment>
                 )}
-                <option>Selecciona el grado o fase</option>
               </select>
             </div>
 
@@ -72,12 +73,13 @@ const SectionAndPeriod = ({ grades }) => {
           <div className="collapsible-body">
             <div className="inputField">
               <label htmlFor="scholarchipPeriod">Agregar Período Escolar</label>
-              <select name="scholarchipPeriod">
-                <option value="2019-2020">Período Escolar 2019-2020</option>
-                <option value="2020-2021">Período Escolar 2020-2021</option>
-                <option value="2021-2022">Período Escolar 2021-2022</option>
-                <option value="2022-2023">Período Escolar 2022-2023</option>
-                <option value="2023-2024">Período Escolar 2023-2024</option>
+              <select name="scholarchipPeriod" onChange={(e) => setData({...data, period: e.target.value})}>
+                <option value="undefined">Selecciona el período</option>
+				<option value="1">Período Escolar 2019-2020</option>
+                <option value="2">Período Escolar 2020-2021</option>
+                <option value="3">Período Escolar 2021-2022</option>
+                <option value="4">Período Escolar 2022-2023</option>
+                <option value="5">Período Escolar 2023-2024</option>
               </select>
             </div>
             <button
