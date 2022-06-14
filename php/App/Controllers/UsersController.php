@@ -76,7 +76,7 @@ class UsersController extends UsersModel
 		:$photo = null;
 
 		//SALDRÁ ERROR SI UNA VARIABLE ESTÁ VACÍA
-		if(empty($ci) || empty($name) || empty($surname) || empty($email) || empty($password) || empty($address) || empty($personal_phone) || empty($birth_date) || empty($gender) || empty($group)){
+		if(empty($ci) || empty($username) || empty($name) || empty($surname) || empty($email) || empty($password) || empty($address) || empty($personal_phone) || empty($birth_date) || empty($gender) || empty($group)){
 
 			$alert = "Ningún campo puede estar vacío";
 
@@ -129,9 +129,17 @@ class UsersController extends UsersModel
 						    	}else{
 						    		
 									//CHEQUEAR SI LA CÉDULA PROPORCIONADA YA SE ENCUENTRA REGISTRADA	
-						    		if(parent::data_query('users', 'ci', $ci)->rowCount() > 0){
+						    		if(parent::data_query('users', 'ci', $ci)->rowCount() > 0 || parent::data_query('users', 'username', $username)->rowCount() > 0){
 										
-										$alert = 'La cédula proporcionada ya se encuentra registrada';
+										if(parent::data_query('users', 'ci', $ci)->rowCount() > 0){
+											
+											$alert = 'La cédula ya se encuentra registrada';
+										
+										}else{
+											
+											$alert = 'El nombre de usuario ya se encuentra registrado';
+										
+										}
 										
 									}else{
 
@@ -186,7 +194,7 @@ class UsersController extends UsersModel
 
 			$check = $check->fetch();
 			
-			if($check->group != 'Primaria' && $check->group != 'Prescolar'){
+			if($check->group != 'Primaria' && $check->group != 'Preescolar'){
 
 				$delete = parent::delete('users', 'ci', $ci);
 

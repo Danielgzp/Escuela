@@ -20,9 +20,10 @@ class UsersModel extends Model{
 	
 	protected function newUserModel($data)
 	{
-		$query = 'INSERT INTO `users` (`ci`, `name`, `surname`, `email`, `password`, `address`, `personal_phone`, `local_phone`, `birth_date`, `gender`, `group`, `admission_date`) VALUES (:ci, :name, :surname, :email, :password, :address, :personal_phone, :local_phone, :birth_date, :gender, :group, :admission_date)';
+		$query = 'INSERT INTO `users` (`ci`, `username`, `name`, `surname`, `email`, `password`, `address`, `personal_phone`, `local_phone`, `birth_date`, `gender`, `group`, `admission_date`) VALUES (:ci, :username, :name, :surname, :email, :password, :address, :personal_phone, :local_phone, :birth_date, :gender, :group, :admission_date)';
 		$sql = $this->db->prepare($query);
 		$sql->bindParam(':ci', $data['ci']);
+		$sql->bindParam(':username', $data['username']);
 		$sql->bindParam(':name', $data['name']);
 		$sql->bindParam(':surname', $data['surname']);
 		$sql->bindParam(':email', $data['email']);
