@@ -8,6 +8,7 @@ import Layout from "../Components/Layout/Layout";
 
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
+import Logout from "../Pages/Logout";
 import Pastoral from "../Pages/Pastoral";
 import History from "../Pages/History";
 import MisionVision from "../Pages/MisionVision";
@@ -27,6 +28,7 @@ const App = () => {
         {/* <Layout> */}
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
+		  <Route exact path="/logout" component={Logout} />
           <Route exact path="/pastoral" component={Pastoral} />
           <Route exact path="/history" component={History} />
           <Route exact path="/mision-vision" component={MisionVision} />
