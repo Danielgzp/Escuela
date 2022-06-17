@@ -26,20 +26,20 @@ const App = () => {
     <BrowserRouter>
       <Switch>
         {/* <Layout> */}
-          <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
-		  <Route exact path="/logout" component={Logout} />
-          <Route exact path="/pastoral" component={Pastoral} />
-          <Route exact path="/history" component={History} />
-          <Route exact path="/mision-vision" component={MisionVision} />
-          <Route exact path="/gallery" component={Gallery} />
-          <Route exact path="/admin" component={AdminHome} />
-          <Route exact path="/admin/addnewadmin" component={AddAdmin} />
-          <Route exact path="/admin/addnewteacher" component={AddTeacher} />
-          <Route exact path="/admin/addnewstudent" component={AddStudent} />
-          <Route exact path="/services/biblioteca" component={Biblioteca} />
-          <Route exact path="/admin/studentprofile" component={StudentProfile} />
-          {/* <Route component={NotFoundPage} /> */}
+        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/logout" component={Logout} />
+        <Route exact path="/pastoral" component={Pastoral} />
+        <Route exact path="/history" component={History} />
+        <Route exact path="/mision-vision" component={MisionVision} />
+        <Route exact path="/gallery" component={Gallery} />
+        <Route exact path="/admin" component={AdminHome} />
+        <Route exact path="/admin/addnewadmin" component={AddAdmin} />
+        <Route exact path="/admin/addnewteacher" component={AddTeacher} />
+        <Route exact path="/admin/addnewstudent" component={AddStudent} />
+        <Route exact path="/services/biblioteca" component={Biblioteca} />
+        <Route exact path="/admin/studentprofile" component={StudentProfile} />
+        {/* <Route component={NotFoundPage} /> */}
         {/* </Layout> */}
       </Switch>
     </BrowserRouter>
