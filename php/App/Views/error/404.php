@@ -60,9 +60,9 @@
 </head>
 <body>
 
-    <div className="error">
-        <p className="error-emoji">(-.-')</p>
-        <div className="error-text">
+    <div class="error">
+        <p class="error-emoji">(-.-')</p>
+        <div class="error-text">
             <h1>Página no encontrada</h1>
             <p>Error 404</p>
         </div>
