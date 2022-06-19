@@ -7,6 +7,7 @@ use App\Controllers\Error;
 use App\Controllers\PaginationController;
 use App\Controllers\UsersController;
 use App\Controllers\StudentsController;
+use App\Controllers\TeacherController;
 use App\Controllers\PeriodsController;
 use App\Controllers\SectionsController;
 
@@ -30,6 +31,12 @@ class Api
 				$student = new StudentsController();
 				$student = $student->newStudentController();
 				echo json_encode($student);
+
+			}else if($_POST['group'] == 'Docente'){
+
+				$teacher = new TeacherController();
+				$teacher = $teacher->newTeacherController();
+				echo json_encode($teacher);
 
 			}else{
 				
@@ -121,6 +128,14 @@ class Api
 	{
 		$show = new PaginationController();
 		$show = $show->pagination($page, 'students');
+		echo $show = json_encode($show, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+	}
+	
+	//MOSTRAR SOLO LOS DOCENTES CON PAGINACIÓN
+	public function showTeachers($page = 1)
+	{
+		$show = new PaginationController();
+		$show = $show->pagination($page, 'teachers');
 		echo $show = json_encode($show, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 	}
 

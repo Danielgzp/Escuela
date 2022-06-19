@@ -8,116 +8,160 @@ use App\Model\TeacherModel;
 class TeacherController extends TeacherModel
 {
 
-	public function new_teacher()
+	public function newTeacherController()
 	{
-
 		$util = new Util();
 
 		$ci = $util->clean_string($_POST['ci']);
 		$name = $util->clean_string($_POST['name']);
-		$last_name = $util->clean_string($_POST['last_name']);
-		$address = $util->clean_string($_POST['address']);
+		$surname = $util->clean_string($_POST['surname']);
 		$email = $util->clean_string($_POST['email']);
-		$phone = $util->clean_string($_POST['phone']);
-		$specialty = $util->clean_string($_POST['specialty']);
+		$username = $util->clean_string($_POST['username']);
+		$password = $util->clean_string($_POST['pass']);
+		$address = $util->clean_string($_POST['address']);
+		$personal_phone = $util->clean_string($_POST['personal_phone']);
+		(isset($_POST['local_phone']) && !empty($_POST['local_phone']))
+		?$local_phone = $util->clean_string($_POST['local_phone'])
+		:$local_phone = null;
+		$birth_date = $util->clean_string($_POST['birth_date']);
 		$gender = $util->clean_string($_POST['gender']);
-		$photo = $_FILES['photo']['name'];
+		$group = $util->clean_string($_POST['group']);
+		$section = $util->clean_string($_POST['section']);
+		$period = $util->clean_string($_POST['period']);
+		$admission_date = date('Y-m-d');
+		(isset($_FILES['photo']))
+		?$photo = $_FILES['photo']['name']
+		:$photo = null;
+		
+		//CHEQUEAR SI EL NOMBRE DE USUARIO SE ENCUENTRA REGISTRADO O NO
+		$check_username = parent::data_query('users', 'username', $username);
 
-		if(empty($ci) || empty($name) || empty($last_name) || empty($address) || empty($email) || empty($phone) || empty($specialty)){
+		//SALDRÁ ERROR SI UNA VARIABLE ESTÁ VACÍA
+		if(empty($ci) || empty($username) || empty($name) || empty($surname) || empty($email) || empty($password) || empty($address) || empty($personal_phone) || empty($birth_date) || empty($gender) || empty($group) || $section == 'undefined' || $period == 'undefined'){
 
-			$alert = [
-		    	"alert"=>"simple",
-		        "type"=>"error",
-		        "title"=>"Oh no!",
-		        "text"=>"Ningún campo puede estar vacío"
-	    	];
+			$alert = "Ningún campo puede estar vacío";
 
 		}else{
-			if(!preg_match("/^[a-zA-ZÀ-ÿ\s]{1,40}$/", $name) || !preg_match("/^[a-zA-ZÀ-ÿ\s]{1,40}$/", $last_name) || !preg_match("/^[a-zA-ZÀ-ÿ\s]{1,40}$/", $specialty)){
+			
+			//PERMITIR SOLAMENTE LETRAS Y ACENTOS
+			if(!preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/", $name) || !preg_match("/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/", $surname)){
 
-				$alert = [
-			    	"alert"=>"simple",
-			        "type"=>"error",
-			        "title"=>"Oh no!",
-			        "text"=>"Los campos nombre, apellido y especialidad sólo pueden tener letras"
-	    		];
+				$alert = "Los campos nombre y apellido sólo pueden tener letras";
 
 			}else{
 
-				if(!is_numeric($phone) || !is_numeric($ci)){
+				//PERMITIR SOLAMENTE NÚMEROS
+				if(!is_numeric($personal_phone)){
 
-					$alert = [
-				    	"alert"=>"simple",
-				        "type"=>"error",
-				        "title"=>"Oh no!",
-				        "text"=>"La cédula y el número de teléfono solo pueden tener números"
-	    			];
+					$alert = "El número de teléfono solo pueden contener números";
 
 				}else{
-					if(strlen($phone) > 11 || strlen($phone) < 11){
-						$alert = [
-					    	"alert"=>"simple",
-					        "type"=>"error",
-					        "title"=>"Oh no!",
-					        "text"=>"El número de teléfono solo puede tener 11 dígitos"
-	    				];
+					
+					//COMPROBAR LOS DÍGITOS PERMITIDOS PARA EL TELÉFONO
+					if(strlen($personal_phone) > 11 || strlen($personal_phone) < 11){
+						
+						$alert = "El número de teléfono solo puede tener 11 dígitos";
+						
 					}else{
+						
+						//COMPROBAR LOS DÍGITOS PERMITIDOS PARA LA CÉDULA
 						if(strlen($ci) < 7 || strlen($ci) > 8){
-							$alert = [
-						    	"alert"=>"simple",
-						        "type"=>"error",
-						        "title"=>"Oh no!",
-						        "text"=>"Introduce una cédula válida"
-	    					];
+							
+							$alert = "Introduce una cédula válida";
+
 						}else{
 
-							if(!isset($photo) || $photo == ''){
+							//COMPROBAR SI EXISTE UNA FOTO
+							if(!isset($photo) || $photo == '' || $photo == null){
 
-								$alert = [
-							    	"alert"=>"simple",
-							        "type"=>"error",
-							        "title"=>"Oh no!",
-							        "text"=>"Por favor, agrega una foto"
-	    						];
+								$alert = "Por favor agrega una foto";
 
 							}else{
 
 								$type = $_FILES['photo']['type'];
-						     	$size = $_FILES['photo']['size'];
-						    	$temp = $_FILES['photo']['tmp_name'];
+								$size = $_FILES['photo']['size'];
+								$temp = $_FILES['photo']['tmp_name'];
 
-						    	if(!((strpos($type, "gif") || strpos($type, "jpeg") || strpos($type, "jpg") || strpos($type, "png")) && ($size < 20000000))){
+								//LOS FORMATOS QUE SE PERMITIRÁN Y EL TAMAÑO DE LA FOTO
+								if(!((strpos($type, "gif") || strpos($type, "jpeg") || strpos($type, "jpg") || strpos($type, "png")) && ($size < 20000000))){
 
-						    		$alert = [
-								    	"alert"=>"simple",
-								        "type"=>"error",
-								        "title"=>"Oh no!",
-								        "text"=>"Se permiten archivos .gif, .jpg, .png. y de 2mb como máximo"
-	    							];
+									$alert = "Se permiten archivos .gif, .jpg, .png. y de 2mb como máximo";
 
-						    	}else{
-						    		if(move_uploaded_file($temp, './img/'.$photo)){
-						    			chmod('./img/'.$photo, 0777);
+								}else{
 
-						    			/*AQUI IRIA LA INSERCIÓN EN LA BASE DE DATOS*/
+									//CHEQUEAR SI LA CÉDULA PROPORCIONADA YA SE ENCUENTRA REGISTRADA
+									if(parent::data_query('users', 'ci', $ci)->rowCount() > 0 || parent::data_query('users', 'username', $username)->rowCount() > 0){
+										
+										if(parent::data_query('users', 'ci', $ci)->rowCount() > 0){
+											
+											$alert = 'La cédula del estudiante ya se encuentra registrada';
+										
+										}else{
+											
+											$alert = 'El nombre de usuario ya se encuentra registrado';
+										
+										}
+										
+									}else{
 
-						    			$alert = [
-									    	"alert"=>"clean",
-									        "type"=>"success",
-									        "title"=>"!",
-									        "text"=>"Se ha agregado el administrador correctamente"
-	    								];
+										$data = [
+											"ci" => $ci,
+											"username" => $username,
+											"name" => $name,
+											"surname" => $surname,
+											"email" => $email,
+											"password" => $password,
+											"address" => $address,
+											"personal_phone" => $personal_phone,
+											"local_phone" => $local_phone,
+											"birth_date" => $birth_date,
+											"gender" => $gender,
+											"group" => $group,
+											"admission_date" => $admission_date
+										];
 
-						    		}
-						    	}
+										//GUARDAR DATOS DEL ESTUDIANTE
+										$save = TeacherModel::newTeacherModel($data);
+										
+										//COMPROBAR SI SE GUARDARON LOS DATOS Y MOVER LA FOTO AL SERVIDOR
+										if($save->rowCount() > 0 && move_uploaded_file($temp, './img/'.$photo)){
+
+											chmod('./img/'.$photo, 0777);
+
+											$data = [
+												"ci" => $ci,
+												"section" => $section,
+												"period" => $period
+											]; 
+
+											//GUARDAR INFORMACIÓN DEL DOCENTE
+											$save_info = TeacherModel::newInfoModel($data);
+
+											//CHEQUEAR
+											if($save_info->rowCount() > 0){
+												
+												$alert = true;
+
+											}else{
+
+												$alert = "Ha ocurrido un error guardando la información";
+												parent::delete('users', 'ci', $ci);
+
+											}									
+										}else{
+											
+											$alert = 'Ha ocurrido un error guardando los datos';
+											
+										}
+									}
+								}
 							}
 						}
 					}
 				}
 			}
 		}
-
-		return $util->sweet_alert($alert);
+		return $alert;
 	}
 
 }

@@ -25,6 +25,12 @@ class PaginationController extends PaginationModel
 					$num_total_rows = paginationModel::students_num_rows();
 
 				break;
+				
+				case "teachers":
+
+					$num_total_rows = paginationModel::teachers_num_rows();
+
+				break;
 
 			}
 
@@ -63,6 +69,12 @@ class PaginationController extends PaginationModel
 					case "students":
 
 						$show = paginationModel::showStudents($start, $num_items_by_page);
+
+					break;
+					
+					case "teachers":
+
+						$show = paginationModel::showTeachers($start, $num_items_by_page);
 
 					break;
 
