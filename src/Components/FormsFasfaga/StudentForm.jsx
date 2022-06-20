@@ -283,7 +283,7 @@ const StudentForm = () => {
               <input className="file-path validate" type="text" />
             </div>
           </div>
-
+          <SectionAndPeriod grades={"primaria"} data={data} setData={setData} />
           <button
             className="btn red waves-effect"
             type="submit"
@@ -294,8 +294,6 @@ const StudentForm = () => {
             <i className="material-icons right">save</i>
           </button>
         </form>
-
-        <SectionAndPeriod grades={"primaria"} data={data} setData={setData} />
       </div>
 
       {/*-------------------------------------------- Estudiante Preescolar ----------------------*/}
