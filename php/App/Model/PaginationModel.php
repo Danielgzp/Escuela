@@ -59,7 +59,7 @@ class PaginationModel extends Model
 	
 	protected function showTeachers($start, $items)
 	{
-		$query = 'SELECT u.ci, u.name, u.surname, email, password, address, personal_phone, local_phone, birth_date, gender, `group`, admission_date, egress_date, s.name as section, p.start, p.end FROM users u INNER JOIN information info ON u.ci = info.ci INNER JOIN section s ON info.section = s.id INNER JOIN period p ON info.section = p.id WHERE `group` = "Primaria" OR `group` = "Preescolar" ORDER BY u.name DESC LIMIT '.$start.', '.$items;
+		$query = 'SELECT u.ci, u.name, u.surname, email, password, address, personal_phone, local_phone, birth_date, gender, `group`, admission_date, egress_date, s.name as section, p.start, p.end FROM users u INNER JOIN information info ON u.ci = info.ci INNER JOIN section s ON info.section = s.id INNER JOIN period p ON info.section = p.id WHERE `group` = "Docente" ORDER BY u.name DESC LIMIT '.$start.', '.$items;
 		$sql = $this->db->prepare($query);
 		$sql->execute();
 		return $sql = $sql->fetchAll();
