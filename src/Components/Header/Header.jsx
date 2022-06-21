@@ -26,6 +26,7 @@ const Header = () => {
     var elems3 = document.querySelectorAll(".dropdown-trigger");
     var instances3 = M.Dropdown.init(elems3, {
       coverTrigger: false,
+      hover: true,
     });
 
     setState({
@@ -56,45 +57,140 @@ const Header = () => {
     <header>
       <ul id="dropdown1" className="dropdown-content">
         <li>
-          <Link to="/history">
-            
-            Historia
-          </Link>
+          <Link to="/history">Historia</Link>
         </li>
         <li className="divider"></li>
         <li>
-          <Link to="/mision-vision">
-            
-            Mision y Vision
-          </Link>
+          <Link to="/mision-vision">Mision y Vision</Link>
         </li>
         <li className="divider"></li>
       </ul>
       <ul id="dropdown2" className="dropdown-content">
         <li>
-          <Link to="/services/biblioteca">
-            Biblioteca
-          </Link>
+          <Link to="/services/biblioteca">Biblioteca</Link>
         </li>
         <li className="divider"></li>
         <li>
-          <Link to="/mision-vision">
-            Computación
-          </Link>
+          <Link to="/mision-vision">Computación</Link>
         </li>
         <li className="divider"></li>
         <li>
-          <Link to="#">
-            Psicología
-          </Link>
+          <Link to="#">Psicología</Link>
         </li>
         <li className="divider"></li>
         <li>
-          <Link to="#">
-            Psicopedagogía
-          </Link>
+          <Link to="#">Psicopedagogía</Link>
         </li>
       </ul>
+      <div className="slider-container">
+        <ul id="slide-out" className="sidenav slide-menu">
+          <li className="no-padding">
+            <ul className="collapsible collapsible-accordion">
+              <div className="background-nav"></div>
+
+              <div className="user-view">
+                <div className="background"></div>
+                <img className="circle" src={logo2} />
+
+                <span className="white-text name center">
+                  U.E Colegio Fe y Alegria San Francisco
+                </span>
+              </div>
+              <li>
+                <Link to="/">
+                  <i className="material-icons icon-white">home</i> 
+                  Home
+                </Link>
+              </li>
+              <li>
+                <a
+                  className="collapsible-header"
+                  onClick={() => handleRotateClick()}
+                >
+                  <i className="material-icons icon-white">account_balance</i>
+                  Quienes Somos
+                  <i className="material-icons right">arrow_drop_down</i>
+                </a>
+                <div className="collapsible-body">
+                  <ul>
+                    <li>
+                      <Link to="/history">
+                        <i className="tiny material-icons icon-white">
+                          chevron_right
+                        </i>
+                        Historia
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/mision-vision">
+                        <i className="tiny material-icons icon-white">
+                          chevron_right
+                        </i>
+                        Mision y Vision
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link to="/gallery">
+              <i className="material-icons icon-white">photo_library</i>
+              Galeria
+            </Link>
+          </li>
+
+          <li>
+            <Link to="#">
+              <i className="material-icons icon-white">description</i>
+              Publicaciones
+            </Link>
+          </li>
+          <ul className="collapsible">
+            <li>
+              <a
+                className="collapsible-header"
+                onClick={() => handleRotateClick()}
+              >
+                <i className="material-icons">school</i>
+                Servicios
+                <i className="material-icons right">arrow_drop_down</i>
+              </a>
+              <div className="collapsible-body">
+                <ul>
+                  <li>
+                    <Link to="/services/biblioteca">
+                      <i className="tiny material-icons icon-white">
+                        chevron_right
+                      </i>
+                      {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+                      Biblioteca
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/mision-vision">
+                      <i className="tiny material-icons icon-white">
+                        chevron_right
+                      </i>
+                      {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+                      Computación
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <li>
+            <Link to="/login">
+              <i className="material-icons icon-white">account_circle</i>
+              Login
+            </Link>
+          </li>
+        </ul>
+      </div>
+
       <div className="navbar-fixed">
         <nav>
           <div className="nav-wrapper fixed">
@@ -174,112 +270,7 @@ const Header = () => {
                 </i>
               </div>
             </div>
-            <div className="slider-container">
-              <div className="background-slider"></div>
-              <ul id="slide-out" className="sidenav slide-menu">
-                <li className="no-padding">
-                  <ul className="collapsible collapsible-accordion">
-                    <div className="background-nav"></div>
 
-                    <div className="user-view">
-                      <div className="background"></div>
-                      <img className="circle" src={logo2} />
-
-                      <span className="white-text name center">
-                        U.E Colegio Fe y Alegria San Francisco
-                      </span>
-                    </div>
-
-                    <li>
-                      <a
-                        className="collapsible-header"
-                        onClick={() => handleRotateClick()}
-                      >
-                        <i className="material-icons icon-white">
-                          account_balance
-                        </i>
-                        Quienes Somos
-                        <i className="material-icons right">arrow_drop_down</i>
-                      </a>
-                      <div className="collapsible-body">
-                        <ul>
-                          <li>
-                            <Link to="/history">
-                              <i className="tiny material-icons icon-white">
-                                chevron_right
-                              </i>
-                              Historia
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/mision-vision">
-                              <i className="tiny material-icons icon-white">
-                                chevron_right
-                              </i>
-                              Mision y Vision
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link to="/gallery">
-                    <i className="material-icons icon-white">photo_library</i>
-                    Galeria
-                  </Link>
-                </li>
-
-                <li>
-                  <Link to="#">
-                    <i className="material-icons icon-white">description</i>
-                    Publicaciones
-                  </Link>
-                </li>
-                <ul className="collapsible">
-                  <li>
-                    <a
-                      className="collapsible-header"
-                      onClick={() => handleRotateClick()}
-                    >
-                      <i className="material-icons">school</i>
-                      Servicios
-                      <i className="material-icons right">arrow_drop_down</i>
-                    </a>
-                    <div className="collapsible-body">
-                      <ul>
-                        <li>
-                          <Link to="/services/biblioteca">
-                            <i className="tiny material-icons icon-white">
-                              chevron_right
-                            </i>
-                            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
-                            Biblioteca
-                          </Link>
-                        </li>
-
-                        <li>
-                          <Link to="/mision-vision">
-                            <i className="tiny material-icons icon-white">
-                              chevron_right
-                            </i>
-                            {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
-                            Computación
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-                <li>
-                  <Link to="/login">
-                    <i className="material-icons icon-white">account_circle</i>
-                    Login
-                  </Link>
-                </li>
-              </ul>
-            </div>
             <ul className="right hide-on-med-and-down"></ul>
           </div>
         </nav>
@@ -289,3 +280,112 @@ const Header = () => {
 };
 
 export default Header;
+
+//  <div className="slider-container">
+//               <div className="background-slider"></div>
+//               <ul id="slide-out" className="sidenav slide-menu">
+//                 <li className="no-padding">
+//                   <ul className="collapsible collapsible-accordion">
+//                     <div className="background-nav"></div>
+
+//                     <div className="user-view">
+//                       <div className="background"></div>
+//                       <img className="circle" src={logo2} />
+
+//                       <span className="white-text name center">
+//                         U.E Colegio Fe y Alegria San Francisco
+//                       </span>
+//                     </div>
+
+//                     <li>
+//                       <a
+//                         className="collapsible-header"
+//                         onClick={() => handleRotateClick()}
+//                       >
+//                         <i className="material-icons icon-white">
+//                           account_balance
+//                         </i>
+//                         Quienes Somos
+//                         <i className="material-icons right">arrow_drop_down</i>
+//                       </a>
+//                       <div className="collapsible-body">
+//                         <ul>
+//                           <li>
+//                             <Link to="/history">
+//                               <i className="tiny material-icons icon-white">
+//                                 chevron_right
+//                               </i>
+//                               Historia
+//                             </Link>
+//                           </li>
+//                           <li>
+//                             <Link to="/mision-vision">
+//                               <i className="tiny material-icons icon-white">
+//                                 chevron_right
+//                               </i>
+//                               Mision y Vision
+//                             </Link>
+//                           </li>
+//                         </ul>
+//                       </div>
+//                     </li>
+//                   </ul>
+//                 </li>
+//                 <li>
+//                   <Link to="/gallery">
+//                     <i className="material-icons icon-white">photo_library</i>
+//                     Galeria
+//                   </Link>
+//                 </li>
+
+//                 <li>
+//                   <Link to="#">
+//                     <i className="material-icons icon-white">description</i>
+//                     Publicaciones
+//                   </Link>
+//                 </li>
+//                 <ul className="collapsible">
+//                   <li>
+//                     <a
+//                       className="collapsible-header"
+//                       onClick={() => handleRotateClick()}
+//                     >
+//                       <i className="material-icons">school</i>
+//                       Servicios
+//                       <i className="material-icons right">arrow_drop_down</i>
+//                     </a>
+//                     <div className="collapsible-body">
+//                       <ul>
+//                         <li>
+//                           <Link to="/services/biblioteca">
+//                             <i className="tiny material-icons icon-white">
+//                               chevron_right
+//                             </i>
+//                             {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+//                             Biblioteca
+//                           </Link>
+//                         </li>
+
+//                         <li>
+//                           <Link to="/mision-vision">
+//                             <i className="tiny material-icons icon-white">
+//                               chevron_right
+//                             </i>
+//                             {/* <i className="tiny material-icons icon-white">chevron_right</i> */}
+//                             Computación
+//                           </Link>
+//                         </li>
+//                       </ul>
+//                     </div>
+//                   </li>
+//                 </ul>
+//                 <li>
+//                   <Link to="/login">
+//                     <i className="material-icons icon-white">account_circle</i>
+//                     Login
+//                   </Link>
+//                 </li>
+//               </ul>
+//             </div>
+//             <ul className="right hide-on-med-and-down"></ul>
+//           </div>

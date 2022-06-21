@@ -1,25 +1,82 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 
-const SectionAndPeriod = ({ grades, data, setData }) => {
-	
+import M from "materialize-css";
+
+const SectionAndPeriod = ({ grades, data, setData, teacher }) => {
+  const [state, setState] = useState({
+    loading: false,
+    error: null,
+    grade: [],
+    period: [],
+  });
+  useEffect(() => {
+    
+
+    async function fetchData() {
+      setState({ loading: true, error: null });
+      try {
+        const data = await fetch("http://localhost/escuela/api/showSections");
+        const data2 = await fetch("http://localhost/escuela/api/showPeriods");
+        const gradeData = await data.json();
+        const periodData = await data2.json();
+        // setGrade(gradeData);
+        setState({
+          ...state,
+          grade: gradeData,
+          period: periodData,
+          loading: false,
+          error: null,
+        });
+      } catch (err) {
+        setState({ loading: false, error: err });
+      }
+    }
+    fetchData();
+
+    // var elems = document.querySelectorAll("select");
+    // var instances = M.FormSelect.init(elems, {});
+  }, []);
+
   return (
     <div className="row">
       <form onSubmit={""} action="" className="col s12 l6 collapsible">
         <li>
           <div className="collapsible-header">
-            <h3 className="collapsible-title">
-              <i className="material-icons icon-red">arrow_drop_down</i>
-              Agregar grado o fase que cursa
-            </h3>
+            {teacher ? (
+              <h3 className="collapsible-title">
+                <i className="material-icons icon-red">arrow_drop_down</i>
+                Asignar curso o grade que imparte
+              </h3>
+            ) : (
+              <h3 className="collapsible-title">
+                <i className="material-icons icon-red">arrow_drop_down</i>
+                Agregar curso o fase que cursa
+              </h3>
+            )}
           </div>
           <div className="collapsible-body">
             <div className="inputField">
               <label>Grado que cursa</label>
-              <select name="sectionsStudent" onChange={(e) => setData({...data, section: e.target.value})}>
-                <option value="undefined">Selecciona el grado o fase</option>
-                {grades === "primaria" ? (
+              <select
+                // name="sectionsStudent"
+                onChange={(e) => setData({ ...data, section: e.target.value })}
+              >
+                <option value="undefined" disabled="disabled">
+                  Selecciona el grado o fase
+                </option>
+                {/* I had the same error and solved it by first asking if the array existed. */}
+                {state.grade?.map((sect) => (
+                  <option key={sect.id} value={sect.id}>
+                    {sect.name}
+                  </option>
+                ))}
+                {/* {grades === "primaria" ? (
                   <React.Fragment>
-                    <optgroup label="1°">
+                    {ey.map((sect) => (
+                      <option value={sect.name}>{sect.name}a</option>
+                    ))}
+                    {/* <optgroup label="1°">
                       <option value="1">1er Grado A</option>
                       <option value="2">1er Grado B</option>
                     </optgroup>
@@ -42,14 +99,14 @@ const SectionAndPeriod = ({ grades, data, setData }) => {
                     <optgroup label="6°">
                       <option value="6to Grado A">6to Grado A</option>
                       <option value="6to Grado B">6to Grado B</option>
-                    </optgroup>
+                    </optgroup> 
                   </React.Fragment>
                 ) : (
                   <React.Fragment>
                     <option value="7">2da Fase</option>
                     <option value="8">3ra Fase</option>
                   </React.Fragment>
-                )}
+                )} */}
               </select>
             </div>
 
@@ -73,13 +130,18 @@ const SectionAndPeriod = ({ grades, data, setData }) => {
           <div className="collapsible-body">
             <div className="inputField">
               <label htmlFor="scholarchipPeriod">Agregar Período Escolar</label>
-              <select name="scholarchipPeriod" onChange={(e) => setData({...data, period: e.target.value})}>
-                <option value="undefined">Selecciona el período</option>
-				<option value="1">Período Escolar 2019-2020</option>
-                <option value="2">Período Escolar 2020-2021</option>
-                <option value="3">Período Escolar 2021-2022</option>
-                <option value="4">Período Escolar 2022-2023</option>
-                <option value="5">Período Escolar 2023-2024</option>
+              <select
+                name="scholarchipPeriod"
+                onChange={(e) => setData({ ...data, period: e.target.value })}
+              >
+                <option value="undefined" disabled="disabled">
+                  Selecciona el período
+                </option>
+                {state.period?.map((period) => (
+                  <option key={period.id} value={period.id}>
+                    {period.name}
+                  </option>
+                ))}
               </select>
             </div>
             <button

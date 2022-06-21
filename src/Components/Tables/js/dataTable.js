@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export const columnas = [
   {
-    name: "ID",
+    name: "Grado",
     selector: (row) => row.id,
     sortable: true,
     reorder: true,
@@ -16,83 +18,86 @@ export const columnas = [
   },
   {
     name: "Apellidos",
-    selector: (row) => row.status,
+    selector: (row) => row.surname,
     sortable: true,
     reorder: true,
   },
   {
     name: "Sexo",
-    selector: (row) => row.species,
+    selector: (row) => row.gender,
     sortable: true,
     reorder: true,
   },
   {
-    cell: (row) => (
-      <img height="56px" width="56px" alt={row.name} src={row.image} />
-    ),
+    // cell: (row) => (
+    //   <img height="56px" width="56px" alt={row.name} src={row.image} />
+    // ),
     name: "Fecha de Nacimiento",
-    selector: (row) => row.image,
+    selector: (row) => row.birth_date,
     sorteble: true,
+    reorder: true,
   },
   {
-    selector: (row) => row.species,
+    selector: (row) => row.address,
     name: "Lugar de Nacimiento",
     sortable: true,
     reorder: true,
   },
   {
     name: "C.I Escolar",
-    selector: (row) => row.species,
+    selector: (row) => row.ci,
     sortable: true,
     reorder: true,
   },
   {
     name: "Direccion",
-    selector: (row) => row.species,
-    sortable: true,
-    reorder: true,
-  },
-  {
-    name: "C.I Escolar",
-    selector: (row) => row.species,
+    selector: (row) => row.addres,
     sortable: true,
     reorder: true,
   },
   {
     name: "Nombre del representante",
-    selector: (row) => row.species,
+    selector: (row) => row.r_name,
     sortable: true,
     reorder: true,
   },
   {
     name: "C.I Representante",
-    selector: (row) => row.species,
+    selector: (row) => row.r_ci,
     sortable: true,
     reorder: true,
   },
   {
     name: "Telefonos",
-    selector: (row) => row.species,
+    selector: (row) => row.personal_phone,
     sortable: true,
     reorder: true,
   },
   {
     name: "Correo",
-    selector: (row) => row.species,
+    selector: (row) => row.email,
     sortable: true,
     reorder: true,
   },
   {
     name: "Vivienda",
-    selector: (row) => row.species,
+    selector: (row) => row.address,
     sortable: true,
     reorder: true,
   },
   {
     cell: (row) => (
-      <a href="/admin/studentprofile" target="_blank" rel="noopener noreferrer">
+      <Link
+        to={`/admin/fasfaga/${row.ci}`
+          .toLowerCase()
+          .replaceAll(" ", "-")
+          .normalize("NFD")
+          .replace(/[?¿¡!\u0300-\u036f]/g, "")}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i className="material-icons">account_box</i>
-      </a>
+      </Link>
     ),
     name: "Ver perfil",
     selector: (row) => row.species,

@@ -1,16 +1,14 @@
-import React from 'react'
+import React from "react";
 
-import './StudentInfo.css'
+import "./StudentInfo.css";
 
-import avatar from '../../images/avatar.jpg'
+import avatar from "../../images/avatar.jpg";
 
-const StudentInfo = () => {
+const StudentInfo = ({ student }) => {
   return (
     <section className="studentInfo">
       <div className="studentInfo-header">
-        
-          <img src={avatar} alt="Foto Estudiante" />
-        
+        <img src={avatar} alt="Foto Estudiante" />
         <div>
           <h2 className="center">Datos Personales del Estudiante</h2>
         </div>
@@ -19,15 +17,15 @@ const StudentInfo = () => {
         <div className="row">
           <div className="input-field col s12 m5 l4">
             <label htmlFor="">Nombres</label>
-            <input type="text" disabled value={"Javier Pepito"} />
+            <input type="text" disabled defaultValue={student.name} />
           </div>
           <div className="input-field col m4 s12 l4">
             <label htmlFor="">Apellidos</label>
-            <input type="text" disabled value={"Gonzalez Perez"} />
+            <input type="text" disabled defaultValue={student.surname} />
           </div>
           <div className="input-field col s12 m3 l3">
             <label htmlFor="">Fecha de Nacimiento</label>
-            <input type="text" disabled value="date" />
+            <input type="text" disabled defaultValue={student.birth_date} />
           </div>
         </div>
         <div className="row">
@@ -36,13 +34,13 @@ const StudentInfo = () => {
             <textarea
               type="text"
               className="materialize-textarea"
-              value={"Av Los Leones, Clinica Con un Nombre"}
+              defaultValue={student.birth_place}
               disabled
             />
           </div>
           <div className="input-field col s12 m3 l4">
             <label htmlFor="">Cédula de Identidad Escolar</label>
-            <input type="text" disabled value="28585670" />
+            <input type="text" disabled defaultValue={student.ci} />
           </div>
           <div className="input-field col s12 m3 l2">
             <label htmlFor="sex">Sexo</label>
@@ -67,7 +65,7 @@ const StudentInfo = () => {
               id="address"
               className="materialize-textarea"
               disabled
-              value={"Barrio San Francisco Calle 6"}
+              defaultValue={student.address}
             />
           </div>
           <div className="input-field col s12 m5 l4">
@@ -77,7 +75,7 @@ const StudentInfo = () => {
               className="validate"
               type="email"
               disabled
-              value={"amanciocrack123@gmail.com"}
+              defaultValue={student.email}
             />
           </div>
           <div className="input-field col s12 m4 l2">
@@ -87,7 +85,7 @@ const StudentInfo = () => {
               className="validate"
               type="text"
               disable
-              value={"Propia"}
+              defaultValue={"Propia"}
             />
           </div>
         </div>
@@ -100,7 +98,7 @@ const StudentInfo = () => {
               className="validate z-depth-1"
               type="text"
               disabled
-              value={"Amancio Ortega"}
+              defaultValue={"Amancio Ortega"}
             />
           </div>
           <div className="input-field col s12 m6 l3">
@@ -110,7 +108,7 @@ const StudentInfo = () => {
               className="validate"
               type="text"
               disabled
-              value={"8765421"}
+              defaultValue={"8765421"}
             />
           </div>
 
@@ -123,19 +121,19 @@ const StudentInfo = () => {
               type="tel"
               className="validate "
               disabled
-              value={"0424323232"}
+              defaultValue={"0424323232"}
             />
             <input
               id="telephone2"
               type="tel"
               aria-disabled
-              value={"04245759867"}
+              defaultValue={"04245759867"}
             />
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
-export default StudentInfo
+export default StudentInfo;

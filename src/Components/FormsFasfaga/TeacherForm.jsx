@@ -1,214 +1,203 @@
-import React from "react";
+import React, { useEffect } from "react";
 
+import SectionAndPeriod from "./Student/SectionAndPeriod";
 import "./styles/FormsFasfaga.css";
 
+import M from "materialize-css";
+
 const TeacherForm = () => {
+  useEffect(() => {
+    var elems2 = document.querySelectorAll(".collapsible");
+    var instances2 = M.Collapsible.init(elems2, {});
+  }, []);
   return (
-    <div>
-      <form action id="newTeacher-form">
-        <div className="personal">
-          <h4>Informacion personal</h4>
-          <div className="input-field">
-            <label htmlFor="namesTeacher">Nombres</label>
-            <input id="namesTeacher" className="validate" type="text" />
-          </div>
-          <div className="input-field">
-            <label htmlFor="last_nameTeacher">Apellidos</label>
-            <input id="last_nameTeacher" className="validate" type="text" />
-          </div>
-          <div className="input-field">
-            <label htmlFor="dniTeacher">Cédula</label>
-            <select>
+    <div id="teacher">
+      <div className="formTitle">
+        <h2>Agregar Docente</h2>
+      </div>
+
+      <form
+        // onSubmit={sendInfo}
+        id="teacher-form"
+        action=""
+        className="form-container"
+      >
+        {/*-----------------Informacion Personal------------------*/}
+        {/* <h4>Informacion personal</h4> */}
+
+        <div className="inputField">
+          <label htmlFor="names">Nombres</label>
+          <input
+            id="names"
+            type="text"
+            required
+            // onChange={(e) => setData({ ...data, name: e.target.value })}
+          />
+        </div>
+        <div className="inputField">
+          <label htmlFor="last_name">Apellidos</label>
+          <input
+            id="last_name"
+            className="validate"
+            type="text"
+            required
+            // onChange={(e) => setData({ ...data, surname: e.target.value })}
+          />
+        </div>
+        <div className="inputField">
+          <label htmlFor="user">Nombre de Usuario</label>
+          <input
+            id="user"
+            type="text"
+            required
+            // onChange={(e) => setData({ ...data, username: e.target.value })}
+          />
+        </div>
+        <div className="inputField">
+          <label htmlFor="pass">Contraseña</label>
+          <input
+            id="pass"
+            type="password"
+            required
+            // onChange={(e) => setData({ ...data, pass: e.target.value })}
+          />
+        </div>
+        <div className="inputField">
+          <label htmlFor="date">Fecha de nacimiento</label>
+          <input
+            id="date"
+            type="date"
+            className="validate"
+            required
+            // onChange={(e) => setData({ ...data, birth_date: e.target.value })}
+          />
+        </div>
+        <div className="inputField">
+          <label htmlFor="birthplace">Lugar de Nacimiento</label>
+          <input
+            id="birthplace"
+            className="validate"
+            type="text"
+            required
+            // onChange={(e) => setData({ ...data, birth_place: e.target.value })}
+          />
+        </div>
+        <div className="inputField">
+          <label htmlFor="dni">Cédula de identidad</label>
+          {/* <select>
               <option value=""></option>
               <option value="Venezolana">V</option>
               <option value="Extranjera">E</option>
-            </select>
-            <input
-              id="dniTeacher"
-              className="validate"
-              type="number"
-              placeholder="0000000"
-            />
-          </div>
-          <div className="input-field">
-            <textarea
-              id="addressTeacher"
-              className="materialize-textarea"
-            ></textarea>
-            <label htmlFor="addressTeacher">Direccion</label>
-          </div>
+            </select> */}
+          <input
+            id="dni"
+            className="validate"
+            type="text"
+            // onChange={(e) => setData({ ...data, ci: e.target.value })}
+          />
+        </div>
+        <div className="inputField">
+          <label htmlFor="sex">Sexo</label>
+          <p>
+            <label htmlFor="masculine">
+              <input
+                name="group1"
+                id="masculine"
+                type="radio"
+                required
+                value="Masculino"
+                // onChange={(e) => setData({ ...data, gender: e.target.value })}
+              />
+              <span>Masculino</span>
+            </label>
+          </p>
+          <p>
+            <label htmlFor="femenine">
+              <input
+                name="group1"
+                type="radio"
+                id="femenine"
+                value="Femenino"
+                // onChange={(e) => setData({ ...data, gender: e.target.value })}
+              />
+              <span>Femenino</span>
+            </label>
+          </p>
+        </div>
+        <div className="inputField">
+          <label htmlFor="address">Direccion</label>
+          <textarea
+            id="address"
+            className="materialize-textarea"
+            required
+            // onChange={(e) => setData({ ...data, address: e.target.value })}
+          ></textarea>
+        </div>
+        <div className="inputField phones">
+          <label htmlFor="telephone" className="center">
+            Telefonos
+          </label>
+          <input
+            id="telephone"
+            type="tel"
+            className="validate"
+            // onChange={(e) => setData({ ...data, personal_phone: e.target.value })}
+          />
+          <input
+            id="telephone2"
+            type="tel"
+            // onChange={(e) => setData({ ...data, local_phone: e.target.value })}
+          />
+        </div>
 
-          <div className="input-field">
-            <input id="dateTeacher" type="date" className="validate" />
-            <label htmlFor="dateTeacher">Fecha de nacimiento</label>
-          </div>
-
-          <div className="input-field">
-            <label htmlFor="emailTeacher">Correo</label>
-            <input id="emailTeacher" className="validate" type="email" />
-          </div>
-          <div className="input-field">
-            <label htmlFor="telephoneTeacher">Telefono</label>
-            <input id="telephoneTeacher" type="tel" className="validate" />
-          </div>
-          <div>
-            <label htmlFor="sexTeacher">Sexo</label>
-            <p>
-              <label htmlFor="masculineTeacher">
-                <input name="group1" id="masculineTeacher" type="radio" />
-                <span>Masculino</span>
-              </label>
-            </p>
-            <p>
-              <label htmlFor="femenineTeacher">
-                <input name="group1" type="radio" id="femenineTeacher" />
-                <span>Femenino</span>
-              </label>
-            </p>
-          </div>
-          <div className="input-field">
-            <label htmlFor="pictureTeacher">Buscar foto...</label>
-            <div>
-              <input type="text" readOnly />
-              <input id="pictureTeacher" className="validate" type="file" />
-            </div>
-          </div>
+        <div className="inputField">
+          <label htmlFor="email">Correo</label>
+          <input
+            id="email"
+            className="validate"
+            type="email"
+            // onChange={(e) => setData({ ...data, email: e.target.value })}
+          />
+        </div>
+        <div className="inputField">
+          <label htmlFor="living">Condición de vivienda</label>
+          <input
+            id="living"
+            className="validate"
+            type="text"
+            // onChange={(e) => setData({ ...data, condition: e.target.value })}
+          />
         </div>
 
         {/*-----------------Informacion Academica------------------*/}
-        <div className="academic">
-          <h4>Informacion academica</h4>
-          <div className="input-field">
-            <span>Grado en el cual imparte docencia</span>
-            <select name="sections">
-              <option>Selecciona el grado</option>
 
-              <optgroup label="1°">
-                <option value="1er Grado A">1er Grado A</option>
-                <option value="1er Grado B">1er Grado B</option>
-              </optgroup>
-              <optgroup label="2°">
-                <option value="2do Grado A">2do Grado A</option>
-                <option value="2do Grado B">2do Grado B</option>
-              </optgroup>
-              <optgroup label="3°">
-                <option value="3er Grado A">3er Grado A</option>
-                <option value="3er Grado B">3er Grado B</option>
-              </optgroup>
-              <optgroup label="4°">
-                <option value="4to Grado A">4to Grado A</option>
-                <option value="4to Grado B">4to Grado B</option>
-              </optgroup>
-              <optgroup label="5°">
-                <option value="5to Grado A">5to Grado A</option>
-                <option value="5to Grado B">5to Grado B</option>
-              </optgroup>
-              <optgroup label="6°">
-                <option value="6to Grado A">6to Grado A</option>
-                <option value="6to Grado B">6to Grado B</option>
-              </optgroup>
-            </select>
-          </div>
-          <div className="input-field">
-            <input id="dateTeacherIn" type="date" className="validate" />
-            <label htmlFor="dateTeacherIn">
-              Fecha en la cual ingresó a la institución
-            </label>
-          </div>
-        </div>
+        {/* <h4 className="center">Informacion academica</h4> */}
 
-        {/*-----------------Informacion de Salud------------------*/}
-        <div className="healthy">
-          <h4>Informacion de Salud</h4>
-          <p>
-            <label htmlFor="Esquizofrenia">
-              <input id="Esquizofrenia" className="validate" type="checkbox" />
-              <span>Esquizofrenia*</span>
-            </label>
-          </p>
-          <p>
-            <label htmlFor="bipolaridad">
-              <input id="bipolaridad" className="validate" type="checkbox" />
-              <span>Bipolaridad</span>
-            </label>
-          </p>
-          <p>
-            <label htmlFor="Nervios">
-              <input
-                id="Nervios"
-                className="validate filled-in"
-                type="checkbox"
-              />
-              <span>Nervios</span>
-            </label>
-          </p>
-          <p>
-            <label htmlFor="Alergias">
-              <input id="Alergias" type="checkbox" />
-              <span>Alergias*</span>
-            </label>
-          </p>
-          <p>
-            <label htmlFor="Diabetes">
-              <input id="Diabetes" className="validate" type="checkbox" />
-              <span>Diabetes*</span>
-            </label>
-          </p>
-          <p>
-            <label htmlFor="Migrañas">
-              <input id="Migrañas" className="validate" type="checkbox" />
-              <span>Migrañas</span>
-            </label>
-          </p>
-          <p>
-            <label htmlFor="Asma">
-              <input id="Asma" className="validate" type="checkbox" />
-              <span>Asma</span>
-            </label>
-          </p>
-          <p>
-            <label htmlFor="Rinitis">
-              <input id="Rinitis" className="validate" type="checkbox" />
-              <span>Rinitis*</span>
-            </label>
-          </p>
-          <div>
-            <h5>Presenta alguna condicion</h5>
-            <p>
-              <label>
-                <input
-                  className="with-gap"
-                  name="conditionGroup"
-                  type="radio"
-                />
-                <span>Si</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input
-                  className="with-gap"
-                  name="conditionGroup"
-                  type="radio"
-                />
-                <span>No</span>
-              </label>
-            </p>
-          </div>
-          <div className="input-field">
-            <textarea
-              id="condition"
-              name="conditionGroup"
-              className="materialize-textarea"
+        <div className="file-field input-field">
+          <div className="btn red">
+            <span>File</span>
+            <input
+              type="file"
+              // onChange={(e) => setData({ ...data, photo: e.target.files[0] })}
             />
-            <label htmlFor="condition">Que tipo de condicion presenta:</label>
+          </div>
+          <div className="file-path-wrapper">
+            <input className="file-path validate" type="text" />
           </div>
         </div>
-        <button className="btn red waves-effect" type="submit" name="action">
-          Submit
-          <i className="material-icons right">send</i>
+
+        <button
+          className="btn red waves-effect"
+          type="submit"
+          name="action"
+          // onClick={(e) => setData({ ...data, group: "Primaria" })}
+        >
+          Guardar
+          <i className="material-icons right">save</i>
         </button>
       </form>
+
+      <SectionAndPeriod grades={"primaria"} teacher={true} />
     </div>
   );
 };

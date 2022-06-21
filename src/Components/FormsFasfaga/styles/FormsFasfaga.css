@@ -21,8 +21,8 @@
   background-color: rgb(255, 235, 235);
   /* border: 1px darkred solid; */
 }
-.form-container .btn{
- margin-top: 10px;
+.form-container .btn {
+  margin-top: 10px;
 }
 #swipeForm .form-container input {
   margin-top: 5px;
@@ -33,16 +33,18 @@
   padding: 0 10px;
   border: red;
   border-radius: 5px;
-  box-shadow: 0 2px 2px 0 rgba(255, 0, 0, 0.14), 0 3px 1px -2px rgba(255, 0, 0, 0.12), 0 1px 5px 0 rgba(255, 0, 0, 0.2) !important;
+  box-shadow: 0 2px 2px 0 rgba(255, 0, 0, 0.14),
+    0 3px 1px -2px rgba(255, 0, 0, 0.12), 0 1px 5px 0 rgba(255, 0, 0, 0.2) !important;
 }
-.select-wrapper .caret{
+.select-wrapper .caret {
   z-index: 1;
 }
 #swipeForm .form-container textarea {
   padding: 10px;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0 4px 5px 0 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%) !important;
+  box-shadow: 0 4px 5px 0 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%) !important;
 }
 #swipeForm label {
   font-size: 1.1rem;
@@ -50,6 +52,9 @@
   top: -20px;
   color: var(--dark-red2);
   font-family: "RobotoCondensed";
+}
+#swipeForm select {
+  display: inline-block;
 }
 .inputField {
   margin: 10px 10px;
@@ -81,28 +86,34 @@
   font-size: 1.5rem;
   text-align: center;
 }
-@media (min-width: 650px) {
-  
+#preescolar, #primaria {
+  animation: fadein 2s;
 }
-
+@media (min-width: 650px) {
+}
 
 /*                 Student Form                                    */
-#swipeForm .collapsible{
+#swipeForm .collapsible {
   border: none;
 }
-#swipeForm .collapsible-body{
+#swipeForm .collapsible-body {
   border: none;
 }
-#swipeForm .collapsible-header{
-border-top: none;
+#swipeForm .collapsible-header {
+  border-top: none;
   padding: 5px;
 }
-#swipeForm .collapsible-title{
+#swipeForm .collapsible-title {
   line-height: 30px;
 }
 .collapsible-button {
   margin-bottom: 12px;
 }
-.select-dropdown{
-    max-height: 450px;
+.select-dropdown {
+  max-height: 450px;
+}
+
+@keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
 }

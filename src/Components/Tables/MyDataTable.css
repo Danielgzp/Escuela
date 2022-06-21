@@ -87,8 +87,8 @@
 }
 .rdt_TableCol {
   justify-content: center;
-  max-width: fit-content !important;
-  min-width: 50px !important;
+  /* max-width: fit-content !important;
+  min-width: 50px !important; */
 }
 .rdt_TableCell {
   justify-content: center;

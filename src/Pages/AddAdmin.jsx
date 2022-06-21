@@ -8,6 +8,7 @@ import M from "materialize-css";
 import AddAdminForm from "../Components/FormsFasfaga/AdminForm";
 import InformatioFasfaga from "../Components/InformationFasfaga/InformationFasfaga";
 import MyDataTable from "../Components/Tables/MyDataTable";
+import InformationFasfaga from "../Components/InformationFasfaga/InformationFasfaga";
 
 const AddAdmin = () => {
   useEffect(() => {
@@ -22,7 +23,7 @@ const AddAdmin = () => {
       <AdminMenu></AdminMenu>
       <section className="full-box dashboard-contentPage">
         <AdminHeader></AdminHeader>
-        <InformatioFasfaga user="Administradores" icon="account" />
+        <InformationFasfaga user="Administradores" icon="account" />
 
         <div className="swipes-container">
           <ul id="swipeList" className="tabs dataMenu z-depth-4">

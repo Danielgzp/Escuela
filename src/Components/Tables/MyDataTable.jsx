@@ -12,16 +12,21 @@ import TableHeader from "./TableHeader";
 
 import { columnas, paginationOptions } from "./js/dataTable";
 
+const API_URL = `http://localhost/escuela/api/showStudents`;
+
 const MyDataTable = () => {
   const [state, setState] = useState({
     loading: false,
     error: null,
+    api: [],
+    filter: []
   });
 
   const [api, setApi] = useState([]);
   let [numberPage, setnumberPage] = useState(1);
   const [search, setSearch] = useState("");
-  const API_URL = `https://rickandmortyapi.com/api/character/?page=${numberPage}`;
+
+  
   let lastPage = document.getElementById("pagination-last-page");
 
   useEffect(() => {
@@ -34,21 +39,23 @@ const MyDataTable = () => {
         const data = await fetch(API_URL);
         const response = await data.json();
         setState({
+          ...state,
           loading: false,
           error: null,
+          api: response.results,
+          filter: state.api
         });
-        setApi(response.results);
       } catch (error) {
         setState({ loading: false, error: error });
       }
     }
     fetchData();
-  }, [numberPage]);
+  }, []);
 
-  const [filter, setFilter] = useState(api);
+  const [filter, setFilter] = useState(state.api);
 
   useMemo(() => {
-    const result = api.filter((student) => {
+    const result = state.api?.filter((student) => {
       return `${student.name}`.toLowerCase().includes(search.toLowerCase());
     });
     /*if (
@@ -63,8 +70,9 @@ const MyDataTable = () => {
     ) {
       return elemento;
     }*/
-    setFilter(result);
-  }, [api, search]);
+    // setFilter(result);
+    setState({...state, filter: result})
+  }, [state.api, search]);
 
   const handleChangeButton = (e) => {
     setSearch(e.target.value);
@@ -143,7 +151,7 @@ const MyDataTable = () => {
         direction="auto"
         highlightOnHover={true}
         columns={columnas}
-        data={filter}
+        data={state.filter}
         striped={true}
         fixedHeader
         fixedHeaderScrollHeight="550px"

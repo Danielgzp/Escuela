@@ -20,12 +20,13 @@ import AddStudent from "../Pages/AddStudent";
 import NotFoundPage from "../Pages/NotFoundPage";
 import Biblioteca from "../Pages/Biblioteca";
 import StudentProfile from "../Pages/StudentProfile";
+import AddPeriod from "../Pages/AddPeriod";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        {/* <Layout> */}
+        <Layout >
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/logout" component={Logout} />
@@ -37,10 +38,11 @@ const App = () => {
         <Route exact path="/admin/addnewadmin" component={AddAdmin} />
         <Route exact path="/admin/addnewteacher" component={AddTeacher} />
         <Route exact path="/admin/addnewstudent" component={AddStudent} />
+        <Route exact path="/admin/addperiod" component={AddPeriod} />
         <Route exact path="/services/biblioteca" component={Biblioteca} />
-        <Route exact path="/admin/studentprofile" component={StudentProfile} />
+        <Route exact path="/admin/fasfaga/:studentProfile" component={StudentProfile} />
         {/* <Route component={NotFoundPage} /> */}
-        {/* </Layout> */}
+        </Layout>
       </Switch>
     </BrowserRouter>
   );

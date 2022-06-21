@@ -1,10 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import pacman from "../../images/pacman.gif"
+import './Loader.css'
+import pacman from "../../images/pacman.gif";
 const Loader = () => {
   return (
-    <div><img src={pacman} alt="" /></div>
-  )
-}
+    <div className="loader">
+      <img src={pacman} alt="" />
+    </div>
+  );
+};
 
-export default Loader
+export default Loader;

@@ -29,7 +29,7 @@ const AddStudent = () => {
                 Nuevo Estudiante
               </a>
             </li>
-            <li className="tab ">
+            <li className="tab">
               <a href="#swipeTable">Nomina de Estudiantes</a>
             </li>
           </ul>
