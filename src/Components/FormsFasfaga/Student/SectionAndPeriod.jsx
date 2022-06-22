@@ -11,8 +11,6 @@ const SectionAndPeriod = ({ grades, data, setData, teacher }) => {
     period: [],
   });
   useEffect(() => {
-    
-
     async function fetchData() {
       setState({ loading: true, error: null });
       try {
@@ -40,7 +38,7 @@ const SectionAndPeriod = ({ grades, data, setData, teacher }) => {
 
   return (
     <div className="row">
-      <form onSubmit={""} action="" className="col s12 l6 collapsible">
+      <div className="col s12 l6 collapsible">
         <li>
           <div className="collapsible-header">
             {teacher ? (
@@ -109,17 +107,11 @@ const SectionAndPeriod = ({ grades, data, setData, teacher }) => {
                 )} */}
               </select>
             </div>
-
-            <button
-              className="btn red waves-effect right collapsible-button"
-              type="submit"
-            >
-              Save
-            </button>
           </div>
         </li>
-      </form>
-      <form onSubmit={""} action="" className="col s12 l6 collapsible">
+      </div>
+
+      <div className="col s12 l6 collapsible">
         <li>
           <div className="collapsible-header">
             <h3 className="collapsible-title">
@@ -144,15 +136,9 @@ const SectionAndPeriod = ({ grades, data, setData, teacher }) => {
                 ))}
               </select>
             </div>
-            <button
-              className="btn red waves-effect right collapsible-button"
-              type="submit"
-            >
-              Save
-            </button>
           </div>
         </li>
-      </form>
+      </div>
     </div>
   );
 };
