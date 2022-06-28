@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 //import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 // este boopstrap da en el carousel
 import DataTable from "react-data-table-component";
+import Swal from "sweetalert2";
 
 import "./MyDataTable.css";
 import Loader from "../Loader/Loader";
@@ -12,9 +13,9 @@ import TableHeader from "./TableHeader";
 
 import { columnas, paginationOptions } from "./js/dataTable";
 
-const API_URL = `http://localhost/escuela/api/showStudents`;
+const API_URL = `https://rickandmortyapi.com/api/character/?page=2`;
 
-const MyDataTable = () => {
+const MyDataTable = (props) => {
   const [state, setState] = useState({
     loading: false,
     error: null,
@@ -88,6 +89,50 @@ const MyDataTable = () => {
     }
     fetchNextPage();
   };
+
+    const handleDeleteStudent = async (e) => {
+      Swal.fire({
+        title: "¿Estás seguro?",
+        text: "¿Deseas eliminar este Estudiante?",
+        icon: "warning",
+        showDenyButton: "true",
+        confirmButtonText: "Sí, deseo eliminar el estudiante",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          deleteStudent();
+          setState({ loading: true });
+        } else if (result.isDenied) {
+          Swal.fire("Cancelado", "", "info");
+        }
+      });
+    };
+
+    async function deleteStudent(e) {
+      console.log("fUNCIONA")
+      const send = JSON.stringify(props.match.params.cedula);
+
+      const answer = await fetch(
+        `http://localhost/escuela/api/deleteStudent/cedula`,
+        {
+          method: "POST",
+          body: send,
+        }
+      );
+      const answer_json = await answer.json();
+
+      if (answer_json) {
+        if (answer_json === "S") {
+          Swal.fire("El Estudiante se ha eliminado correctamente", "", "success");
+
+          props.history.push("/");
+        } else {
+          Swal.fire("Oops", answer_json, "error");
+        }
+      } else {
+        Swal.fire("Oops", "Ha ocurrido un error. Intente nuevamente.", "error");
+      }
+    }
+
   const handleClickPrev = () => {
     setnumberPage((numberPage = numberPage - 1));
     async function fetchPrevPage() {
@@ -150,7 +195,7 @@ const MyDataTable = () => {
         dense
         direction="auto"
         highlightOnHover={true}
-        columns={columnas}
+        columns={columnas(handleDeleteStudent)}
         data={state.filter}
         striped={true}
         fixedHeader

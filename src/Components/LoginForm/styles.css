@@ -20,27 +20,18 @@
    width: 100%;
    padding: 10px 15px;
 }
-.login-container h2{
+.logInForm h2{
     color: white;
     margin-top: 10px;
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2rem;
     letter-spacing: 0.5px;
 }
 .login-div{
     border-radius: 0px;
 }
-#user-form input, #password-form input{
-    width: 90%;
-    height: 40px;
-    padding-left: 15px;
-    padding-right: 10px;
-    background-color: #fff;
-    border: 0 #fff;
-    border-radius: 3px;
-    outline: none;
-    font-size: 1.4rem;
-    margin-top: 10px;
+#user-form input{
+    color: white;
 }
 .sesion-button{
     display: flex;

@@ -1,32 +1,30 @@
-import React from "react";
+import React from 'react'
 
 import "./StudentInfo.css";
-
 import avatar from "../../images/avatar.jpg";
-import { Link } from "react-router-dom";
 
-const StudentInfo = ({ student }) => {
+const StudentInfoEdit = ({student}) => {
   return (
-    <section className="studentInfo">
+    <form className="studentInfo" onSubmit={""}>
       <div className="studentInfo-header">
         <img src={avatar} alt="Foto Estudiante" />
         <div>
-          <h2 className="center">Datos Personales del Estudiante</h2>
+          <h2 className="center">Editar Datos Personales del Estudiante</h2>
         </div>
       </div>
       <div className="studentInfo-container">
         <div className="row">
           <div className="input-field col s12 m5 l4">
             <label htmlFor="">Nombres</label>
-            <input type="text" disabled defaultValue={student.name} />
+            <input type="text"  defaultValue={student.name} />
           </div>
           <div className="input-field col m4 s12 l4">
             <label htmlFor="">Apellidos</label>
-            {/* <input type="text" disabled defaultValue={student.surname} /> */}
+            {/* <input type="text" defaultValue={student.surname} /> */}
           </div>
           <div className="input-field col s12 m3 l3">
             <label htmlFor="">Fecha de Nacimiento</label>
-            {/* <input type="text" disabled defaultValue={student.birth_date} /> */}
+            {/* <input type="text" defaultValue={student.birth_date} /> */}
           </div>
         </div>
         <div className="row">
@@ -35,25 +33,24 @@ const StudentInfo = ({ student }) => {
             <textarea
               type="text"
               className="materialize-textarea"
-              // defaultValue={student.birth_place}
-              disabled
-            />
+            //   defaultValue={student.birth_place}
+                          />
           </div>
           <div className="input-field col s12 m3 l4">
             <label htmlFor="">Cédula de Identidad Escolar</label>
-            <input type="text" disabled defaultValue={student.id} />
+            <input type="text" defaultValue={student.id} />
           </div>
           <div className="input-field col s12 m3 l2">
             <label htmlFor="sex">Sexo</label>
             <p>
               <label htmlFor="masculine">
-                <input name="group1" id="masculine" type="radio" disabled />
+                <input name="group1" id="masculine" type="radio" />
                 <span>Masculino</span>
               </label>
             </p>
             <p>
               <label htmlFor="femenine">
-                <input name="group1" type="radio" id="femenine" disabled />
+                <input name="group1" type="radio" id="femenine" />
                 <span>Femenino</span>
               </label>
             </p>
@@ -65,8 +62,7 @@ const StudentInfo = ({ student }) => {
             <input
               id="address"
               className="materialize-textarea"
-              disabled
-              // defaultValue={student.address}
+                            // defaultValue={student.address}
             />
           </div>
           <div className="input-field col s12 m5 l4">
@@ -75,8 +71,7 @@ const StudentInfo = ({ student }) => {
               id="email"
               className="validate"
               type="email"
-              disabled
-              // defaultValue={student.email}
+                            // defaultValue={student.email}
             />
           </div>
           <div className="input-field col s12 m4 l2">
@@ -85,7 +80,6 @@ const StudentInfo = ({ student }) => {
               id="living"
               className="validate"
               type="text"
-              disable
               defaultValue={"Propia"}
             />
           </div>
@@ -98,8 +92,7 @@ const StudentInfo = ({ student }) => {
               id="representerName"
               className="validate z-depth-1"
               type="text"
-              disabled
-              defaultValue={"Amancio Ortega"}
+                            defaultValue={"Amancio Ortega"}
             />
           </div>
           <div className="input-field col s12 m6 l3">
@@ -108,8 +101,7 @@ const StudentInfo = ({ student }) => {
               id="representative_dni"
               className="validate"
               type="text"
-              disabled
-              defaultValue={"8765421"}
+                            defaultValue={"8765421"}
             />
           </div>
 
@@ -121,32 +113,18 @@ const StudentInfo = ({ student }) => {
               id="telephone"
               type="tel"
               className="validate "
-              disabled
-              defaultValue={"0424323232"}
+                            defaultValue={"0424323232"}
             />
             <input
               id="telephone2"
               type="tel"
-              aria-disabled
-              defaultValue={"04245759867"}
+              aria-              defaultValue={"04245759867"}
             />
           </div>
         </div>
-        <Link
-          to={`/admin/fasfaga/${student.id}/edit`
-            .toLowerCase()
-            .replaceAll(" ", "-")
-            .normalize("NFD")
-            .replace(/[?¿¡!\u0300-\u036f]/g, "")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn"
-        >
-          Editar Estudiante
-        </Link>
       </div>
-    </section>
+    </form>
   );
-};
+}
 
-export default StudentInfo;
+export default StudentInfoEdit

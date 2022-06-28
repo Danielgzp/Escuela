@@ -20,6 +20,7 @@ import AddStudent from "../Pages/AddStudent";
 import NotFoundPage from "../Pages/NotFoundPage";
 import Biblioteca from "../Pages/Biblioteca";
 import StudentProfile from "../Pages/StudentProfile";
+import StudentEdit from "../Pages/StudentEdit";
 import AddPeriod from "../Pages/AddPeriod";
 
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
         <Route exact path="/admin/addperiod" component={AddPeriod} />
         <Route exact path="/services/biblioteca" component={Biblioteca} />
         <Route exact path="/admin/fasfaga/:studentProfile" component={StudentProfile} />
+        <Route exact path="/admin/fasfaga/:studentProfile/edit" component={StudentEdit} />
         {/* <Route component={NotFoundPage} /> */}
         </Layout>
       </Switch>

@@ -7,10 +7,12 @@ import AdminHeader from "../Components/AdminHeader/AdminHeader";
 import AdminMenu from "../Components/AdminMenu/AdminMenu";
 import PageError from "../Components/Error/PageError";
 import Loader from "../Components/Loader/Loader";
-import StudentInfo from "../Components/StudentInfo/StudentInfo";
+import StudentInfoEdit from "../Components/StudentInfo/StudentInfoEdit";
 
-const StudentProfile = (props) => {
+const StudentEdit = (props) => {
   const studentProfile = props.match.params.studentProfile;
+  console.log(props)
+  console.log(studentProfile)
 
   const [state, setState] = useState({
     student: [],
@@ -22,7 +24,6 @@ const StudentProfile = (props) => {
     async function fetchData() {
       setState({ loading: true, error: null });
       try {
-        // const data = await fetch("http://localhost/escuela/api/showStudents");
         const data = await fetch(
           "https://rickandmortyapi.com/api/character/?page=2"
         );
@@ -63,10 +64,10 @@ const StudentProfile = (props) => {
         <AdminHeader></AdminHeader>
 
         {/* Cotenido principal  */}
-        <StudentInfo student={state.student} />
+        <StudentInfoEdit student={state.student} />
       </section>
     </main>
   );
 };
 
-export default StudentProfile;
+export default StudentEdit;

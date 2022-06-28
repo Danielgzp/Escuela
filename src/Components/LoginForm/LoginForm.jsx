@@ -71,42 +71,35 @@ const LoginForm = () => {
         autocomplete="off"
         className="full-box logInForm"
         onSubmit={sendInfo}
+        id="user-form"
       >
-        <p className="text-center text-muted">
+        <p className="center-align text-muted">
           <i className="zmdi zmdi-account-circle zmdi-hc-5x"></i>
         </p>
-        <p className="text-center text-muted text-uppercase">
-          Inicia sesión con tu cuenta
-        </p>
+        <h2 className="center-align">Inicia sesión con tu cuenta</h2>
         <div className="form-group label-floating">
-          <label className="control-label" htmlFor="Username">
-            Nombre de usuario
-          </label>
+          <p className="help-block">Escribe tú nombre de usuario</p>
           <input
             className="form-control"
             id="Username"
             type="text"
             onChange={(e) => setData({ ...data, username: e.target.value })}
           />
-          <p className="help-block">Escribe tú nombre de usuario</p>
         </div>
         <div className="form-group label-floating">
-          <label className="control-label" htmlFor="UserPass">
-            Contraseña
-          </label>
+          <p className="help-block">Escribe tú contraseña</p>
           <input
             className="form-control"
             id="UserPass"
             type="text"
             onChange={(e) => setData({ ...data, pass: e.target.value })}
           />
-          <p className="help-block">Escribe tú contraseña</p>
         </div>
-        <div className="form-group text-center">
+        <div className="form-group center-align">
           <input
             type="submit"
             value="Iniciar sesión"
-            className="btn btn-raised btn-danger"
+            className="btn red btn-raised btn-danger"
           />
         </div>
       </form>
